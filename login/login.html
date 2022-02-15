@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="./styles/formula.css">
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
@@ -14,7 +15,7 @@
   <body>
     <header class="header">
       <div>
-        <img src="/images/sneakers_svg.svg" width="100" alt="" />
+        <img src="../images/sneakers_svg.svg" width="100" alt="" />
       </div>
       <nav class="hidden">
         <ul>
@@ -35,8 +36,28 @@
         </div>
       </div>
     </header>
-    <main class="index-main"></main>
-
+    <main class="index-main center-content">
+      <h1>Log In</h1>
+      <div>
+        <form>
+          <div class="">
+            <label for="email-field">Email</label>
+            <input type="email" name="email" id="email-field">
+          </div>
+          <div>
+            <label for="password-field">Password</label>
+            <input type="password" name="password" id="password-field">
+          </div>
+          <div>
+            <input type="submit" value="Logga In">
+          </div>
+        </form>
+      </div>
+      <div>
+        <p>Ny kund?</p>
+        <input type="button" value="Registrera">
+      </div>
+    </main>
     <footer class="footer">
       <div class="social-media-icons">
         <a><i class="fa-brands fa-youtube"></i></a>
