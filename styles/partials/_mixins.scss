@@ -1,0 +1,10 @@
+@mixin flex($justify, $align, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin list-style {
+  list-style: none;
+  text-decoration: none;
+}
