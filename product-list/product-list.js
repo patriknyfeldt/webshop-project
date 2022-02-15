@@ -1,5 +1,5 @@
 const productList = document.getElementById('product-list');
-let categories = [];
+let products = [];
 
 
 
