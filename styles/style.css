@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Roboto&family=Teko:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,10 +39,9 @@ body {
   padding: 10px;
 }
 
-.index-main {
+/* .index-main {
   height: 50vh;
-}
-
+} */
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,6 +91,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 80%;
 }
 
 .footer-link-wrapper {
@@ -107,7 +108,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 50px;
 }
 
 ul {

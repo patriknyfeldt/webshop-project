@@ -1,0 +1,41 @@
+.hero-div {
+  background-image: url(../images/isaac-wendland-7DCZgKyp8vw-unsplash.jpg);
+  height: 230px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.category-div-container a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.category-div-container a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.category-div-container #damsko-category {
+  background-image: url(../images/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg);
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  margin: 20px 0 20px 0;
+}
+
+.category-div-container #herrsko-category {
+  background-image: url(../images/irene-kredenets-dwKiHoqqxk8-unsplash.jpg);
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  margin: 20px 0 20px 0;
+}
+
+.category-div-container #barnsko-category {
+  background-image: url(../images/kris-gerhard-0BKZfcamvGg-unsplash.jpg);
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  margin: 20px 0 20px 0;
+}
+/*# sourceMappingURL=indexstyle.css.map */
