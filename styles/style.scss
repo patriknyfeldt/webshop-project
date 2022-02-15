@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 body {
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -23,9 +23,9 @@ body {
   border: 2px solid black;
   padding: 10px;
 }
-.index-main {
+/* .index-main {
   height: 50vh;
-}
+} */
 .footer {
   @include flex(space-between, center, column);
   border: 2px solid black;
@@ -37,10 +37,13 @@ body {
 }
 .footer-links {
   @include flex(space-between, center);
+  width: 80%
+
 }
 .footer-link-wrapper {
   @include flex(space-between, center, column);
-  margin: 50px;
+
+  
 }
 ul {
   @include list-style;
