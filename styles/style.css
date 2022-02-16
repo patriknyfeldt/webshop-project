@@ -7,7 +7,6 @@
 }
 
 body {
-  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,6 +14,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: auto;
 }
 
 .hidden {
@@ -35,8 +35,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 2px solid black;
+  height: auto;
   padding: 10px;
+}
+
+.header .navigation-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 40px;
+  gap: 20px;
 }
 
 .navigation-icons {
@@ -111,12 +119,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 2px solid black;
   padding: 10px;
-  margin-top: auto;
+  height: 300px;
+  background-color: #FAF4F4;
 }
 
-.social-media-links {
+.social-media-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,6 +138,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  font-size: 30px;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .footer-links {
@@ -163,10 +174,64 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  line-height: 2em;
 }
 
 ul {
   list-style: none;
   text-decoration: none;
+}
+
+@media (min-width: 550px) {
+  .header {
+    height: 120px;
+  }
+  .hero-div {
+    height: 300px;
+  }
+  .log-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+  }
+  .log-in li a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  .navigation-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 20px 10px 0 0;
+  }
+  .hamburger-meny {
+    display: none;
+  }
+  .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 30px;
+  }
+  .nav-links ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+  }
+  .nav-links ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
 }
 /*# sourceMappingURL=style.css.map */

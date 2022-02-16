@@ -9,9 +9,9 @@
   text-decoration: none;
 }
 
-@mixin category-img {
-  height: 300px;
+@mixin category-img { //till bildlänkarna på startsidan
+  height: 380px;
   background-size: cover;
   background-position: center center;
-  margin: 20px 0 20px 0;
+  margin: 20px;
 }

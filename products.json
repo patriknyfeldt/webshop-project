@@ -1,0 +1,146 @@
+{   
+
+    "products": [
+        {
+            "female": [
+                {
+                    "id": "1",
+                    "name": "Adidas",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "899"
+                },
+                {
+                    "id": "2",
+                    "name": "Nike",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "699"
+                },
+                {
+                    "id": "3",
+                    "name": "Adidas",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "799"
+                },
+                {
+                    "id": "4",
+                    "name": "Nike",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "949"
+                },
+                {
+                    "id": "5",
+                    "name": "Adidas",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "999"
+                },
+                {
+                    "id": "6",
+                    "name": "Nike",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "849"
+                }
+            ]
+        },
+        {
+            "male": [
+                {
+                    "id": "1",
+                    "name": "Adidas",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "999"
+                },
+                {
+                    "id": "2",
+                    "name": "Nike",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "789"
+                },
+                {
+                    "id": "3",
+                    "name": "Adidas",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "649"
+                },
+                {
+                    "id": "4",
+                    "name": "Nike",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "899"
+                },
+                {
+                    "id": "5",
+                    "name": "Adidas",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "949"
+                },
+                {
+                    "id": "6",
+                    "name": "Nike",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "799"
+                }
+            ]
+        },
+        {
+            "kids": [
+                {
+                    "id": "1",
+                    "name": "Adidas",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "./images/barn/adidas_kids.jpeg",
+                    "price": "399"
+                },
+                {
+                    "id": "2",
+                    "name": "Adidas",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "./images/barn/adidas_LEGO.jpeg",
+                    "price": "499"
+                },
+                {
+                    "id": "3",
+                    "name": "New Balance",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "./images/barn/new_balance_kids.jpeg",
+                    "price": "299"
+                },
+                {
+                    "id": "4",
+                    "name": "Nike",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "./images/barn/nike_kids.jpeg",
+                    "price": "399"
+                },
+                {
+                    "id": "5",
+                    "name": "Puma",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "./images/barn/puma_kids.jpeg",
+                    "price": "349"
+                },
+                {
+                    "id": "6",
+                    "name": "Reebok",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "./images/barn/reebok_kids.jpeg",
+                    "price": "399"
+                }
+
+                
+            ]
+        }
+    ]
+}
+

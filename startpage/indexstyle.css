@@ -1,5 +1,6 @@
+@charset "UTF-8";
 .hero-div {
-  background-image: url(../images/isaac-wendland-7DCZgKyp8vw-unsplash.jpg);
+  background-image: url(../images/hero-löpande-man.jpg);
   height: 230px;
   background-size: cover;
   background-position: center center;
@@ -16,26 +17,64 @@
 }
 
 .category-div-container #damsko-category {
-  background-image: url(../images/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg);
-  height: 300px;
+  background-image: url(../images/kategori-damskor.jpg);
+  height: 380px;
   background-size: cover;
   background-position: center center;
-  margin: 20px 0 20px 0;
+  margin: 20px;
 }
 
 .category-div-container #herrsko-category {
-  background-image: url(../images/irene-kredenets-dwKiHoqqxk8-unsplash.jpg);
-  height: 300px;
+  background-image: url(../images/kategori-herrskor.jpg);
+  height: 380px;
   background-size: cover;
   background-position: center center;
-  margin: 20px 0 20px 0;
+  margin: 20px;
 }
 
 .category-div-container #barnsko-category {
-  background-image: url(../images/kris-gerhard-0BKZfcamvGg-unsplash.jpg);
-  height: 300px;
+  background-image: url(../images/kategori-barnskor.jpg);
+  height: 380px;
   background-size: cover;
   background-position: center center;
-  margin: 20px 0 20px 0;
+  margin: 20px;
+}
+
+.aside-img {
+  background-image: url(../images/reklam-knyta-sko.jpg);
+  height: 380px;
+  background-size: cover;
+  background-position: center center;
+  margin: 20px;
+  height: 150px;
+}
+
+@media (min-width: 550px) {
+  .category-div-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .category-div-container .category {
+    width: 350px;
+  }
+  .rea-aside {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .rea-aside .aside-img {
+    height: 400px;
+    width: 70%;
+  }
 }
 /*# sourceMappingURL=indexstyle.css.map */

@@ -2,13 +2,14 @@
 @import "../styles/partials/variables";
 @import "../styles/partials/mixins";
 .hero-div{
-    background-image: url(../images/isaac-wendland-7DCZgKyp8vw-unsplash.jpg);
+    background-image: url(../images/hero-löpande-man.jpg);
     height: 230px;
     background-size: cover;
     background-position: center center;
 }
 
 .category-div-container{
+    
     a{
         @include list-style;
     }
@@ -18,19 +19,48 @@
        }
 
     #damsko-category{
-        background-image: url(../images/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg);
+        background-image: url(../images/kategori-damskor.jpg);
         @include category-img;
     }
 
     #herrsko-category{
-        background-image: url(../images/irene-kredenets-dwKiHoqqxk8-unsplash.jpg);
+        background-image: url(../images/kategori-herrskor.jpg);
         @include category-img;
     }
     #barnsko-category {
-
-        background-image: url(../images/kris-gerhard-0BKZfcamvGg-unsplash.jpg);
+        background-image: url(../images/kategori-barnskor.jpg);
         @include category-img;
     }
     
     
+}
+.aside-img{
+    background-image: url(../images/reklam-knyta-sko.jpg);
+    @include category-img;
+    height: 150px;
+    
+}
+
+@media (min-width: $breakpointMedium){
+    .category-div-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    .category{
+        width: 350px;
+    }
+}
+.rea-aside{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+    .aside-img{
+        height: 400px;
+        width: 70%;
+    }
+    
+}
+
 }
