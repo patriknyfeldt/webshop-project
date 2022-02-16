@@ -1,6 +1,6 @@
 {
     "products": [{
-        "category": "Dam sneakers",
+        "category": "dam",
         "items": [
             {
                 "id": "1",
@@ -47,7 +47,7 @@
 
         ]
         },
-        {   "category": "Herr sneakers",
+        {   "category": "herr",
             "items": [
                 {
                     "id": "1",
@@ -95,7 +95,7 @@
             ]
         },
         {
-            "category": "Barn sneakers",
+            "category": "barn",
             "items": [
                 {
                     "id": "1",
