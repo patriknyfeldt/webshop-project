@@ -1,13 +1,69 @@
+<<<<<<< HEAD
 {   
     "products": [
         {
             "female": [
                 {
                     "id": "1",
+=======
+{
+    "products": [{
+        "category": "female",
+        "items": [
+            {
+                "id": "1",
+>>>>>>> 3d7aae7defee8a95352487c2ca6ef364fb1866f4
                     "name": "Adidas",
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                     "image": "w",
                     "price": "899"
+            },
+            {
+                "id": "2",
+                "name": "Nike",
+                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "image": "w",
+                "price": "699"
+            },
+            {
+                "id": "3",
+                "name": "Adidas",
+                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "image": "w",
+                "price": "799"
+            },
+            {
+                "id": "4",
+                "name": "Nike",
+                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "image": "w",
+                "price": "949"
+            },
+            {
+                "id": "5",
+                "name": "Adidas",
+                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "image": "w",
+                "price": "999"
+            },
+            {
+                "id": "6",
+                "name": "Nike",
+                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "image": "w",
+                "price": "849"
+            }
+
+        ]
+        },
+        {   "category": "male",
+            "items": [
+                {
+                    "id": "1",
+                        "name": "Adidas",
+                        "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                        "image": "w",
+                        "price": "899"
                 },
                 {
                     "id": "2",
@@ -44,56 +100,12 @@
                     "image": "w",
                     "price": "849"
                 }
+    
             ]
         },
         {
-            "male": [
-                {
-                    "id": "1",
-                    "name": "Adidas",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "w",
-                    "price": "999"
-                },
-                {
-                    "id": "2",
-                    "name": "Nike",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "w",
-                    "price": "789"
-                },
-                {
-                    "id": "3",
-                    "name": "Adidas",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "w",
-                    "price": "649"
-                },
-                {
-                    "id": "4",
-                    "name": "Nike",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "w",
-                    "price": "899"
-                },
-                {
-                    "id": "5",
-                    "name": "Adidas",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "w",
-                    "price": "949"
-                },
-                {
-                    "id": "6",
-                    "name": "Nike",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "w",
-                    "price": "799"
-                }
-            ]
-        },
-        {
-            "kids": [
+            "category": "kids",
+            "items": [
                 {
                     "id": "1",
                     "name": "Adidas",
@@ -140,6 +152,7 @@
                 
             ]
         }
-    ]
-}
 
+    ]
+        
+}
