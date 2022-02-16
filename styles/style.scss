@@ -58,3 +58,45 @@ body {
 ul {
   @include list-style;
 }
+
+@media (min-width: $breakpointMedium){
+  .header{
+      height: 120px;
+  }
+  .hero-div{
+      height: 300px;
+      
+  }
+  .log-in{
+      display: flex;
+      gap: 10px;
+      li a{
+          @include list-style;
+          color: black;
+      }
+  }
+  .navigation-icons{
+      display: flex;
+      justify-content: flex-end;
+      margin: 20px 10px 0 0;
+  }
+  .hamburger-meny{
+      display: none;
+  }
+  .nav-links{
+      display: flex;
+      height: 100%;
+      align-items: flex-end;
+      margin-bottom: 30px;
+      
+      ul{
+          display: flex;
+          gap: 30px;
+          li a{
+              @include list-style;
+              color: black;
+          }
+          
+      }
+  }
+}

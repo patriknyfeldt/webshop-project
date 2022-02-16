@@ -123,4 +123,57 @@ ul {
   list-style: none;
   text-decoration: none;
 }
+
+@media (min-width: 550px) {
+  .header {
+    height: 120px;
+  }
+  .hero-div {
+    height: 300px;
+  }
+  .log-in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+  }
+  .log-in li a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  .navigation-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 20px 10px 0 0;
+  }
+  .hamburger-meny {
+    display: none;
+  }
+  .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 30px;
+  }
+  .nav-links ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+  }
+  .nav-links ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+}
 /*# sourceMappingURL=style.css.map */
