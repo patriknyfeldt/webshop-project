@@ -37,8 +37,10 @@
                   <li><a class="menu-item" href="">HERR</a></li>
                   <li><a class="menu-item" href="">BARN</a></li>
                 </ul>
-                <button class="nav-btn login-button">Logga in</button>
-                <button class="nav-btn register-button">Registrera dig</button>
+                <div>
+                  <button class="nav-btn login-button">Logga in</button>
+                  <button class="nav-btn register-button">Registrera dig</button>
+                </div>
               </div>
               <div class="navigation-icons">
                 <a><i class="cart fa-solid fa-cart-shopping"></i></a>
@@ -59,37 +61,55 @@
           <input type="button" value="Logga In">
       </div>
       <div>
-          <form>
+          <form id="createaccount-form">
               <ul>
                   <li>
                       <div class="content-column">
-                          <label for="forename">Förnamn*</label>
-                          <input type="text" name="forename" id="forename" required>
+                          <label for="forename-field">Förnamn*</label>
+                          <input type="text" name="forename-field" id="forename-field" required>
                       </div>
                   </li>
                   <li>
                       <div class="content-column">
-                          <label for="lastname">Efternamn*</label>
-                          <input type="text" name="lastname" id="lastname" required>
+                          <label for="lastname-field">Efternamn*</label>
+                          <input type="text" name="lastname-field" id="lastname-field" required>
                       </div>
                   </li>
                   <li>
                       <div class="content-column">
-                          <label for="email">E-postadress*</label>
-                          <input type="email" name="email" id="email" required>
+                          <label for="adress-field">Gatuadress*</label>
+                          <input type="text" name="adress-field" id="adress-field" required>
                       </div>
                   </li>
                   <li>
                       <div class="content-column">
-                          <label for="password">Lösenord*</label>
-                          <input type="password" name="password" id="password" required>
+                          <label for="zipcode-field">Postnummer*</label>
+                          <input type="text" name="zipcode-field" id="zipcode-field" required>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="content-column">
+                          <label for="city-field">Ort*</label>
+                          <input type="text" name="city-field" id="city-field" required>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="content-column">
+                          <label for="email-field">E-postadress*</label>
+                          <input type="email" name="email-field" id="email-field" required>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="content-column">
+                          <label for="password-field">Lösenord*</label>
+                          <input type="password" name="password-field" id="password-field" required>
                       </div>
 
                   </li>
                   <li>
                       <div class="content-column">
-                          <label for="verify-password">Verifiera Lösenord*</label>
-                          <input type="password" name="verify-password" id="verify-password" required>
+                          <label for="verifypassword">Verifiera Lösenord*</label>
+                          <input type="password" name="verifypassword" id="verifypassword" required>
                       </div>
                   </li>
                   <li>
@@ -98,7 +118,7 @@
                   </li>
               </ul>
               <div class="center-content">
-                  <input type="button" value="Registrera dig">
+                  <input type="submit" value="Registrera dig" id="createaccount-btn">
               </div>
           </form>
       </div>
@@ -139,6 +159,6 @@
       <p>© 2022 PSAR, Inc. All Rights Reserved</p>
     </footer>
     <script src="../js/nav.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/createaccount.js"></script>
   </body>
 </html>
