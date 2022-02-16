@@ -1,7 +1,7 @@
 
 const queryString = new URLSearchParams(location.search);
 const qsCategory = queryString.get('category');
-const main = document.getElementById('productlist-main');
+const productList = document.getElementById('product-list');
 let products = [];
 
 // const listProducts = (prodList) => {
@@ -14,12 +14,13 @@ let products = [];
 // }
 
 const drawProduct = (item) => 
-    `<li>
+    `<articel id=${item.id}>
     <h2>${item.name}</h2>
-    <img src=${item.image}></img>
+    <a><img src=${item.image}></img></a>
     <p>Description: ${item.description}<p/>
     <p>Price: ${item.price}<p/>
-    </li>`;
+    <button id="add-btn-${item.id}">lägg till i varukorgen</button>
+    </article>`;
 
 
 const getProducts = async () => {
@@ -30,9 +31,8 @@ const getProducts = async () => {
     products.forEach(product => {
     if(product.category === qsCategory){
         let items = product.items;
-        console.log(items)
-            main.innerHTML = items.map(drawProduct).join('');
-
+            productList.innerHTML = items.map(drawProduct).join('');
+        console.log(productList.innerHTML);
 
 //        list.innerHTML = productsObj.map(drawArticle).join('');
 
