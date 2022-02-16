@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="./styles/formula.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+    />
+    <title>PSAR - Logga in</title>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <img src="../images/sneakers_svg.svg" width="100" alt="" />
+      </div>
+      <nav class="hidden">
+        <ul>
+          <li><a href="">DAM</a></li>
+          <li><a href="">HERR</a></li>
+          <li><a href="">BARN</a></li>
+        </ul>
+      </nav>
+      <div>
+        <ul class="hidden">
+          <li><a href="">Logga in</a></li>
+          <li><a href="">Registrera</a></li>
+        </ul>
+        <div class="navigation-icons">
+          <a><i class="fa-solid fa-cart-shopping"></i></a>
+          <a><i class="fa-solid fa-bars"></i></a>
+          <a class="hidden"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="index-main center-content">
+      <div>
+          <h1>Skapa konto</h1>
+      </div>
+      <div>
+          <input type="button" value="Logga In">
+      </div>
+      <div>
+          <form>
+              <ul>
+                  <li>
+                      <div class="content-column">
+                          <label for="forename">Förnamn*</label>
+                          <input type="text" name="forename" id="forename" required>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="content-column">
+                          <label for="lastname">Efternamn*</label>
+                          <input type="text" name="lastname" id="lastname" required>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="content-column">
+                          <label for="email">E-postadress*</label>
+                          <input type="email" name="email" id="email" required>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="content-column">
+                          <label for="password">Lösenord*</label>
+                          <input type="password" name="password" id="password" required>
+                      </div>
+
+                  </li>
+                  <li>
+                      <div class="content-column">
+                          <label for="verify-password">Verifiera Lösenord*</label>
+                          <input type="password" name="verify-password" id="verify-password" required>
+                      </div>
+                  </li>
+                  <li>
+                      <input type="checkbox" name="checkbox-terms" id="checkbox-terms" required>
+                      <label for="checkbox-terms">Acceptera villkor</label>
+                  </li>
+              </ul>
+              <div class="center-content">
+                  <input type="button" value="Registrera dig">
+              </div>
+          </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="social-media-icons">
+        <a><i class="fa-brands fa-youtube"></i></a>
+        <a><i class="fa-brands fa-twitter"></i></a>
+        <a><i class="fa-brands fa-instagram"></i></a>
+        <a><i class="fa-brands fa-facebook"></i></a>
+      </div>
+      <div class="footer-links">
+        <div class="footer-link-wrapper">
+          <h3>about</h3>
+          <ul>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </div>
+        <div class="footer-link-wrapper">
+          <h3>about</h3>
+          <ul>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </div>
+        <div class="footer-link-wrapper">
+          <h3>about</h3>
+          <ul>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </div>
+      </div>
+      <p>© 2022 PSAR, Inc. All Rights Reserved</p>
+    </footer>
+    <script src="./js/login.js"></script>
+  </body>
+</html>
