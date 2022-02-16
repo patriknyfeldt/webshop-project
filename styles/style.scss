@@ -33,6 +33,7 @@ body {
   }
 }
 
+// Dropdown meny
 .navigation-icons {
   position: fixed;
   z-index: 100;
@@ -40,7 +41,7 @@ body {
   right: 1rem;
   .cart {
     margin-right: 1rem;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 }
 .hamburger {
@@ -60,9 +61,6 @@ body {
 
 .menu-hamburger {
   position: fixed;
-  transform: translateY(-300%);
-  transition: transform 0.2s;
-  top: 21rem;
   text-align: center;
   left: 0;
   right: 0;
@@ -72,9 +70,7 @@ body {
   background: white;
   list-style: none;
   min-height: 250px;
-  .showMenu {
-    transform: translateY(0);
-  }
+  
   .menu-item { 
   display: block;
   color: black;
@@ -148,13 +144,13 @@ ul {
       }
   }
   .navigation-icons{
-      display: flex;
-      justify-content: flex-end;
-      margin: 20px 10px 0 0;
+    visibility: hidden;
   }
-  .hamburger-meny{
-      display: none;
+
+  .menu-hamburger {
+    display: none;
   }
+
   .nav-links{
       display: flex;
       height: 100%;
