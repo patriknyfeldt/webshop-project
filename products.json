@@ -4,10 +4,10 @@
         "items": [
             {
                 "id": "1",
-                    "name": "Adidas",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "w",
-                    "price": "899"
+                "name": "Adidas",
+                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "image": "w",
+                "price": "899"
             },
             {
                 "id": "2",
@@ -51,10 +51,10 @@
             "items": [
                 {
                     "id": "1",
-                        "name": "Adidas",
-                        "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                        "image": "w",
-                        "price": "899"
+                    "name": "Adidas",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "899"
                 },
                 {
                     "id": "2",

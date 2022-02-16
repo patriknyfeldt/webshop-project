@@ -14,8 +14,6 @@ if(activeUser){
     activeUserDisplay.innerText = `Welcome ${activeUser.email}!`;
 }
 
-console.log(userList);
-
 document.getElementById("login-button").addEventListener("click", e =>{
     e.preventDefault();
     if(emailField.value === "" || passwordField.value === ""){
