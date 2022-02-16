@@ -1,6 +1,8 @@
 const menuHamburger = document.querySelector('.menu-hamburger');
 const menuItems = document.querySelectorAll('.menu-item');
 
+menuHamburger.style.display = 'none';
+
 const hamburger = document.querySelector('.hamburger');
 const menuIcon = document.querySelector('.menu-icon');
 const closeIcon = document.querySelector('.close-icon');
