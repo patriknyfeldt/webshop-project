@@ -1,13 +1,13 @@
 {
     "products": [{
-        "category": "female",
+        "category": "Dam sneakers",
         "items": [
             {
                 "id": "1",
-                    "name": "Adidas",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "w",
-                    "price": "899"
+                "name": "Adidas",
+                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "image": "w",
+                "price": "899"
             },
             {
                 "id": "2",
@@ -47,14 +47,14 @@
 
         ]
         },
-        {   "category": "male",
+        {   "category": "Herr sneakers",
             "items": [
                 {
                     "id": "1",
-                        "name": "Adidas",
-                        "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                        "image": "w",
-                        "price": "899"
+                    "name": "Adidas",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "899"
                 },
                 {
                     "id": "2",
@@ -95,7 +95,7 @@
             ]
         },
         {
-            "category": "kids",
+            "category": "Barn sneakers",
             "items": [
                 {
                     "id": "1",
