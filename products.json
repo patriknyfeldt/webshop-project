@@ -1,53 +1,53 @@
 {
     "products": [{
-        "category": "female",
+        "category": "dam",
         "items": [
             {
                 "id": "1",
                 "name": "Adidas",
                 "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                "image": "w", 
+                "image": "../images/dam/kdamskor-svarta-puma.jpg",
                 "price": "899"
             },
             {
                 "id": "2",
                 "name": "Nike",
                 "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                "image": "w",
+                "image": "'..images/dam/damskor'-vit-adidas.jpg",
                 "price": "699"
             },
             {
                 "id": "3",
                 "name": "Adidas",
                 "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                "image": "w",
+                "image": "..images/dam/damskor-vita-converse.jpg",
                 "price": "799"
             },
             {
                 "id": "4",
                 "name": "Nike",
                 "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                "image": "w",
+                "image": "..images/dam/damskor-vita-fila.jpg",
                 "price": "949"
             },
             {
                 "id": "5",
                 "name": "Adidas",
                 "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                "image": "w",
+                "image": "../images/dam/damskor-vita-nb.png",
                 "price": "999"
             },
             {
                 "id": "6",
                 "name": "Nike",
                 "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                "image": "w",
+                "image": "../images.dam/damskor-vita-nike.jpg",
                 "price": "849"
             }
 
         ]
         },
-        {   "category": "male",
+        {   "category": "herr",
             "items": [
                 {
                     "id": "1",
@@ -95,48 +95,48 @@
             ]
         },
         {
-            "category": "kids",
+            "category": "barn",
             "items": [
                 {
                     "id": "1",
                     "name": "Adidas",
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "./images/barn/adidas_kids.jpeg",
+                    "image": "../images/barn/adidas_kids.jpeg",
                     "price": "399"
                 },
                 {
                     "id": "2",
                     "name": "Adidas",
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "./images/barn/adidas_LEGO.jpeg",
+                    "image": "../images/barn/adidas_LEGO.jpeg",
                     "price": "499"
                 },
                 {
                     "id": "3",
                     "name": "New Balance",
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "./images/barn/new_balance_kids.jpeg",
+                    "image": "../images/barn/new_balance_kids.jpeg",
                     "price": "299"
                 },
                 {
                     "id": "4",
                     "name": "Nike",
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "./images/barn/nike_kids.jpeg",
+                    "image": "../images/barn/nike_kids.jpeg",
                     "price": "399"
                 },
                 {
                     "id": "5",
                     "name": "Puma",
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "./images/barn/puma_kids.jpeg",
+                    "image": "../images/barn/puma_kids.jpeg",
                     "price": "349"
                 },
                 {
                     "id": "6",
                     "name": "Reebok",
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "./images/barn/reebok_kids.jpeg",
+                    "image": "../images/barn/reebok_kids.jpeg",
                     "price": "399"
                 }
 
