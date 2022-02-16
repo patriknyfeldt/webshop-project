@@ -35,8 +35,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: auto;
-  padding: 10px;
+  position: fixed;
+  background: white;
+  width: 100%;
+  padding: 20px 10px;
 }
 
 .header .navigation-icons {
@@ -56,11 +58,12 @@ body {
 
 .navigation-icons .cart {
   margin-right: 1rem;
-  font-size: 35px;
+  font-size: 2.2rem;
 }
 
 .hamburger {
-  font-size: 45px;
+  width: 50px;
+  height: 50px;
   border: none;
   background: white;
 }
@@ -69,15 +72,14 @@ body {
   display: none;
 }
 
-.hamburger .showMenu {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.hamburger .menu-icon, .hamburger .close-icon {
+  font-size: 3rem;
 }
 
 .menu-hamburger {
   position: fixed;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-300%);
+          transform: translateY(-300%);
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
@@ -87,11 +89,16 @@ body {
   left: 0;
   right: 0;
   bottom: 50%;
+  z-index: 99;
   color: white;
   background: white;
   list-style: none;
   min-height: 250px;
-  padding-top: 3rem;
+}
+
+.menu-hamburger .showMenu {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .menu-hamburger .menu-item {
@@ -99,7 +106,26 @@ body {
   color: black;
   font-size: 1.6rem;
   text-decoration: none;
-  margin-bottom: 1rem;
+  margin: 1.3rem 0;
+}
+
+.menu-hamburger .nav-btn {
+  border-style: none;
+  width: 100px;
+  padding: 5px 0;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+.menu-hamburger .login-button {
+  background: #ecffde;
+  border: 1px solid #a7be97;
+}
+
+.menu-hamburger .register-button {
+  background: #89a3b3;
+  border: 1px solid #5c717e;
+  color: white;
 }
 
 /* .index-main {
