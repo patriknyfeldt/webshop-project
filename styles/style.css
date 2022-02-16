@@ -58,7 +58,7 @@ body {
 
 .navigation-icons .cart {
   margin-right: 1rem;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
 }
 
 .hamburger {
@@ -78,13 +78,6 @@ body {
 
 .menu-hamburger {
   position: fixed;
-  -webkit-transform: translateY(-300%);
-          transform: translateY(-300%);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-  top: 21rem;
   text-align: center;
   left: 0;
   right: 0;
@@ -94,11 +87,6 @@ body {
   background: white;
   list-style: none;
   min-height: 250px;
-}
-
-.menu-hamburger .showMenu {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .menu-hamburger .menu-item {
@@ -227,15 +215,9 @@ ul {
     color: black;
   }
   .navigation-icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    margin: 20px 10px 0 0;
+    visibility: hidden;
   }
-  .hamburger-meny {
+  .menu-hamburger {
     display: none;
   }
   .nav-links {
