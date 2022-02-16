@@ -1,22 +1,13 @@
-<<<<<<< HEAD
-{   
-    "products": [
-        {
-            "female": [
-                {
-                    "id": "1",
-=======
 {
     "products": [{
         "category": "female",
         "items": [
             {
                 "id": "1",
->>>>>>> 3d7aae7defee8a95352487c2ca6ef364fb1866f4
-                    "name": "Adidas",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "w",
-                    "price": "899"
+                "name": "Adidas",
+                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "image": "w",
+                "price": "899"
             },
             {
                 "id": "2",
@@ -60,10 +51,10 @@
             "items": [
                 {
                     "id": "1",
-                        "name": "Adidas",
-                        "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                        "image": "w",
-                        "price": "899"
+                    "name": "Adidas",
+                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "image": "w",
+                    "price": "899"
                 },
                 {
                     "id": "2",
