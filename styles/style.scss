@@ -23,6 +23,54 @@ body {
   border: 2px solid black;
   padding: 10px;
 }
+
+.navigation-icons {
+  position: fixed;
+  z-index: 100;
+  top: 2rem;
+  right: 1rem;
+  .cart {
+    margin-right: 1rem;
+    font-size: 35px;
+  }
+}
+.hamburger {
+  font-size: 45px;
+  border: none;
+  background: white;
+
+  .close-icon {
+    display: none;
+  }
+  
+  .showMenu {
+    transform: translateY(0);
+  }
+}
+
+.menu-hamburger {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 21rem;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  color: white;
+  background: white;
+  list-style: none;
+  min-height: 250px;
+  padding-top: 3rem;
+  .menu-item { 
+  display: block;
+  color: black;
+  font-size: 1.6rem;
+  text-decoration:none;
+  margin-bottom: 1rem;
+  }
+}
+
 /* .index-main {
   height: 50vh;
 } */
