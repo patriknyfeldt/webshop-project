@@ -15,7 +15,7 @@
   <body>
     <header class="header">
       <div>
-        <img src="../webshop-project/images/sneakers_svg.svg" width="100" alt="" />
+        <img src="./images/sneakers_svg.svg" width="100" alt="" />
       </div>
       <nav class="hidden nav-links">
         <ul>
@@ -30,11 +30,23 @@
           |
           <li><a href="">Registrera</a></li>
         </ul>
-        <div class="navigation-icons">
-          <a><i class="fa-solid fa-cart-shopping"></i></a>
-          <a class="hamburger-meny"><i class="fa-solid fa-bars"></i></a>
-          <a class="hidden"><i class="fa-solid fa-xmark"></i></a>
-        </div>
+        
+        <div class="menu-hamburger">
+        <ul>
+          <li><a class="menu-item" href="">DAM</a></li>
+          <li><a class="menu-item" href="">HERR</a></li>
+          <li><a class="menu-item" href="">BARN</a></li>
+        </ul>
+        <button class="login-button">Logga in</button>
+        <button class="register-button">Registrera dig</button>
+      </div>
+      <div class="navigation-icons">
+          <a><i class="cart fa-solid fa-cart-shopping"></i></a>
+        <button class="hamburger">
+              <i class="menu-icon fa-solid fa-bars"></i>
+              <i class="close-icon fa-solid fa-xmark"></i>
+          </button>
+            </div>
       </div>
     </header>
     <main class="index-main">
@@ -111,5 +123,6 @@
       </div>
       <small class="copyright">© 2022 PSAR, Inc. All Rights Reserved</small>
     </footer>
+    <script src="nav.js"></script>
   </body>
 </html>
