@@ -1,14 +1,22 @@
 
 const queryString = new URLSearchParams(location.search);
 const qsCategory = queryString.get('category');
+document.querySelector('h1').innerText = qsCategory;
 const productList = document.getElementById('product-list');
 let products = [];
 
+const searchProductsForm = document.getElementById('search-products-form');
+const searchProductsInputField = document.getElementById('search-products-inputfield');
+searchProductsForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log(searchProductsInputField.value)
+    
+})
 
 
 const drawProduct = (item) =>
     
-    `<section class="products-wrapper">
+    `<div class="products-wrapper">
     <articel class="product-article "id=${item.id}>
     <h2>${item.name}</h2>
     <div class="article-content-wrapper">
@@ -24,7 +32,7 @@ const drawProduct = (item) =>
     </div>
     </div>
     </article>
-    </section>`;
+    </div>`;
 
 
 const getProducts = async () => {
@@ -35,8 +43,7 @@ const getProducts = async () => {
     products.forEach(product => {
     if(product.category === qsCategory){
         let items = product.items;
-            productList.innerHTML = items.map(drawProduct).join('');
-        console.log(productList.innerHTML);
+        productList.innerHTML = items.map(drawProduct).join('');
     }
     })
 }
