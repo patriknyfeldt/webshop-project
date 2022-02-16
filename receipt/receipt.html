@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="../styles/style.css">
     <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
-    />
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+  />
     <title>PSAR - Kvitto</title>
   </head>
   <body>
     <header class="header">
       <div>
-        <img src="/images/sneakers_svg.svg" width="100" alt="" />
+          <img src="../images/sneakers_svg.svg" width="100" alt="logo" />
       </div>
-      <nav class="hidden">
+      <nav class="hidden nav-links">
         <ul>
           <li><a href="">DAM</a></li>
           <li><a href="">HERR</a></li>
@@ -24,15 +24,30 @@
         </ul>
       </nav>
       <div>
-        <ul class="hidden">
+        <ul class="hidden log-in">
           <li><a href="">Logga in</a></li>
           <li><a href="">Registrera</a></li>
         </ul>
-        <div class="navigation-icons">
-          <a><i class="fa-solid fa-cart-shopping"></i></a>
-          <a><i class="fa-solid fa-bars"></i></a>
-          <a class="hidden"><i class="fa-solid fa-xmark"></i></a>
-        </div>
+      
+        <!--Dropdown menu börjar här-->
+        <div class="menu-hamburger">
+            <ul>
+              <li><a class="menu-item" href="">DAM</a></li>
+              <li><a class="menu-item" href="">HERR</a></li>
+              <li><a class="menu-item" href="">BARN</a></li>
+            </ul>
+            <button class="nav-btn login-button">Logga in</button>
+            <button class="nav-btn register-button">Registrera dig</button>
+          </div>
+          <div class="navigation-icons">
+            <a><i class="cart fa-solid fa-cart-shopping"></i></a>
+            <button class="hamburger">
+                  <i class="menu-icon fa-solid fa-bars"></i>
+                  <i class="close-icon fa-solid fa-xmark"></i>
+              </button>
+                </div>
+                <!--Dropdown slutar här-->
+        
       </div>
     </header>
     <main class="index-main"></main>
@@ -72,5 +87,6 @@
       </div>
       <p>© 2022 PSAR, Inc. All Rights Reserved</p>
     </footer>
+    <script src="/webshop-project/nav.js"></script>
   </body>
 </html>
