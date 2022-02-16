@@ -1,0 +1,8 @@
+[{
+    email:"tommy.suarez@gmail.com",
+    password:"rickenbacker"
+},
+{
+    email:"rebecca.siddons@gmail.com",
+    password:"vonbraun"
+}]
