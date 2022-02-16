@@ -47,6 +47,64 @@ body {
   gap: 20px;
 }
 
+.navigation-icons {
+  position: fixed;
+  z-index: 100;
+  top: 2rem;
+  right: 1rem;
+}
+
+.navigation-icons .cart {
+  margin-right: 1rem;
+  font-size: 35px;
+}
+
+.hamburger {
+  font-size: 45px;
+  border: none;
+  background: white;
+}
+
+.hamburger .close-icon {
+  display: none;
+}
+
+.hamburger .showMenu {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.menu-hamburger {
+  position: fixed;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  top: 21rem;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  color: white;
+  background: white;
+  list-style: none;
+  min-height: 250px;
+  padding-top: 3rem;
+}
+
+.menu-hamburger .menu-item {
+  display: block;
+  color: black;
+  font-size: 1.6rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+/* .index-main {
+  height: 50vh;
+} */
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
