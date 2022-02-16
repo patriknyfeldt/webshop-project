@@ -1,5 +1,8 @@
 //använd mixins och variabler istället
-
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
 .products-wrapper {
   display: flex;
   justify-content: center;
