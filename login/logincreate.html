@@ -37,8 +37,10 @@
                   <li><a class="menu-item" href="">HERR</a></li>
                   <li><a class="menu-item" href="">BARN</a></li>
                 </ul>
-                <button class="nav-btn login-button">Logga in</button>
-                <button class="nav-btn register-button">Registrera dig</button>
+                <div>
+                  <button class="nav-btn login-button">Logga in</button>
+                  <button class="nav-btn register-button">Registrera dig</button>
+                </div>
               </div>
               <div class="navigation-icons">
                 <a><i class="cart fa-solid fa-cart-shopping"></i></a>
@@ -75,6 +77,24 @@
                   </li>
                   <li>
                       <div class="content-column">
+                          <label for="adress-field">Gatuadress*</label>
+                          <input type="text" name="adress-field" id="adress-field" required>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="content-column">
+                          <label for="zipcode-field">Postnummer*</label>
+                          <input type="text" name="zipcode-field" id="zipcode-field" required>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="content-column">
+                          <label for="city-field">Ort*</label>
+                          <input type="text" name="city-field" id="city-field" required>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="content-column">
                           <label for="email-field">E-postadress*</label>
                           <input type="email" name="email-field" id="email-field" required>
                       </div>
@@ -88,8 +108,8 @@
                   </li>
                   <li>
                       <div class="content-column">
-                          <label for="verifypassword-field">Verifiera Lösenord*</label>
-                          <input type="password" name="verifypassword-field" id="verifypassword-field" required>
+                          <label for="verifypassword">Verifiera Lösenord*</label>
+                          <input type="password" name="verifypassword" id="verifypassword" required>
                       </div>
                   </li>
                   <li>
@@ -98,7 +118,7 @@
                   </li>
               </ul>
               <div class="center-content">
-                  <input type="button" value="Registrera dig" id="createaccount-btn">
+                  <input type="submit" value="Registrera dig" id="createaccount-btn">
               </div>
           </form>
       </div>
