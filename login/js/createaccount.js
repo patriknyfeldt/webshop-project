@@ -1,17 +1,29 @@
-document.getElementById("createaccount-btn").addEventListener("click", (e)=>{
+const errorMessage = document.getElementById("error-message");
+console.log(errorMessage);
+
+document.getElementById("createaccount-btn").addEventListener("click", e =>{
     e.preventDefault();
     //get every input fields from form
     const inputFields = Array.from(document.querySelectorAll("form input[type='text'],form input[type='email'], form input[type='password']"));
-    if(inputFields.find(e=> e.value === "")){
-        console.log("Field is empty");
+
+    let hasEmptyField = false;
+    inputFields.forEach(field =>{
+        if(field.required && field.validity.valueMissing){
+            field.setCustomValidity("Fyll in tom fält.")
+            printErrorMessage("Tom fält");
+            hasEmptyField = true;
+        }
+    });
+
+    if(hasEmptyField){
         return;
     }
     else if(document.getElementById("password-field").value !== document.getElementById("verifypassword").value){
-        console.log("Passwords doesn't match");
+        printErrorMessage("Lösenord är inte matchade.")
         return;
     }
     else if(!document.getElementById("checkbox-terms").checked){
-        console.log("You must accept the terms.");
+        printErrorMessage("Du måste acceptera villkoren.")
         return;
     }
     console.log("create account function");
@@ -21,13 +33,12 @@ document.getElementById("createaccount-btn").addEventListener("click", (e)=>{
     inputFields.filter(e=>e.id.includes("-field")).forEach(field =>{
         const variableName =  field.id.substring(0, field.id.indexOf("-field"));
         newUser[variableName] = field.value;
-        console.log(newUser[variableName]);
     })
     const userList = JSON.parse(localStorage.getItem("userList"));
 
     //cehck if user exists. If true, abort operation. Else add new user to database
     if(userList.find(e=> e.email === newUser.email)){
-        console.log("User already exists.")
+        printErrorMessage("Det finns en redan existerande användare med den eposten.");
         return;
     }
     else{
@@ -37,5 +48,16 @@ document.getElementById("createaccount-btn").addEventListener("click", (e)=>{
         inputFields.forEach(e=>{
             e.value = "";
         })
+        //is error message box still visible
+        if(!errorMessage.parentElement.classList.contains("hidden")){
+            errorMessage.parentElement.classList.add("hidden");
+        }
     }
 })
+
+function printErrorMessage(text){
+    if(errorMessage.parentElement.classList.contains("hidden")){
+        errorMessage.parentElement.classList.remove("hidden");
+    }
+    errorMessage.innerText = text;
+}
