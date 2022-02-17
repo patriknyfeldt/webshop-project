@@ -3,16 +3,17 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 }
+
 .products-wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
   .product-article {
+    max-width: 500px;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    flex: 1;
+    // flex: 1;
     margin: 10px;
     background: #faf4f4;
     h2 {

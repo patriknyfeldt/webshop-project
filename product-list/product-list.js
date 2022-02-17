@@ -33,7 +33,6 @@ const getProducts = async (inputValue) => {
     const response = await fetch('../products.json');
     const data = await response.json();
     products = [...data.products];
-    
     products.forEach(product => {
         if(product.category === qsCategory){
         let items = product.items;        
@@ -65,7 +64,7 @@ const getSearchedProducts = ((item, inputValue) => {
 
 })
 
-searchProductsForm.addEventListener('input', (e) => {
+searchProductsForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let inputValue = searchProductsInputField.value.toLowerCase();
     getProducts(inputValue);
