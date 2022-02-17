@@ -38,22 +38,34 @@ const getProducts = async (inputValue) => {
     
     products.forEach(product => {
         if(product.category === qsCategory){
-            let items = product.items;        
+        let items = product.items;        
         productList.innerHTML = items.map(drawProduct).join(''); 
-        items.forEach(item => {
-            
-            let itemName = item.name.toLowerCase();
-            if(inputValue === itemName){
-                searchedItems = [];
-                searchedItems.push(item);
-                console.log(searchedItems);
-                productList.innerHTML = searchedItems.map(drawProduct).join(''); 
-            }
-        })
+        searchedItems = [];
 
+        items.forEach(item => {
+            getSearchedProducts(item, inputValue);
+        })
     }
     })
 }
+
+const getSearchedProducts = ((item, inputValue) => {
+    let itemDescription = item.description.toLowerCase();
+    let itemName = item.name.toLowerCase();
+
+    if(itemDescription.includes(inputValue)){
+        searchedItems.push(item);
+        console.log(searchedItems);
+        productList.innerHTML = searchedItems.map(drawProduct).join(''); 
+
+    }
+    if(inputValue === itemName){
+        searchedItems.push(item);
+        console.log(searchedItems);
+        productList.innerHTML = searchedItems.map(drawProduct).join(''); 
+    }
+
+})
 
 searchProductsForm.addEventListener('input', (e) => {
     e.preventDefault();
