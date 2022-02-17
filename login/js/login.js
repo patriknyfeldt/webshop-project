@@ -1,7 +1,7 @@
 const emailField = document.getElementById("email-field");
 const passwordField = document.getElementById("password-field");
 const activeUserDisplay = document.getElementById("active-user-display");
-let activeUser = JSON.parse(localStorage.getItem("user"));
+const errorMessageDisplay = document.getElementById("error-message");
 
 let userList = [];
 const userData = JSON.parse(localStorage.getItem("userList"))
@@ -10,45 +10,42 @@ if(userData){
     userList = [...userData]
 }
 
-if(activeUser){
-    activeUserDisplay.innerText = `Welcome ${activeUser.email}!`;
-}
-
 document.getElementById("login-button").addEventListener("click", e =>{
     e.preventDefault();
     if(emailField.value === "" || passwordField.value === ""){
         passwordField.value = "";
-        console.log("required fields are empty");
+        printErrorMessage("Fyll in de tomma fälten.");
         return;
     }
-    const loginInfo = {
-        email: emailField.value,
-        password: passwordField.value
-    }
-
     
-    if(isExistingUser(loginInfo)){
-        localStorage.setItem("user", JSON.stringify(loginInfo));
-        activeUser = loginInfo;
-        activeUserDisplay.innerText = `Welcome ${activeUser.email}!`;
+    if(userExists(emailField.value)){
+        const user = getUser(emailField.value);
+        if(user.password !== passwordField.value){
+            printErrorMessage("Fel lösenord.");
+            return;
+        }
+        localStorage.setItem("user", JSON.stringify(user));
         emailField.value = "";
         passwordField.value = "";
+        location.reload();
     }
     else{
-        activeUserDisplay.innerText = `User doesn't exist`;
+        printErrorMessage("Finns ingen användare med den eposten.")
         passwordField.value = "";
     }
 })
 
-const isExistingUser = (loginDetail) => {
-    console.log(`loginDetail: ${loginDetail.email} ${loginDetail.password}`);
-    let flag = false;
-    userList.forEach(user =>{
-        console.log(`user: ${user.email} ${user.password}`);
-        if(user.email === loginDetail.email && user.password === loginDetail.password){
-            console.log("found user!");
-            flag = true;
-        }
-    })
-    return flag;
+const getUser = (email) => {
+    return userList.find(user => user.email === email);
+}
+
+const userExists = (email) =>{
+    return userList.find(user => user.email === email)? true : false;
+}
+
+function printErrorMessage(text){
+    if(errorMessageDisplay.parentElement.classList.contains("hidden")){
+        errorMessageDisplay.parentElement.classList.remove("hidden");
+    }
+    errorMessageDisplay.innerText = text;
 }
