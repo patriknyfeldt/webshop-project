@@ -1,4 +1,3 @@
-
 const queryString = new URLSearchParams(location.search);
 const qsCategory = queryString.get('category');
 document.querySelector('h1').innerText = qsCategory;
@@ -9,7 +8,7 @@ const searchProductsForm = document.getElementById('search-products-form');
 const searchProductsInputField = document.getElementById('search-products-inputfield');
 searchProductsForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(searchProductsInputField.value)
+    console.log(searchProductsInputField.value);
     
 })
 
@@ -17,21 +16,21 @@ searchProductsForm.addEventListener('submit', (e) => {
 const drawProduct = (item) =>
     
     `<div class="products-wrapper">
-    <articel class="product-article "id=${item.id}>
-    <h2>${item.name}</h2>
-    <div class="article-content-wrapper">
-    <div class="article-left-wrapper">
-    <a><img class="product-img" src=${item.image}></img></a>
-    </div>
-    <div class="article-right-wrapper">
-    <p>Description: ${item.description}<p/>
-    <br>
-    <p>Price: ${item.price}<p/>
-    <br>
-    <button id="add-btn-${item.id}">lägg till i varukorgen</button>
-    </div>
-    </div>
-    </article>
+        <articel class="product-article "id=${item.id}>
+            <h2>${item.name}</h2>
+            <div class="article-content-wrapper">
+                <div class="article-left-wrapper">
+                    <a><img class="product-img" src=${item.image}></img></a>
+                </div>
+                <div class="article-right-wrapper">
+                    <p>Description: ${item.description}<p/>
+                    <br>
+                    <p>Price: ${item.price}<p/>
+                    <br>
+                    <button id="add-btn-${item.id}">lägg till i varukorgen</button>
+                </div>
+            </div>
+        </article>
     </div>`;
 
 
