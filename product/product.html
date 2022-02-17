@@ -26,7 +26,8 @@
       <div>
         <ul class="hidden log-in">
           <li><a><i class="cart fa-solid fa-cart-shopping"></i></a></li>
-          <li><a href="../login/login.html">Logga in</a></li>
+          <li><a id="user-name" class="hidden" href="../index.html"></a></li>
+          <li id="log-in-link"><a href="../login/login.html">Logga in</a></li>
           <li><a href="../login/logincreate.html">Registrera</a></li>
         </ul>
                 <!--Dropdown menu börjar här-->
@@ -49,7 +50,10 @@
                         <!--Dropdown slutar här-->
       </div>
     </header>
-    <main class="index-main"></main>
+    <main class="index-main">
+      <section id="product-info">
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="social-media-icons">
@@ -86,6 +90,8 @@
       </div>
       <p>© 2022 PSAR, Inc. All Rights Reserved</p>
     </footer>
+    <script src="../js/main.js"></script>
     <script src="../js/nav.js"></script>
+    <script src="../js/product.js"></script>
   </body>
 </html>
