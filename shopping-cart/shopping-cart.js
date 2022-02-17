@@ -5,8 +5,6 @@ let savedProductList = savedProducts.list;
 console.log(savedProductList);
 
 
-
-
     savedProductList.forEach(product => {
     chosenProductCart.innerHTML += 
     `<section class="products-wrapper">
