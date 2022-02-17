@@ -3,15 +3,10 @@ const qsCategory = queryString.get('category');
 document.querySelector('h1').innerText = qsCategory;
 const productList = document.getElementById('product-list');
 let products = [];
+let searchedItems = [];
 
 const searchProductsForm = document.getElementById('search-products-form');
 const searchProductsInputField = document.getElementById('search-products-inputfield');
-searchProductsForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log(searchProductsInputField.value);
-    
-})
-
 
 const drawProduct = (item) =>
     
@@ -34,16 +29,34 @@ const drawProduct = (item) =>
     </div>`;
 
 
-const getProducts = async () => {
+const getProducts = async (inputValue) => {
     const response = await fetch('../products.json');
     const data = await response.json();
     products = [...data.products];
     
     products.forEach(product => {
-    if(product.category === qsCategory){
-        let items = product.items;
-        productList.innerHTML = items.map(drawProduct).join('');
+        if(product.category === qsCategory){
+            let items = product.items;        
+        productList.innerHTML = items.map(drawProduct).join(''); 
+        items.forEach(item => {
+            
+            let itemName = item.name.toLowerCase();
+            if(inputValue === itemName){
+                searchedItems = [];
+                searchedItems.push(item);
+                console.log(searchedItems);
+                productList.innerHTML = searchedItems.map(drawProduct).join(''); 
+            }
+        })
+
     }
     })
 }
+
+searchProductsForm.addEventListener('input', (e) => {
+    e.preventDefault();
+    let inputValue = searchProductsInputField.value.toLowerCase();
+    getProducts(inputValue);
+    
+})
 getProducts();
