@@ -5,6 +5,7 @@ const productList = document.getElementById('product-list');
 let buttons;
 let articles;
 let products = [];
+let listedProducts = []
 let searchedItems = [];
 
 const searchProductsForm = document.getElementById('search-products-form');
@@ -33,6 +34,9 @@ const drawProduct = (item) =>
         const response = await fetch('../products.json');
         const data = await response.json();
         products = [...data.products];
+        listedProducts = products.find(e => e.category === qsCategory).items;
+        /* console.log(listedProducts); */
+       /*  console.log(products); */
     
         products.forEach(product => {
             if(product.category === qsCategory){
@@ -52,28 +56,28 @@ const drawProduct = (item) =>
         buttons = productList.querySelectorAll(".add-to-cart");
         articles = productList.querySelectorAll(".product-article");
         shoppingCart = document.getElementById("shopping-cart-list");
-        let articlesForChart = [];
-        let artId;
-
+        
         buttons.forEach(button => {
             
             button.addEventListener('click', (e) => {
-                    let productID = e.target.id.slice(7);
+                let productID = e.target.id.slice(7);
+                
+                const chosenProduct = listedProducts.find(product => product.id === productID);
+                
+                /* console.log(chosenProduct); */
 
-                    articles.forEach(article =>{
-                     artId = article.id.slice(8);
-                     console.log(article);
-                     console.log(articleObject);
-                     if(artId === productID){
-                         articlesForChart.push(articleObject);
+                let articlesForChartObject = JSON.parse(localStorage.getItem("basket"));
+                let articlesForChart = [];
+                if(articlesForChartObject){
+                    articlesForChart = articlesForChartObject.list;
+                }
+                articlesForChart.push(chosenProduct);
 
-                         let articleObject = {
-                             "article": article
-                         }
-                        localStorage.setItem("basket", JSON.stringify(articlesForChart));
-                   }   
-                                        
-                 })
+                const basketList = {
+                    list: articlesForChart
+                }
+                
+                localStorage.setItem("basket", JSON.stringify(basketList));
                 
                 
             })
