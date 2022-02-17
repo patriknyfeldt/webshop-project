@@ -25,9 +25,10 @@
         </ul>
       </nav>
       <div>
-        <ul class="hidden log-in">
+        <ul class="log-in">
           <li><a><i class="cart fa-solid fa-cart-shopping"></i></a></li>
-          <li><a href="./login.html">Logga in</a></li>
+          <li><a id="user-name" class="hidden" href="../index.html"></a></li>
+          <li id="log-in-link"><a href="./login.html">Logga in</a></li>
           <li><a href="./logincreate.html">Registrera</a></li>
         </ul>
  
@@ -67,7 +68,7 @@
             <input type="password" name="password" id="password-field" required>
           </div>
           <div class="content-column">
-            <a href="../index.html">Logga in</a>
+            <input type="button" id="login-button" value="Logga in">
           </div>
         </form>
       </div>
@@ -111,6 +112,7 @@
       </div>
       <p>© 2022 PSAR, Inc. All Rights Reserved</p>
     </footer>
+    <script src="../js/main.js"></script>
     <script src="../js/nav.js"></script>
     <script src="./js/login.js"></script>
   </body>
