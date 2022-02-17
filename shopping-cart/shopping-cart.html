@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+    />
+    <link rel="stylesheet" href="shopping-cart-styles/shoppingcart-style.css">
+    <title>PSAR varukorg</title>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+          <img src="../images/sneakers_svg.svg" width="100" alt="" />
+      </div>
+      <nav class="hidden nav-links">
+        <ul>
+          <li><a href="">DAM</a></li>
+          <li><a href="">HERR</a></li>
+          <li><a href="">BARN</a></li>
+        </ul>
+      </nav>
+      <div>
+        <ul class="hidden log-in">
+          <li><a><i class="cart fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="../login/login.html">Logga in</a></li>
+          <li><a href="../login/logincreate.html">Registrera</a></li>
+        </ul>
+                <!--Dropdown menu börjar här-->
+                <div class="menu-hamburger">
+                    <ul>
+                      <li><a class="menu-item" href="">DAM</a></li>
+                      <li><a class="menu-item" href="">HERR</a></li>
+                      <li><a class="menu-item" href="">BARN</a></li>
+                    </ul>
+                    <button class="nav-btn login-button">Logga in</button>
+                    <button class="nav-btn register-button">Registrera dig</button>
+                  </div>
+                  <div class="navigation-icons">
+                    <a><i class="cart fa-solid fa-cart-shopping"></i></a>
+                    <button class="hamburger">
+                          <i class="menu-icon fa-solid fa-bars"></i>
+                          <i class="close-icon fa-solid fa-xmark"></i>
+                      </button>
+                        </div>
+                        <!--Dropdown slutar här-->
+      </div>
+    </header>
+    <main class="shopping-cart-main">
+        <h1>Kndvagnen</h1>
+        <section id="chosen-product-cart">
+          <article>
+
+            <div class="shopping-cart-img">
+              <img src="../images/dam/damskor_svarta_puma.jpg" alt="">
+            </div>
+
+            <div class="shopping-cart-text">
+              <h2></h2>
+              <p></p>
+            </div>
+
+            <div class="shopping-cart-counter">
+              <p>antal</p>
+              <p>1</p>
+            
+              <div class="shopping-cart-counter-btn">
+                <button></button>
+                <button></button>
+              </div>
+
+              <b>pris:15.000</b>
+            </div>
+            
+            
+
+            
+          </article>
+        </section>
+    </main>
+
+  <!--   <footer class="footer">
+      <div class="social-media-icons">
+        <a><i class="fa-brands fa-youtube"></i></a>
+        <a><i class="fa-brands fa-twitter"></i></a>
+        <a><i class="fa-brands fa-instagram"></i></a>
+        <a><i class="fa-brands fa-facebook"></i></a>
+      </div>
+      <div class="footer-links">
+        <div class="footer-link-wrapper">
+          <h3>about</h3>
+          <ul>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </div>
+        <div class="footer-link-wrapper">
+          <h3>about</h3>
+          <ul>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </div>
+        <div class="footer-link-wrapper">
+          <h3>about</h3>
+          <ul>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </div>
+      </div>
+      <p>© 2022 PSAR, Inc. All Rights Reserved</p>
+    </footer> -->
+    <script src="./shopping-cart.js"></script>
+    <script src="../js/nav.js"></script>
+  </body>
+</html>
