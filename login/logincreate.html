@@ -58,15 +58,12 @@
           <h1>Skapa konto</h1>
       </div>
       <div>
-          <input type="button" value="Logga In">
-      </div>
-      <div>
           <form id="createaccount-form">
-              <ul>
+              <ul class="center-content">
                   <li>
                       <div class="content-column">
                           <label for="forename-field">Förnamn*</label>
-                          <input type="text" name="forename-field" id="forename-field" required>
+                          <input type="text" name="forename-field" id="forename-field" class="login-field" required>
                       </div>
                   </li>
                   <li>
@@ -113,14 +110,28 @@
                       </div>
                   </li>
                   <li>
+                      <div class="content-column">
+                          <label for="telephone-field">Telefon</label>
+                          <input type="password" name="telephone" id="telephone-field">
+                      </div>
+                  </li>
+                  <li>
                       <input type="checkbox" name="checkbox-terms" id="checkbox-terms" required>
                       <label for="checkbox-terms">Acceptera villkor</label>
+                  </li>
+                  <li>
+                      <div class="error-box hidden">
+                        <span id="error-message"></span>
+                      </div>
                   </li>
               </ul>
               <div class="center-content">
                   <input type="submit" value="Registrera dig" id="createaccount-btn">
               </div>
           </form>
+      </div>
+      <div>
+        <input type="button" value="Logga In">
       </div>
     </main>
     <footer class="footer">

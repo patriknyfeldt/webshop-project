@@ -1,9 +1,7 @@
 {
-    "version": 3,
-    "mappings": "AAEA,AAAA,eAAe,CAAA;EACX,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;CACtB;;AAED,AAEI,eAFW,GAEP,CAAC,CAAA;EACD,OAAO,EAAC,KAAK;CAChB",
-    "sources": [
-        "formula.scss"
-    ],
-    "names": [],
-    "file": "formula.css"
+"version": 3,
+"mappings": "AAEA,eAAe;EACX,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;;AAKnB,mBAAK;EACD,OAAO,EAAC,KAAK;;AAIrB,UAAU;EACN,MAAM,EAAE,aAAa;EACrB,OAAO,EAAE,SAAS;EAClB,SAAS,EAAC,KAAK",
+"sources": ["formula.scss"],
+"names": [],
+"file": "formula.css"
 }
