@@ -18,7 +18,7 @@ const drawProduct = (item) =>
     <h2>${item.name}</h2>
     <div class="article-content-wrapper">
     <div class="article-left-wrapper">
-    <a><img class="product-img" src=${item.image}></img></a>
+    <a href="../product/product.html?article=${item.id}"><img class="product-img" src=${item.image}></img></a>
     </div>
     <div class="article-right-wrapper">
     <p>Description: ${item.description}<p/>
@@ -52,9 +52,9 @@ const drawProduct = (item) =>
         })
 
         
-        //test
         buttons = productList.querySelectorAll(".add-to-cart");
         articles = productList.querySelectorAll(".product-article");
+        // Behövs här eller i shopping-cart.js?
         shoppingCart = document.getElementById("shopping-cart-list");
         
         buttons.forEach(button => {
