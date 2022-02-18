@@ -37,7 +37,6 @@ const getArticles = async () => {
             allItems.push(item);
             console.log(allItems);
             })
-            // console.log(product.items);
       })
 
 }
