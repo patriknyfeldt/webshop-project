@@ -13,17 +13,6 @@ const searchProductsInputField = document.getElementById('search-products-inputf
 
 const drawProduct = (item) =>
 
-<<<<<<< HEAD
-const getProducts = async (inputValue) => {
-    const response = await fetch('../products.json');
-    const data = await response.json();
-    products = [...data.products];
-    products.forEach(product => {
-        if(product.category === qsCategory){
-        let items = product.items;        
-        productList.innerHTML = items.map(drawProduct).join(''); 
-        searchedItems = [];
-=======
     `<section class="products-wrapper">
     <articel class="product-article "id=article-${item.id}>
     <h2>${item.name}</h2>
@@ -41,14 +30,14 @@ const getProducts = async (inputValue) => {
     </div>
     </article>
     </section>`;
+    
     const getProducts = async (inputValue) => {
         const response = await fetch('../products.json');
         const data = await response.json();
         products = [...data.products];
+        console.log(products);
         listedProducts = products.find(e => e.category === qsCategory).items;
-        /* console.log(listedProducts); */
-       /*  console.log(products); */
-    
+        
         products.forEach(product => {
             if(product.category === qsCategory){
                 let items = product.items;        
@@ -59,7 +48,6 @@ const getProducts = async (inputValue) => {
                     getSearchedProducts(item, inputValue);
                 })
             }
->>>>>>> d0a36b4907b38028d10b7b5f772b4b2d25fb0184
 
         })
 
