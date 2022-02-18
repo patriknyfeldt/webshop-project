@@ -14,45 +14,74 @@
   <body>
     <header class="header">
       <div>
-          <img src="../images/sneakers_svg.svg" width="100" alt="" />
+        <img src="../images/sneakers_svg.svg" width="100" alt="" />
       </div>
       <nav class="hidden nav-links">
         <ul>
-          <li><a href="">DAM</a></li>
-          <li><a href="">HERR</a></li>
-          <li><a href="">BARN</a></li>
+          <li>
+            <a href="../product-list/product-list.html?category=dam">DAM</a>
+          </li>
+          <li>
+            <a href="../product-list/product-list.html?category=herr">HERR</a>
+          </li>
+          <li>
+            <a href="../product-list/product-list.html?category=barn">BARN</a>
+          </li>
         </ul>
       </nav>
       <div>
         <ul class="hidden log-in">
-          <li><a><i class="cart fa-solid fa-cart-shopping"></i></a></li>
+          <li>
+            <a href="../shopping-cart/shopping-cart.html"
+              ><i class="cart fa-solid fa-cart-shopping"></i
+            ></a>
+          </li>
           <li><a id="user-name" class="hidden" href="../index.html"></a></li>
           <li id="log-in-link"><a href="../login/login.html">Logga in</a></li>
           <li><a href="../login/logincreate.html">Registrera</a></li>
         </ul>
-                <!--Dropdown menu börjar här-->
-                <div class="menu-hamburger">
-                    <ul>
-                      <li><a class="menu-item" href="">DAM</a></li>
-                      <li><a class="menu-item" href="">HERR</a></li>
-                      <li><a class="menu-item" href="">BARN</a></li>
-                    </ul>
-                    <button class="nav-btn login-button">Logga in</button>
-                    <button class="nav-btn register-button">Registrera dig</button>
-                  </div>
-                  <div class="navigation-icons">
-                    <a><i class="cart fa-solid fa-cart-shopping"></i></a>
-                    <button class="hamburger">
-                          <i class="menu-icon fa-solid fa-bars"></i>
-                          <i class="close-icon fa-solid fa-xmark"></i>
-                      </button>
-                        </div>
-                        <!--Dropdown slutar här-->
+        <!--Dropdown menu börjar här-->
+        <div class="menu-hamburger">
+          <ul>
+            <li>
+              <a
+                class="menu-item"
+                href="../product-list/product-list.html?category=dam"
+                >DAM</a
+              >
+            </li>
+            <li>
+              <a
+                class="menu-item"
+                href="../product-list/product-list.html?category=herr"
+                >HERR</a
+              >
+            </li>
+            <li>
+              <a
+                class="menu-item"
+                href="../product-list/product-list.html?category=barn"
+                >BARN</a
+              >
+            </li>
+          </ul>
+          <button class="nav-btn login-button">Logga in</button>
+          <button class="nav-btn register-button">Registrera dig</button>
+        </div>
+        <div class="navigation-icons">
+          <a href="../shopping-cart/shopping-cart.html"
+            ><i class="cart fa-solid fa-cart-shopping"></i
+          ></a>
+          <button class="hamburger">
+            <i class="menu-icon fa-solid fa-bars"></i>
+            <i class="close-icon fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <!--Dropdown slutar här-->
       </div>
     </header>
     <main class="index-main">
-      <section id="product-info">
-      </section>
+      <section id="product-info"></section>
     </main>
 
     <footer class="footer">
