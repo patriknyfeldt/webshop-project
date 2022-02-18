@@ -11,7 +11,7 @@ function userInit(){
         const loginDisplay = document.getElementById("log-in-link");
         if(userNameDisplay){
             userNameDisplay.classList.remove("hidden");
-            userNameDisplay.innerText = `Welcome ${activeUser.forename}!`;
+            userNameDisplay.innerText = activeUser.forename;
 
         }
         if(loginDisplay){

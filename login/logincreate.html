@@ -59,66 +59,69 @@
           <h1>Skapa konto</h1>
       </div>
       <div>
-          <form id="createaccount-form">
-              <ul class="center-content">
+          <form id="createaccount-form" class="form-style">
+              <ul>
                   <li>
                       <div class="content-column">
                           <label for="forename-field">Förnamn*</label>
-                          <input type="text" name="forename-field" id="forename-field" class="login-field" required>
+                          <input type="text" name="forename-field" id="forename-field" class="input-field" required>
                       </div>
                   </li>
                   <li>
                       <div class="content-column">
                           <label for="lastname-field">Efternamn*</label>
-                          <input type="text" name="lastname-field" id="lastname-field" required>
+                          <input type="text" name="lastname-field" id="lastname-field" class="input-field" required>
                       </div>
                   </li>
                   <li>
                       <div class="content-column">
                           <label for="adress-field">Gatuadress*</label>
-                          <input type="text" name="adress-field" id="adress-field" required>
+                          <input type="text" name="adress-field" id="adress-field" class="input-field" required>
                       </div>
                   </li>
                   <li>
                       <div class="content-column">
                           <label for="zipcode-field">Postnummer*</label>
-                          <input type="text" name="zipcode-field" id="zipcode-field" required>
+                          <input type="text" name="zipcode-field" id="zipcode-field" class="input-field" required>
                       </div>
                   </li>
                   <li>
                       <div class="content-column">
                           <label for="city-field">Ort*</label>
-                          <input type="text" name="city-field" id="city-field" required>
+                          <input type="text" name="city-field" id="city-field" class="input-field" required>
                       </div>
                   </li>
                   <li>
                       <div class="content-column">
                           <label for="email-field">E-postadress*</label>
-                          <input type="email" name="email-field" id="email-field" required>
+                          <input type="email" name="email-field" id="email-field" class="input-field" required>
                       </div>
                   </li>
                   <li>
                       <div class="content-column">
                           <label for="password-field">Lösenord*</label>
-                          <input type="password" name="password-field" id="password-field" required>
+                          <input type="password" name="password-field" id="password-field" class="input-field" required>
                       </div>
 
                   </li>
                   <li>
-                      <div class="content-column">
-                          <label for="verifypassword">Verifiera Lösenord*</label>
-                          <input type="password" name="verifypassword" id="verifypassword" required>
-                      </div>
+                    <div class="content-column">
+                      <label for="verifypassword">Verifiera Lösenord*</label>
+                      <input type="password" name="verifypassword" id="verifypassword" class="input-field" required>
+                    </div>
                   </li>
                   <li>
                       <div class="content-column">
                           <label for="telephone-field">Telefon</label>
-                          <input type="password" name="telephone" id="telephone-field">
+                          <input type="password" name="telephone" class="input-field" id="telephone-field">
                       </div>
                   </li>
                   <li>
+                    <dov class="form-row">
                       <input type="checkbox" name="checkbox-terms" id="checkbox-terms" required>
                       <label for="checkbox-terms">Acceptera villkor</label>
+
+                    </dov>
                   </li>
                   <li>
                       <div class="error-box hidden">
@@ -126,13 +129,17 @@
                       </div>
                   </li>
               </ul>
-              <div class="center-content">
-                  <input type="submit" value="Registrera dig" id="createaccount-btn">
+              <div class="content-column">
+                  <input type="submit" value="Registrera dig" id="createaccount-btn" class="round-button lightgreen">
               </div>
           </form>
       </div>
-      <div>
-        <a href="./login.html">Logga in</a>
+      <div class="content-column">
+        <p class="center-content font-size-medium">Tillbaka till inloggning?</p>
+        <div class="content-column">
+          <a href="./login.html" class="round-link-button dimblue">Logga in</a>
+
+        </div>
       </div>
     </main>
     <footer class="footer">
