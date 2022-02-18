@@ -101,6 +101,7 @@ const getSearchedProducts = ((item, inputValue) => {
         console.log(searchedItems);
         productList.innerHTML = searchedItems.map(drawProduct).join(''); 
     }
+    
 
 })
 
