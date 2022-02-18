@@ -30,14 +30,14 @@ const drawProduct = (item) =>
     </div>
     </article>
     </section>`;
+    
     const getProducts = async (inputValue) => {
         const response = await fetch('../products.json');
         const data = await response.json();
         products = [...data.products];
+        console.log(products);
         listedProducts = products.find(e => e.category === qsCategory).items;
-        /* console.log(listedProducts); */
-       /*  console.log(products); */
-    
+        
         products.forEach(product => {
             if(product.category === qsCategory){
                 let items = product.items;        
@@ -101,10 +101,11 @@ const getSearchedProducts = ((item, inputValue) => {
         console.log(searchedItems);
         productList.innerHTML = searchedItems.map(drawProduct).join(''); 
     }
+    
 
 })
 
-searchProductsForm.addEventListener('input', (e) => {
+searchProductsForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let inputValue = searchProductsInputField.value.toLowerCase();
     getProducts(inputValue);
