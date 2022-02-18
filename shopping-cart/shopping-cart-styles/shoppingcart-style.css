@@ -1,0 +1,94 @@
+.product-cart-container {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-cart-container .layout-text-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+}
+
+.product-cart-container .layout-text-counter .shopping-cart-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0 0 30px;
+}
+
+.product-cart-container .layout-text-counter .shopping-cart-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 0 0 30px;
+  gap: 10px;
+}
+
+.product-cart-container .layout-text-counter .shopping-cart-counter .shopping-cart-counter-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product-cart-container .layout-text-counter .shopping-cart-counter .shopping-cart-counter-btn .add-more {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+}
+
+.product-cart-container .layout-text-counter .shopping-cart-counter .shopping-cart-counter-btn .line-between {
+  width: 10px;
+  margin: 3px 0 3px 0;
+  border-bottom: 1px solid black;
+}
+
+.product-cart-container .layout-text-counter .shopping-cart-counter .shopping-cart-counter-btn .add-less {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.product-cart-container .layout-text-counter .shopping-cart-counter b {
+  margin-left: 30px;
+}
+
+.product-cart-container .shopping-cart-img {
+  height: 180px;
+  width: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.product-cart-container .shopping-cart-img img {
+  height: 130px;
+  width: 130px;
+}
+/*# sourceMappingURL=shoppingcart-style.css.map */
