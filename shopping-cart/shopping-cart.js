@@ -2,9 +2,9 @@ const chosenProductCart = document.getElementById("chosen-product-cart");
 
 let savedProducts = JSON.parse(localStorage.getItem("basket"));
 let savedProductList = savedProducts.list;
-console.log(savedProductList);
 
-
+console.log(`savedProductList:`);
+console.log(savedProductList)
 
     savedProductList.forEach(product => {
         const article = product.article;
@@ -17,22 +17,41 @@ console.log(savedProductList);
     <h2>${article.name}</h2>
     <p>Description: ${article.description}</p>
     </div>
-    <input class="number-inputs" id="count-input-${article.id}" type="number" value="${product.quantity}" min="1"></input>
+    <span id="count-input-${article.id}" min="1">${product.quantity}</span>
+    <input class="number-inputs" type="button" id="decrement-${article.id}" value="<" >
+    <input class="number-inputs" type="button" id="increment-${article.id}" value=">">
         
     <b>price: ${article.price}</b>
     </div>`;
         
     });
 
-    const numberInputs = document.querySelectorAll('.number-inputs');
-    console.log(numberInputs);
-    numberInputs.forEach(input => {
-        const inputID = input.id.slice(12);
+    document.querySelectorAll('input[id*="increment"]').forEach(input => {
+        const inputID = input.id.slice(10);
+        console.log(inputID)
         const chosenProduct = savedProductList.find(a => a.article.id === inputID);
-        console.log(chosenProduct)
-
-        input.addEventListener('change', (e) => {
-
+        // console.log(chosenProduct);
+        
+        input.addEventListener('click', (e) => {
+            chosenProduct.quantity++;
+            document.getElementById(`count-input-${inputID}`).innerText = chosenProduct.quantity;
+            localStorage.setItem("basket", JSON.stringify(savedProducts));
+        })
+    })
+    document.querySelectorAll('input[id*="decrement"]').forEach(input => {
+        const inputID = input.id.slice(10);
+        console.log(inputID)
+        const chosenProduct = savedProductList.find(a => a.article.id === inputID);
+        // console.log(chosenProduct);
+        
+        input.addEventListener('click', (e) => {
+            if(chosenProduct.quantity <= 1){
+                return;
+            }
+            chosenProduct.quantity--;
+            document.getElementById(`count-input-${inputID}`).innerText = chosenProduct.quantity;
+            console.log(savedProducts);
+            localStorage.setItem("basket", JSON.stringify(savedProducts));
         })
     })
 
