@@ -51,7 +51,8 @@ const drawProduct = (item) =>
 
         })
 
-        
+        // TILLHÖR VARUKORGS FUNKTIONEN
+
         buttons = productList.querySelectorAll(".add-to-cart");
         articles = productList.querySelectorAll(".product-article");
         // Behövs här eller i shopping-cart.js?
@@ -85,6 +86,8 @@ const drawProduct = (item) =>
         }) 
 
 }
+
+// TILLHÖR SÖKFUNTIONEN
 
 const getSearchedProducts = ((item, inputValue) => {
     let itemDescription = item.description.toLowerCase();
