@@ -9,8 +9,8 @@ document.getElementById("createaccount-btn").addEventListener("click", e =>{
     let hasEmptyField = false;
     inputFields.forEach(field =>{
         if(field.required && field.validity.valueMissing){
-            field.setCustomValidity("Fyll in tom fält.")
-            printErrorMessage("Tom fält");
+            field.setCustomValidity("Fyll in de tomma fälten med stjärnor(*).")
+            printErrorMessage("Fyll in de tomma fälten med stjärnor(*).");
             hasEmptyField = true;
         }
     });

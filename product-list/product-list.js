@@ -35,7 +35,6 @@ const drawProduct = (item) =>
         const response = await fetch('../products.json');
         const data = await response.json();
         products = [...data.products];
-        console.log(products);
         listedProducts = products.find(e => e.category === qsCategory).items;
         
         products.forEach(product => {
@@ -64,6 +63,7 @@ const drawProduct = (item) =>
                 let productID = e.target.id.slice(7);
                 
                 const chosenProduct = listedProducts.find(product => product.id === productID);
+               
                 
                 /* console.log(chosenProduct); */
 
@@ -72,9 +72,21 @@ const drawProduct = (item) =>
                 if(articlesForChartObject){
                     articlesForChart = articlesForChartObject.list;
                 }
-                articlesForChart.push(chosenProduct);
 
-                const basketList = {
+                const existingProduct = articlesForChart.find(a => a.article.id === chosenProduct.id)
+                if(existingProduct){
+                    existingProduct.quantity++
+                }
+                else if(!existingProduct){
+                    const articleObj = {
+                        quantity: 1,
+                        article: chosenProduct
+                    }
+                    articlesForChart.push(articleObj);
+                }
+
+
+                    const basketList = {
                     list: articlesForChart
                 }
                 
@@ -84,6 +96,7 @@ const drawProduct = (item) =>
             })
 
         }) 
+    
 
 }
 

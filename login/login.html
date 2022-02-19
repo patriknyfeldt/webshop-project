@@ -88,23 +88,27 @@
         <p id="active-user-display">&nbsp;</p>
       </div>
       <div>
-        <form>
-          <div class="content-column">
-            <label for="email-field">Email</label>
-            <input type="email" name="email" id="email-field" required />
-          </div>
-          <div class="content-column">
-            <label for="password-field">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password-field"
-              required
-            />
-          </div>
-          <div class="content-column">
-            <input type="submit" id="login-button" value="Logga in" />
-          </div>
+        <form class="form-style">
+          <ul>
+            <li>
+              <div class="content-column">
+                <label for="email-field">Email</label>
+                <input type="email" name="email" id="email-field" class="input-field" required>
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="password-field">Password</label>
+                <input type="password" name="password" id="password-field" class="input-field" required>
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <input type="submit" id="login-button" value="Logga in" class="round-button lightgreen">
+              </div>
+
+            </li>
+          </ul>
         </form>
       </div>
       <div>
@@ -112,9 +116,11 @@
           <span id="error-message"></span>
         </div>
       </div>
-      <div>
-        <p>Ny kund?</p>
-        <a href="./logincreate.html">Registrera</a>
+      <div class="content-column">
+        <p class="center-content font-size-medium">Ny kund?</p>
+        <div class="content-column">
+          <a href="./logincreate.html" class="round-link-button dimblue">Registrera</a>
+        </div>
       </div>
     </main>
     <footer class="footer">
