@@ -21,6 +21,7 @@ const getArticles = async () => {
       })
       console.log(allItems);
       console.log(qsArticles);
+      
       allItems.forEach(item => {
 
             if(item.id === qsArticles){
