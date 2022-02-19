@@ -30,10 +30,10 @@ const getArticles = async () => {
                   `<articel class="product-article "id=article-${item.id}>
                   <div class="flex-container">
                   <div class="image-container">
-                  <h2>${item.name}</h2>
                   <a href="../product/product.html?article=${item.id}"><img class="product-img" src=${item.image}></img></a>
                   </div>
                   <div class="info-container">
+                  <h2>${item.name}</h2>
                   <p>Beskrivning: ${item.description}<p/>
                   <br>
                   <p>Pris: ${item.price}<p/>
