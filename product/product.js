@@ -21,16 +21,16 @@ const getArticles = async () => {
       })
       console.log(allItems);
       console.log(qsArticles);
-      
+
       allItems.forEach(item => {
 
             if(item.id === qsArticles){
                   
             productContainer.innerHTML += 
                   `<articel class="product-article "id=article-${item.id}>
-                  <h2>${item.name}</h2>
                   <div class="flex-container">
                   <div class="image-container">
+                  <h2>${item.name}</h2>
                   <a href="../product/product.html?article=${item.id}"><img class="product-img" src=${item.image}></img></a>
                   </div>
                   <div class="info-container">

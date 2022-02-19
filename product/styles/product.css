@@ -1,0 +1,19 @@
+.product-article .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.product-article .flex-container .image-container h2 {
+  text-align: center;
+}
+
+.product-article .flex-container .info-container {
+  border: 1px solid black;
+}
+/*# sourceMappingURL=product.css.map */
