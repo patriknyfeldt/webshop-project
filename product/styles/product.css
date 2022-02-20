@@ -17,11 +17,15 @@
 
 .product-article .flex-container .image-container, .product-article .flex-container .info-container {
   border: 1px solid black;
-  margin: 20px;
+  margin: 10px;
   padding: 30px;
 }
 
 .product-article .flex-container .image-container img, .product-article .flex-container .info-container img {
   max-width: 350px;
+}
+
+.product-article .flex-container .image-container h2, .product-article .flex-container .info-container h2 {
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=product.css.map */
