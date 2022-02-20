@@ -35,7 +35,7 @@ if(savedProductList.length){
             </span>
             <span>|</span>
             <span>
-                <a href="../">Till beställning</a>
+                <a href="../order/order.html">Till beställning</a>
             </span>
         </div>
     `;
