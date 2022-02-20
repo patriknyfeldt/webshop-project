@@ -25,20 +25,29 @@ savedProductList.forEach(product => {
                 </div>
             </article>
         </section>
-        `;
+    `;
 });
-chosenProductCart.innerHTML += `
-    <div>
-        <p id="total-price" >Total: 0</p>
-    </div>
-`;
+if(savedProductList.length){
+    console.log("create price and order display")
+    chosenProductCart.innerHTML += `
+        <div id="order-row">
+            <span id="total-price">Total: 0
+            </span>
+            <span>|</span>
+            <span>
+                <a href="../">Till beställning</a>
+            </span>
+        </div>
+    `;
+}
+else{
+    document.getElementById("empty-cart-message").classList.remove("hidden");
+}
 let totalPriceDisplay = document.getElementById("total-price");
-
 calculateSum();
 
 document.querySelectorAll('input[id*="increment"]').forEach(input => {
     const inputID = input.id.slice(10);
-    console.log(inputID)
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
     // console.log(chosenProduct);
     
@@ -49,9 +58,9 @@ document.querySelectorAll('input[id*="increment"]').forEach(input => {
         calculateSum();
     })
 })
+
 document.querySelectorAll('input[id*="decrement"]').forEach(input => {
     const inputID = input.id.slice(10);
-    console.log(inputID)
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
     // console.log(chosenProduct);
     
@@ -61,27 +70,35 @@ document.querySelectorAll('input[id*="decrement"]').forEach(input => {
         }
         chosenProduct.quantity--;
         document.getElementById(`count-input-${inputID}`).innerText = chosenProduct.quantity;
+        localStorage.setItem("basket", JSON.stringify(savedProducts));
+        calculateSum();
+    })
+})
+
+document.querySelectorAll('input[id*="remove"]').forEach(input =>{
+    const inputID = input.id.slice(7);
+    const chosenProduct = savedProductList.find(a => a.article.id === inputID);
+    document.getElementById(`remove-${inputID}`).addEventListener("click", ()=>{
+        savedProductList.splice(savedProductList.indexOf(chosenProduct), 1);
         console.log(savedProducts);
+        document.getElementById(`chosen-product-cart-${inputID}`).remove();
         localStorage.setItem("basket", JSON.stringify(savedProducts));
         calculateSum();
     })
 })
 
 function calculateSum(){
-    let sum = 0;
-    savedProductList.forEach(p => sum += p.article.price * p.quantity);
-    console.log("sum: " + sum);
-    totalPriceDisplay.textContent = `Total pris: ${sum}`;
+    console.log(savedProductList)
+    if(savedProductList.length === 0){
+        if(document.getElementById("order-row")){
+
+            document.getElementById("order-row").classList.add("hidden");
+        }  
+        document.getElementById("empty-cart-message").classList.remove("hidden");
+    }
+    else{
+        totalPriceDisplay.textContent ="Total: " + savedProductList.reduce((total, p) => total += p.article.price * p.quantity, 0);
+
+    }
 }
 
-
-// <div class="shopping-cart-counter">
-// <div>
-// <p></p>
-// <p>${product.quantity}</p>
-// </div>
-// <div class="shopping-cart-counter-btn">
-// <div class="add-more"></div>
-// <div class="line-between"></div>
-// <div class="add-less"></div>
-// </div>
