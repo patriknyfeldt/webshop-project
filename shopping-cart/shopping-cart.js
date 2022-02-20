@@ -4,7 +4,7 @@ let savedProducts = JSON.parse(localStorage.getItem("basket"));
 let savedProductList = savedProducts.list;
 
 // console.log(`savedProductList:`);
-// console.log(savedProductList)
+//console.log(savedProductList)
 
 savedProductList.forEach(product => {
     const article = product.article;
