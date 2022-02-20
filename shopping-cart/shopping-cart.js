@@ -25,7 +25,7 @@ savedProductList.forEach(product => {
                 </div>
             </article>
         </section>
-        `;
+    `;
 });
 chosenProductCart.innerHTML += `
     <div>
@@ -59,6 +59,18 @@ document.querySelectorAll('input[id*="decrement"]').forEach(input => {
         }
         chosenProduct.quantity--;
         document.getElementById(`count-input-${inputID}`).innerText = chosenProduct.quantity;
+        localStorage.setItem("basket", JSON.stringify(savedProducts));
+        calculateSum();
+    })
+})
+
+document.querySelectorAll('input[id*="remove"]').forEach(input =>{
+    const inputID = input.id.slice(7);
+    const chosenProduct = savedProductList.find(a => a.article.id === inputID);
+    document.getElementById(`remove-${inputID}`).addEventListener("click", ()=>{
+        savedProductList.splice(savedProductList.indexOf(chosenProduct), 1);
+        console.log(savedProducts);
+        document.getElementById(`chosen-product-cart-${inputID}`).remove();
         localStorage.setItem("basket", JSON.stringify(savedProducts));
         calculateSum();
     })
