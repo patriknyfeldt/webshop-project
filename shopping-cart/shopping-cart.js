@@ -27,13 +27,23 @@ savedProductList.forEach(product => {
         </section>
     `;
 });
-chosenProductCart.innerHTML += `
-    <div>
-        <p id="total-price" >Total: 0</p>
-    </div>
-`;
+if(savedProductList.length){
+    console.log("create price and order display")
+    chosenProductCart.innerHTML += `
+        <div id="order-row">
+            <span id="total-price">Total: 0
+            </span>
+            <span>|</span>
+            <span>
+                <a href="../">Till beställning</a>
+            </span>
+        </div>
+    `;
+}
+else{
+    document.getElementById("empty-cart-message").classList.remove("hidden");
+}
 let totalPriceDisplay = document.getElementById("total-price");
-
 calculateSum();
 
 document.querySelectorAll('input[id*="increment"]').forEach(input => {
@@ -48,6 +58,7 @@ document.querySelectorAll('input[id*="increment"]').forEach(input => {
         calculateSum();
     })
 })
+
 document.querySelectorAll('input[id*="decrement"]').forEach(input => {
     const inputID = input.id.slice(10);
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
@@ -77,6 +88,17 @@ document.querySelectorAll('input[id*="remove"]').forEach(input =>{
 })
 
 function calculateSum(){
-    totalPriceDisplay.textContent ="Total: " + savedProductList.reduce((total, p) => total += p.article.price * p.quantity, 0);
+    console.log(savedProductList)
+    if(savedProductList.length === 0){
+        if(document.getElementById("order-row")){
+
+            document.getElementById("order-row").classList.add("hidden");
+        }  
+        document.getElementById("empty-cart-message").classList.remove("hidden");
+    }
+    else{
+        totalPriceDisplay.textContent ="Total: " + savedProductList.reduce((total, p) => total += p.article.price * p.quantity, 0);
+
+    }
 }
 
