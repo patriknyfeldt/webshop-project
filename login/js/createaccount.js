@@ -34,7 +34,10 @@ document.getElementById("createaccount-btn").addEventListener("click", e =>{
         const variableName =  field.id.substring(0, field.id.indexOf("-field"));
         newUser[variableName] = field.value;
     })
-    const userList = JSON.parse(localStorage.getItem("userList"));
+    let userList = JSON.parse(localStorage.getItem("userList"));
+    if(!userList){
+        userList = [];
+    }
 
     //cehck if user exists. If true, abort operation. Else add new user to database
     if(userList.find(e=> e.email === newUser.email)){
