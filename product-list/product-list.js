@@ -50,7 +50,8 @@ const drawProduct = (item) =>
 
         })
 
-        
+        // TILLHÖR VARUKORGS FUNKTIONEN
+
         buttons = productList.querySelectorAll(".add-to-cart");
         articles = productList.querySelectorAll(".product-article");
         // Behövs här eller i shopping-cart.js?
@@ -62,6 +63,7 @@ const drawProduct = (item) =>
                 let productID = e.target.id.slice(7);
                 
                 const chosenProduct = listedProducts.find(product => product.id === productID);
+               
                 
                 /* console.log(chosenProduct); */
 
@@ -70,9 +72,21 @@ const drawProduct = (item) =>
                 if(articlesForChartObject){
                     articlesForChart = articlesForChartObject.list;
                 }
-                articlesForChart.push(chosenProduct);
 
-                const basketList = {
+                const existingProduct = articlesForChart.find(a => a.article.id === chosenProduct.id)
+                if(existingProduct){
+                    existingProduct.quantity++
+                }
+                else if(!existingProduct){
+                    const articleObj = {
+                        quantity: 1,
+                        article: chosenProduct
+                    }
+                    articlesForChart.push(articleObj);
+                }
+
+
+                    const basketList = {
                     list: articlesForChart
                 }
                 
@@ -82,8 +96,11 @@ const drawProduct = (item) =>
             })
 
         }) 
+    
 
 }
+
+// TILLHÖR SÖKFUNTIONEN
 
 const getSearchedProducts = ((item, inputValue) => {
     let itemDescription = item.description.toLowerCase();

@@ -1,29 +1,10 @@
+
 const queryString = new URLSearchParams(location.search);
-const qsCategory = queryString.get('article');
-const productContainer = document.querySelector('product-info');
-// Variable name examples: productItem, info , (content), (item)
-let products = [];
-let allItems = [];
+const qsArticles = queryString.get('article');
+const productContainer = document.getElementById('product-info');
 
-const renderProduct = (item) => 
-
-`<section class="products-wrapper">
-      <articel class="product-article "id=article-${item.id}>
-      <h2>${item.name}</h2>
-      <div class="article-content-wrapper">
-      <div class="article-left-wrapper">
-      <a href="../product/product.html?article=${item.id}"><img class="product-img" src=${item.image}></img></a>
-      </div>
-      <div class="article-right-wrapper">
-      <p>Description: ${item.description}<p/>
-      <br>
-      <p>Price: ${item.price}<p/>
-      <br>
-      <button class="add-to-cart" id="addbtn-${item.id}">lägg till i varukorgen</button>
-      </div>
-      </div>
-      </article>
-</section>`;
+let products = []; // Array to store the data in products.json
+let allItems = []; // Array to store products that are copied ^
 
 
 const getArticles = async () => {
@@ -34,12 +15,41 @@ const getArticles = async () => {
       products.forEach(product => {
             let items = product.items;
             items.forEach(item => {
-            allItems.push(item);
-            console.log(allItems);
+                  allItems.push(item);
             })
+            
       })
+      console.log(allItems);
+      console.log(qsArticles);
 
+      allItems.forEach(item => {
+
+            if(item.id === qsArticles){
+                  
+            productContainer.innerHTML += 
+                  `<articel class="product-article "id=article-${item.id}>
+                  <div class="flex-container">
+                  <div class="image-container">
+                  <a href="../product/product.html?article=${item.id}"><img class="product-img" src=${item.image}></img></a>
+                  </div>
+                  <div class="info-container">
+                  <h2>${item.name}</h2>
+                  <p>Beskrivning: ${item.description}<p/>
+                  <br>
+                  <p>Pris: ${item.price}<p/>
+                  <br>
+                  <button class="add-to-cart" id="addbtn-${item.id}">Köp<button>
+                  </div>
+                  </div>
+                  </article>`;  
+            }
+      })
+      
 }
 getArticles();
+
+
+
+
 
 

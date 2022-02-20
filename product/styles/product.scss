@@ -1,0 +1,23 @@
+
+.product-article {
+
+margin: 50px;
+
+      .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            .image-container, .info-container {
+                  border: 1px solid black;
+                  margin: 20px;
+                  padding: 30px;
+                  img {
+                        max-width: 350px;
+                  }
+                  h2 {
+                        // text-align: center;
+                  }
+            }
+      }
+}
