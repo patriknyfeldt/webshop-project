@@ -8,7 +8,8 @@
                 "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                 "image": "../images/dam/damskor_svarta_puma.jpg",
                 "price": "899",
-                "category": "DAM"
+                "category": "DAM",
+                "alt": "bild på svarta sneakers från Puma"
             },
             {
                 "id": "2",
@@ -16,7 +17,8 @@
                 "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                 "image": "../images/dam/damskor_vit_adidas.jpg",
                 "price": "699",
-                "category": "DAM"
+                "category": "DAM",
+                "alt": "Bild på vita sneakers från Adidas"
             },
             {
                 "id": "3",
@@ -24,7 +26,8 @@
                 "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                 "image": "../images/dam/damskor_vita_converse.jpg",
                 "price": "799",
-                "category": "DAM"
+                "category": "DAM",
+                "alt": "Bild på vita sneakers från Converse"
             },
             {
                 "id": "4",
@@ -32,7 +35,8 @@
                 "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                 "image": "../images/dam/damskor_vita_fila.jpg",
                 "price": "949",
-                "category": "DAM"
+                "category": "DAM",
+                "alt": "Bild på Vita sneakers från Fila"
             },
             {
                 "id": "5",
@@ -40,7 +44,8 @@
                 "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                 "image": "../images/dam/damskor_vita_nb.jpg",
                 "price": "999",
-                "category": "DAM"
+                "category": "DAM",
+                "alt": "Bild på vita sneakers från New Balance"
             },
             {
                 "id": "6",
@@ -48,7 +53,8 @@
                 "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                 "image": "../images/dam/damskor_vita_nike.jpg",
                 "price": "849",
-                "category": "DAM"
+                "category": "DAM",
+                "alt": "Bild på färgglada sneakers från Nike"
             }
 
         ]
@@ -61,7 +67,8 @@
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                     "image": "../images/herr/herrskor_blue_puma.jpg",
                     "price": "899",
-                    "category": "HERR"
+                    "category": "HERR",
+                    "alt": "Bild på blå sneakers från Puma"
                 },
                 {
                     "id": "8",
@@ -69,7 +76,8 @@
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                     "image": "../images/herr/herrskor_vans.jpg",
                     "price": "699",
-                    "category": "HERR"
+                    "category": "HERR",
+                    "alt": "Bild på färgglada sneakers från Vans"
                 },
                 {
                     "id": "9",
@@ -77,7 +85,8 @@
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                     "image": "../images/herr/herrskor_vita_adidas.jpg",
                     "price": "799",
-                    "category": "HERR"
+                    "category": "HERR",
+                    "alt": "Bild på vita sneakers från Adidas"
                 },
                 {
                     "id": "10",
@@ -85,7 +94,8 @@
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                     "image": "../images/herr/herrskor_vita_fila.jpg",
                     "price": "949",
-                    "category": "HERR"
+                    "category": "HERR",
+                    "alt": "bild på vita sneakers från Fila"
                 },
                 {
                     "id": "11",
@@ -93,7 +103,8 @@
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                     "image": "../images/herr/herrskor_vita_nb.jpg",
                     "price": "999",
-                    "category": "HERR"
+                    "category": "HERR",
+                    "alt": "Bild på vita sneakers från New Balance"
                 },
                 {
                     "id": "12",
@@ -101,7 +112,8 @@
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                     "image": "../images/herr/herrskor_vita_reebok.jpg",
                     "price": "849",
-                    "category": "HERR"
+                    "category": "HERR",
+                    "alt": "Bild på vita sneakers från Reebok"
                 }
     
             ]
@@ -115,7 +127,8 @@
                     "description": "barnsko est qui dolorem ipsum quia.",
                     "image": "../images/barn/adidas_kids.jpeg",
                     "price": "399",
-                    "category": "BARN"
+                    "category": "BARN",
+                    "alt": "Bild på färgglada sneakers från Adidas"
                 },
                 {
                     "id": "14",
@@ -123,7 +136,8 @@
                     "description": "sneaker porro quisquam est qui dolorem ipsum quia.",
                     "image": "../images/barn/adidas_LEGO.jpeg",
                     "price": "499",
-                    "category": "BARN"
+                    "category": "BARN",
+                    "alt": "Bild på färgglada sneakers från Adidas"
                 },
                 {
                     "id": "15",
@@ -131,7 +145,8 @@
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                     "image": "../images/barn/new_balance_kids.jpeg",
                     "price": "299",
-                    "category": "BARN"
+                    "category": "BARN",
+                    "alt": "Bild på blå sneakers från New Balance"
                 },
                 {
                     "id": "16",
@@ -139,7 +154,8 @@
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                     "image": "../images/barn/nike_kids.jpeg",
                     "price": "399",
-                    "category": "BARN"
+                    "category": "BARN",
+                    "alt": "Bild på svarta sneakers från Nike"
                 },
                 {
                     "id": "17",
@@ -147,7 +163,8 @@
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                     "image": "../images/barn/puma_kids.jpeg",
                     "price": "349",
-                    "category": "BARN"
+                    "category": "BARN",
+                    "alt": "Bild på färgglada sneakers från Puma"
                 },
                 {
                     "id": "18",
@@ -155,7 +172,8 @@
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
                     "image": "../images/barn/reebok_kids.jpeg",
                     "price": "399",
-                    "category": "BARN"
+                    "category": "BARN",
+                    "alt": "Bild på färgglada sneakers från Reebok"
                 }
 
                 
