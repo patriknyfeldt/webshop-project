@@ -109,13 +109,13 @@ const getSearchedProducts = ((item, inputValue) => {
     if(itemDescription.includes(inputValue)){
         searchedItems.push(item);
         console.log(searchedItems);
-        productList.innerHTML = searchedItems.map(drawProduct).join(''); 
+        productList.innerHTML = searchedItems.map(drawProduct).join('');
 
     }
     if(inputValue === itemName){
         searchedItems.push(item);
         console.log(searchedItems);
-        productList.innerHTML = searchedItems.map(drawProduct).join(''); 
+        productList.innerHTML = searchedItems.map(drawProduct).join('');
     }
     
 
@@ -125,7 +125,8 @@ searchProductsForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let inputValue = searchProductsInputField.value.toLowerCase();
     getProducts(inputValue);
-    
+    searchProductsInputField.value = "";
+
 })
 
 getProducts();
