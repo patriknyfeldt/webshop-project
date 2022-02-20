@@ -35,7 +35,6 @@ const drawProduct = (item) =>
         const response = await fetch('../products.json');
         const data = await response.json();
         products = [...data.products];
-        console.log(products);
         listedProducts = products.find(e => e.category === qsCategory).items;
         
         products.forEach(product => {
