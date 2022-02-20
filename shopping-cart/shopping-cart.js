@@ -38,7 +38,6 @@ calculateSum();
 
 document.querySelectorAll('input[id*="increment"]').forEach(input => {
     const inputID = input.id.slice(10);
-    console.log(inputID)
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
     // console.log(chosenProduct);
     
@@ -51,7 +50,6 @@ document.querySelectorAll('input[id*="increment"]').forEach(input => {
 })
 document.querySelectorAll('input[id*="decrement"]').forEach(input => {
     const inputID = input.id.slice(10);
-    console.log(inputID)
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
     // console.log(chosenProduct);
     
@@ -61,27 +59,12 @@ document.querySelectorAll('input[id*="decrement"]').forEach(input => {
         }
         chosenProduct.quantity--;
         document.getElementById(`count-input-${inputID}`).innerText = chosenProduct.quantity;
-        console.log(savedProducts);
         localStorage.setItem("basket", JSON.stringify(savedProducts));
         calculateSum();
     })
 })
 
 function calculateSum(){
-    let sum = 0;
-    savedProductList.forEach(p => sum += p.article.price * p.quantity);
-    console.log("sum: " + sum);
-    totalPriceDisplay.textContent = `Total pris: ${sum}`;
+    totalPriceDisplay.textContent ="Total: " + savedProductList.reduce((total, p) => total += p.article.price * p.quantity, 0);
 }
 
-
-// <div class="shopping-cart-counter">
-// <div>
-// <p></p>
-// <p>${product.quantity}</p>
-// </div>
-// <div class="shopping-cart-counter-btn">
-// <div class="add-more"></div>
-// <div class="line-between"></div>
-// <div class="add-less"></div>
-// </div>
