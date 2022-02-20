@@ -4,12 +4,15 @@ h1 {
   text-transform: uppercase;
 }
 
-.products-wrapper {
+#product-list{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+.products-wrapper {
+
   .product-article {
-    max-width: 500px;
+    max-width: 400px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -35,4 +38,5 @@ h1 {
       height: 150px;
     }
   }
+}
 }
