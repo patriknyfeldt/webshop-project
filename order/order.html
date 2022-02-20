@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../order/styles/order-style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
@@ -80,7 +81,60 @@
         <!--Dropdown slutar här-->
       </div>
     </header>
-    <main class="index-main"></main>
+    <main class="index-main">
+      <form id="order-form">
+        <ul>
+          <li>
+            <div>
+              <label for="customer-name-input">Namn*</label>
+              <input id="customer-name-input" type="text" required />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-adress-input">Adress*</label>
+              <input id="customer-adress-input" type="text" required />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-zipcode-input">Postnummer*</label>
+              <input id="customer-zipcode-input" type="text" required />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-city-input">Ort*</label>
+              <input id="customer-city-input" type="text" required />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-email-input">Epost*</label>
+              <input id="customer-email-input" type="email" required />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-phone-input">Telefonnummer</label>
+              <input id="customer-phone-input" type="tel" />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-comments">Övriga kommentarer</label>
+              <textarea
+                name=""
+                id="customer-comments"
+                cols="30"
+                rows="3"
+              ></textarea>
+              <button>Skicka beställning</button>
+            </div>
+          </li>
+        </ul>
+      </form>
+    </main>
 
     <footer class="footer">
       <div class="social-media-icons">
