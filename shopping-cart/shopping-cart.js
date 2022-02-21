@@ -42,16 +42,20 @@ if(savedProductList.length){
     chosenProductCart.innerHTML += `
         <div id="order-row" class="checkout-wrapper">
             <div class="checkout">
-                <span id="total-price">Total: 0
+                <span id="total-price" class="total-sum">Total: 0
                 </span>
                 
                 <span>
-                    <button class="checkout-btn"><a href="../order/order.html">Till beställning</a></button>
+                <a href="../order/order.html"><button class="checkout-btn lightgreen">Kassa</button></a>
                 </span>
             </div>
         </div>
     `;
 }
+
+
+
+
 else{
     document.getElementById("empty-cart-message").classList.remove("hidden");
 }

@@ -6,6 +6,7 @@
 
 
 
+
 h1{
     text-align: center;
     margin-bottom: 50px;
@@ -13,16 +14,17 @@ h1{
 .product-cart-container{
     
     display: flex;
-    height: 300px;
+    height: 250px;
     margin: 10px 0 0 10px;
     .name-and-counter{
         display: flex;
         flex-direction: column;
         gap: 80px;
+        margin-left: 30px;
     .shopping-cart-text{
         display: flex;
         flex-direction: column;
-        margin-left: 30px;
+        
     }
     .counter-and-price{
         display: flex;
@@ -82,22 +84,37 @@ h1{
     display: flex;
     justify-content: center;
 .checkout{
+    
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 200px;
+    height: 150px;
     width: 80%;
     border-top: 1px solid black;
+    gap: 30px;
+
+    .total-sum{
+        margin-top:40px ;
+        font-size: 2rem;
+    }
     
         .checkout-btn{
-            list-style: none;
-            a{
-                
-                background-color: $register-border-color;
+                font-family: Arial, Helvetica, sans-serif;
+                border:1px solid $input-border-colour;
+                border-radius: 25px;
+                height:50px;
+                min-width:300px;
+                font-size:$input-font-size;
+                padding: 0px 30px;
+                cursor:pointer;
             }
-          
-           }
-    
-   
 }
+}
+
+.lightgreen{
+    @include input-color-theme(#ECFFDE, black, #daf3c8, #f4ffec);
+}
+
+.dimblue{
+    @include input-color-theme(#89A3B3, white, #708592,#a3becf);
 }
