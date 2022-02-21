@@ -16,15 +16,15 @@ const drawProduct = (item) =>
 
     `<div class="products-wrapper">
     <articel class="product-article "id=article-${item.id}>
-    <h2>${item.name}</h2>
     <div class="article-content-wrapper">
     <div class="article-left-wrapper">
+    <h2>${item.name}</h2>
     <a href="../product/product.html?article=${item.id}"><img class="product-img" src=${item.image} alt="${item.alt}"></img></a>
     </div>
     <div class="article-right-wrapper">
     <p>${item.description}<p/>
     <br>
-    <p>Price: ${item.price}<p/>
+    <p>Pris: ${item.price}<p/>
     <br>
     <button class="add-to-cart" id="addbtn-${item.id}">lägg till i varukorgen</button>
     </div>
@@ -53,51 +53,52 @@ const drawProduct = (item) =>
 
         // TILLHÖR VARUKORGS FUNKTIONEN
 
-        addToShoppingCart();
-        // buttons = productList.querySelectorAll(".add-to-cart");
-        // articles = productList.querySelectorAll(".product-article");
-        // // Behövs här eller i shopping-cart.js?
-        // shoppingCart = document.getElementById("shopping-cart-list");
         
-        // buttons.forEach(button => {
+        buttons = productList.querySelectorAll(".add-to-cart");
+        articles = productList.querySelectorAll(".product-article");
+        // Behövs här eller i shopping-cart.js?
+        shoppingCart = document.getElementById("shopping-cart-list");
+        
+        buttons.forEach(button => {
             
-        //     button.addEventListener('click', (e) => {
-        //         let productID = e.target.id.slice(7);
+            button.addEventListener('click', (e) => {
+                let productID = e.target.id.slice(7);
                 
-        //         const chosenProduct = listedProducts.find(product => product.id === productID);
+
+                const chosenProduct = listedProducts.find(product => product.id === productID);
                
                 
-        //         /* console.log(chosenProduct); */
+                /* console.log(chosenProduct); */
 
-        //         let articlesForChartObject = JSON.parse(localStorage.getItem("basket"));
-        //         let articlesForChart = [];
-        //         if(articlesForChartObject){
-        //             articlesForChart = articlesForChartObject.list;
-        //         }
+                let articlesForChartObject = JSON.parse(localStorage.getItem("basket"));
+                let articlesForChart = [];
+                if(articlesForChartObject){
+                    articlesForChart = articlesForChartObject.list;
+                }
 
-        //         const existingProduct = articlesForChart.find(a => a.article.id === chosenProduct.id)
-        //         if(existingProduct){
-        //             existingProduct.quantity++
-        //         }
-        //         else if(!existingProduct){
-        //             const articleObj = {
-        //                 quantity: 1,
-        //                 article: chosenProduct
-        //             }
-        //             articlesForChart.push(articleObj);
-        //         }
+                const existingProduct = articlesForChart.find(a => a.article.id === chosenProduct.id)
+                if(existingProduct){
+                    existingProduct.quantity++
+                }
+                else if(!existingProduct){
+                    const articleObj = {
+                        quantity: 1,
+                        article: chosenProduct
+                    }
+                    articlesForChart.push(articleObj);
+                }
 
 
-        //             const basketList = {
-        //             list: articlesForChart
-        //         }
+                    const basketList = {
+                    list: articlesForChart
+                }
                 
-        //         localStorage.setItem("basket", JSON.stringify(basketList));
+                localStorage.setItem("basket", JSON.stringify(basketList));
                 
                 
-        //     })
+            })
 
-        // }) 
+        }) 
     
 
 }

@@ -43,6 +43,12 @@ const getArticles = async () => {
                   </div>
                   </article>`;  
             }
+            
+      })
+      let buttons = document.querySelectorAll(".add-to-cart");
+
+      addBtn.addEventListener('click', () => {
+            console.log('hej');
       })
       
 }

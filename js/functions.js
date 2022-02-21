@@ -1,6 +1,5 @@
 const addToShoppingCart = () => {
-    buttons = productList.querySelectorAll(".add-to-cart");
-    articles = productList.querySelectorAll(".product-article");
+   
     // Behövs här eller i shopping-cart.js?
     shoppingCart = document.getElementById("shopping-cart-list");
     

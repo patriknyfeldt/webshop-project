@@ -1,16 +1,34 @@
 //använd mixins och variabler istället
+@import "partials/variables";
+@import "partials/mixins";
 
 h1 {
-  color: $login-btn-color;
   text-align: center;
   text-transform: uppercase;
 }
-
-.product-list-wrapper{
+.search-products-form {
+  display: flex;
+  input {
+    margin: 10px 0;
+    display: block;
+    border: 1px solid #707070;
+    border-radius: 15px;
+    height: 50px;
+    max-width: 300px;
+    font-size: 30px;
+    padding: 0 10px;
+  }
+}
+.product-list-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-list-wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
+
   .product-article {
     max-width: 400px;
     padding: 15px;
@@ -21,6 +39,7 @@ h1 {
     background: #faf4f4;
     h2 {
       text-align: center;
+      margin-bottom: 5px;
     }
     .article-content-wrapper {
       display: flex;
@@ -30,6 +49,9 @@ h1 {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        .add-to-cart {
+          background: $login-btn-color;
+        }
       }
     }
 
