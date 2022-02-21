@@ -63,14 +63,9 @@ const getArticles = async () => {
                   quantity: 1,
                   article: product
             }
-      }
-      let buttons = document.querySelectorAll(".add-to-cart");
+            basketList.push(articleObj);
 
-      addBtn.addEventListener('click', () => {
-            console.log('hej');
-      })
-      articlesForChart.push(articleObj);
-      
+      }
       console.log(basketList)
       
       localStorage.setItem("basket", JSON.stringify(basketList));

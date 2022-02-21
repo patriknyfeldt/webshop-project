@@ -19,12 +19,12 @@ const drawProduct = (item) =>
     <div class="article-content-wrapper">
     <div class="article-left-wrapper">
     <h2>${item.name}</h2>
-    <a href="../product/product.html?article=${item.id}"><img class="product-img" src=${item.image} alt="${item.alt}"></img></a>
+    <a class="img-link" href="../product/product.html?article=${item.id}"><img class="product-img" src=${item.image} alt="${item.alt}"></img></a>
     </div>
     <div class="article-right-wrapper">
-    <p>${item.description}<p/>
+    <p class="description-paragraph">${item.description}<p/>
     <br>
-    <p>Pris: ${item.price}<p/>
+    <p class="price-paragraph" >Pris: ${item.price}<p/>
     <br>
     <button class="add-to-cart" id="addbtn-${item.id}">lägg till i varukorgen</button>
     </div>

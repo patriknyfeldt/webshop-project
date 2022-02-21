@@ -28,7 +28,8 @@ h1 {
   flex-wrap: wrap;
 
   .product-article {
-    max-width: 300px;
+    font-family: $main-font-family;
+    max-width: 350px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -36,10 +37,6 @@ h1 {
     justify-content: center;
     margin: 10px;
     background: #faf4f4;
-    h2 {
-      text-align: center;
-      margin-bottom: 5px;
-    }
     .article-content-wrapper {
       display: flex;
       flex-direction: column;
@@ -52,22 +49,49 @@ h1 {
         align-items: center;
       }
       .article-left-wrapper {
-        @include flex(center, center, column);
-      }
-      .article-right-wrapper {
-        margin-left: 10%;
-        @include flex(center, center, column);
-        .add-to-cart {
-          background: $login-btn-color;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        h2 {
+          text-align: center;
+          margin-bottom: 5px;
+        }
+        .img-link {
+          display: flex;
+          justify-content: center;
+        }
+        .product-img {
+          width: 80%;
+          transition: width 0.2s;
+          &:hover {
+            width: 100%;
+          }
+          @media ($breakpointMedium) {
+            width: 150px;
+            height: 150px;
+          }
         }
       }
-    }
-
-    .product-img {
-      width: 80%;
-      @media ($breakpointMedium) {
-        width: 150px;
-        height: 150px;
+      .article-right-wrapper {
+        margin: 0 auto;
+        // margin-left: 10%;
+        .description-paragraph {
+          text-align: center;
+        }
+        @include flex(center, center, column);
+        .add-to-cart {
+          @include input-color-theme($login-btn-color, black, #daf3c8, #f4ffec);
+          height: 50px;
+          border-radius: 30px;
+          min-width: 300px;
+          font-size: 15px;
+          border: 1px solid $border-color-btn;
+          cursor: pointer;
+          @media (min-width: $breakpointMedium) {
+            min-width: 150px;
+            height: 35px;
+          }
+        }
       }
     }
   }
