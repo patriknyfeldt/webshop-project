@@ -69,10 +69,10 @@ const drawProduct = (item) =>
 
                 /* console.log(chosenProduct); */
 
-                let articlesForChartObject = JSON.parse(localStorage.getItem("basket"));
+                let basketList = JSON.parse(localStorage.getItem("basket"));
                 let articlesForChart = [];
-                if(articlesForChartObject){
-                    articlesForChart = articlesForChartObject.list;
+                if(basketList){
+                    articlesForChart = basketList;
                 }
 
                 const existingProduct = articlesForChart.find(a => a.article.id === chosenProduct.id)
@@ -87,12 +87,7 @@ const drawProduct = (item) =>
                     articlesForChart.push(articleObj);
                 }
 
-
-                    const basketList = {
-                    list: articlesForChart
-                }
-                
-                localStorage.setItem("basket", JSON.stringify(basketList));
+                localStorage.setItem("basket", JSON.stringify(articlesForChart));
                 
                 
             })

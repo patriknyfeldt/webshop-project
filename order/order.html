@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../order/styles/order-style.css" />
+    <link rel="stylesheet" href="../login/styles/formula.css">
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
@@ -82,7 +83,7 @@
       </div>
     </header>
     <main class="index-main">
-      <form id="order-form">
+      <form id="order-form" class="form-style">
         <ul>
           <li>
             <div>
@@ -182,7 +183,7 @@
           </li>
           <li>
             <div>
-              <label for="customer-comments-tetinput">Övriga kommentarer</label>
+              <label for="customer-comments-textinput">Övriga kommentarer</label>
               <textarea
                 name="customer-comments-textinput"
                 id="customer-comments-textinput"
@@ -192,10 +193,16 @@
             </div>
           </li>
           <li>
+            <div class="error-box hidden">
+              <span id="error-message"></span>
+            </div>
+        </li>
+          <li>
             <div>
               <input 
                 type="submit" 
                 id="send-order-btn"
+                class="round-button lightgreen"
                 value="Skicka beställning"
               >
             </div>
