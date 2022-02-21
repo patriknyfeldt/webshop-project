@@ -66,7 +66,7 @@ const drawProduct = (item) =>
 
                 const chosenProduct = listedProducts.find(product => product.id === productID);
 
-                
+
                 /* console.log(chosenProduct); */
 
                 let articlesForChartObject = JSON.parse(localStorage.getItem("basket"));
