@@ -45,7 +45,7 @@ const getArticles = async () => {
                   </article>`;  
       }
 
-document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
+      document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
 
       let basketListObject = JSON.parse(localStorage.getItem("basket"));
       let basketList = [];
@@ -63,36 +63,19 @@ document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
                   quantity: 1,
                   article: product
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-            
-      })
+      }
       let buttons = document.querySelectorAll(".add-to-cart");
 
       addBtn.addEventListener('click', () => {
             console.log('hej');
       })
-=======
-            articlesForChart.push(articleObj);
-      }
-      const basketList = {
-            list: articlesForChart
-=======
-            basketList.push(articleObj);
->>>>>>> 0374f78accdaa2101492e12606d80c71111a4b6d
-      }
+      articlesForChart.push(articleObj);
+      
       console.log(basketList)
       
       localStorage.setItem("basket", JSON.stringify(basketList));
-})
+
 // addToShoppingCart();
->>>>>>> 587443efa6baaec2fc267d979fcbf306c8f8b4fb
-      
+      })
 }
 getArticles();
-
-
-
-
-
-
