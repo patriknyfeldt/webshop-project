@@ -35,19 +35,17 @@ const getArticles = async () => {
                               </div>
                         <div class="info-container">
                               <h2>${item.name}</h2>
-                              <p>Beskrivning: ${item.description}<p/>
+                              <p>Beskrivning: ${item.description}</p>
                               <br>
-                              <p>Pris: ${item.price}<p/>
+                              <p class="price">Pris: ${item.price} kr</p>
                               <br>
-                              <button class="add-to-cart" id="addbtn-${item.id}">Köp<button>
+                              <button class="add-to-cart" id="addbtn-${item.id}">Köp</button>
                               </div>
                         </div>
                   </article>`;  
       }
 
-console.log(document.getElementById(`addbtn-${item.id}`));
 document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
-      console.log("add to basket");
 
       let articlesForChartObject = JSON.parse(localStorage.getItem("basket"));
       let articlesForChart = [];
