@@ -10,6 +10,7 @@ h1 {
 }
 
 .search-products-form input {
+  font-family: Arial, FontAwesome;
   margin: 10px 0;
   display: block;
   border: 1px solid #707070;
