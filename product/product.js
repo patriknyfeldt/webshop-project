@@ -35,28 +35,26 @@ const getArticles = async () => {
                               </div>
                         <div class="info-container">
                               <h2>${item.name}</h2>
-                              <p>Beskrivning: ${item.description}<p/>
+                              <p>Beskrivning: ${item.description}</p>
                               <br>
-                              <p>Pris: ${item.price}<p/>
+                              <p class="price">Pris: ${item.price} kr</p>
                               <br>
-                              <button class="add-to-cart" id="addbtn-${item.id}">Köp<button>
+                              <button class="add-to-cart" id="addbtn-${item.id}">Köp</button>
                               </div>
                         </div>
                   </article>`;  
       }
 
-console.log(document.getElementById(`addbtn-${item.id}`));
 document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
-      console.log("add to basket");
 
-      let articlesForChartObject = JSON.parse(localStorage.getItem("basket"));
-      let articlesForChart = [];
-      if(articlesForChartObject){
-            articlesForChart = articlesForChartObject.list;
+      let basketListObject = JSON.parse(localStorage.getItem("basket"));
+      let basketList = [];
+      if(basketListObject){
+            basketList = basketListObject;
       }
       
-      console.log(articlesForChart)
-      const existingProduct = articlesForChart.find(a => a.article.id === product.id)
+      console.log(basketList)
+      const existingProduct = basketList.find(a => a.article.id === product.id)
       if(existingProduct){
             existingProduct.quantity++
       }
@@ -65,10 +63,7 @@ document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
                   quantity: 1,
                   article: product
             }
-            articlesForChart.push(articleObj);
-      }
-      const basketList = {
-            list: articlesForChart
+            basketList.push(articleObj);
       }
       console.log(basketList)
       

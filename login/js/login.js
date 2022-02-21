@@ -1,6 +1,5 @@
 const emailField = document.getElementById("email-field");
 const passwordField = document.getElementById("password-field");
-const activeUserDisplay = document.getElementById("active-user-display");
 const errorMessageDisplay = document.getElementById("error-message");
 
 let userList = [];
