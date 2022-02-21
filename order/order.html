@@ -86,10 +86,11 @@
         <ul>
           <li>
             <div>
-              <label for="customer-forname-input">Förnamn*</label>
+              <label for="input-customer-forename">Förnamn*</label>
               <input
-                id="customer-forname-input"
-                name="customer-forname-input"
+                id="input-customer-forename"
+                name="input-customer-forename"
+                class="input-field"
                 type="text"
                 required
               />
@@ -97,10 +98,11 @@
           </li>
           <li>
             <div>
-              <label for="customer-lastname-input">Efteramn*</label>
+              <label for="input-customer-lastname">Efteramn*</label>
               <input
-                id="customer-lastname-input"
-                name="customer-lastname-input"
+                id="input-customer-lastname"
+                name="input-customer-lastname"
+                class="input-field"
                 type="text"
                 required
               />
@@ -108,10 +110,11 @@
           </li>
           <li>
             <div>
-              <label for="customer-adress-input">Adress*</label>
+              <label for="input-customer-adress">Adress*</label>
               <input
-                id="customer-adress-input"
-                name="customer-adress-input"
+                id="input-customer-adress"
+                name="input-customer-adress"
+                class="input-field"
                 type="text"
                 required
               />
@@ -119,10 +122,11 @@
           </li>
           <li>
             <div>
-              <label for="customer-zipcode-input">Postnummer*</label>
+              <label for="input-customer-zipcode">Postnummer*</label>
               <input
-                id="customer-zipcode-input"
-                name="customer-zipcode-input"
+                id="input-customer-zipcode"
+                name="input-customer-zipcode"
+                class="input-field"
                 type="text"
                 required
               />
@@ -130,10 +134,11 @@
           </li>
           <li>
             <div>
-              <label for="customer-city-input">Ort*</label>
+              <label for="input-customer-city">Ort*</label>
               <input
-                id="customer-city-input"
-                name="customer-city-input"
+                id="input-customer-city"
+                name="input-customer-city"
+                class="input-field"
                 type="text"
                 required
               />
@@ -141,10 +146,11 @@
           </li>
           <li>
             <div>
-              <label for="customer-email-input">Epost*</label>
+              <label for="input-customer-email">Epost*</label>
               <input
-                id="customer-email-input"
-                name="customer-email-input"
+                id="input-customer-email"
+                name="input-customer-email"
+                class="input-field"
                 type="email"
                 required
               />
@@ -152,20 +158,34 @@
           </li>
           <li>
             <div>
-              <label for="customer-phone-input">Telefonnummer</label>
+              <label for="input-customer-telephone">Telefonnummer</label>
               <input
-                id="customer-phone-input"
-                name="customer-phone-input"
+                id="input-customer-telephone"
+                name="input-customer-telephone"
+                class="input-field"
                 type="tel"
               />
             </div>
           </li>
           <li>
             <div>
-              <label for="customer-comments">Övriga kommentarer</label>
+              <label for="input-customer-card">Kortnummer*</label>
+              <input
+                id="input-customer-card"
+                name="input-customer-card"
+                class="input-field"
+                type="tel"
+                placeholder="xxxx-xxxx-xxxx-xxxx"
+                required
+              />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-comments-tetinput">Övriga kommentarer</label>
               <textarea
-                name="customer-comments-input"
-                id="customer-comments-input"
+                name="customer-comments-textinput"
+                id="customer-comments-textinput"
                 cols="30"
                 rows="3"
               ></textarea>
@@ -215,8 +235,8 @@
       </div>
       <p>© 2022 PSAR, Inc. All Rights Reserved</p>
     </footer>
-    <script src="../order/order.js"></script>
-    <script src="../js/main.js"></script>
+    <script type="module" src="../js/main.js"></script>
     <script src="../js/nav.js"></script>
+    <script type="module" src="../order/js/order.js"></script>
   </body>
 </html>
