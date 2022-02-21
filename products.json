@@ -141,36 +141,36 @@
                 },
                 {
                     "id": "15",
-                    "name": "New Balance",
+                    "name": "Converse",
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "../images/barn/new_balance_kids.jpeg",
+                    "image": "../images/barn/converse_kids.jpeg",
                     "price": "299",
                     "category": "BARN",
                     "alt": "Bild på blå sneakers från New Balance"
                 },
                 {
                     "id": "16",
-                    "name": "Nike",
+                    "name": "Jordan",
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "../images/barn/nike_kids.jpeg",
+                    "image": "../images/barn/Jordan_kids.jpeg",
                     "price": "399",
                     "category": "BARN",
                     "alt": "Bild på svarta sneakers från Nike"
                 },
                 {
                     "id": "17",
-                    "name": "Puma",
+                    "name": "Nike",
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "../images/barn/puma_kids.jpeg",
+                    "image": "../images/barn/nike_kids.jpeg",
                     "price": "349",
                     "category": "BARN",
                     "alt": "Bild på färgglada sneakers från Puma"
                 },
                 {
                     "id": "18",
-                    "name": "Reebok",
+                    "name": "Adidas",
                     "description": "Neque porro quisquam est qui dolorem ipsum quia.",
-                    "image": "../images/barn/reebok_kids.jpeg",
+                    "image": "../images/barn/adidass_kids.jpeg",
                     "price": "399",
                     "category": "BARN",
                     "alt": "Bild på färgglada sneakers från Reebok"
