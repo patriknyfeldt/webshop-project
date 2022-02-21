@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../order/styles/order-style.css" />
-    <link rel="stylesheet" href="../login/styles/formula.css">
+    <link rel="stylesheet" href="../login/styles/formula.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
@@ -82,19 +82,20 @@
         <!--Dropdown slutar här-->
       </div>
     </header>
-    <main class="index-main">
-      <div id="order-description-grp">
-
-        <div id="order-form-wrapper">
-          <form id="order-form" class="form-style">
+    <main class="index-main order-main">
+      <h1>Beställ</h1>
+      <div class="order-description-grp" id="order-description-grp">
+        <div class="order-form-wrapper" id="order-form-wrapper">
+          <form id="order-form" class="form-style order-form">
+            <h2>Fyll i dina uppgifter</h2>
             <ul>
               <li>
-                <div>
+                <div class="input-wrapper">
                   <label for="input-customer-forename">Förnamn*</label>
                   <input
                     id="input-customer-forename"
                     name="input-customer-forename"
-                    class="input-field"
+                    class="input-field order-input"
                     type="text"
                     data-name="Forename"
                     required
@@ -102,12 +103,12 @@
                 </div>
               </li>
               <li>
-                <div>
+                <div class="input-wrapper">
                   <label for="input-customer-lastname">Efteramn*</label>
                   <input
                     id="input-customer-lastname"
                     name="input-customer-lastname"
-                    class="input-field"
+                    class="input-field order-input"
                     type="text"
                     data-name="Lastname"
                     required
@@ -115,12 +116,12 @@
                 </div>
               </li>
               <li>
-                <div>
+                <div class="input-wrapper">
                   <label for="input-customer-adress">Adress*</label>
                   <input
                     id="input-customer-adress"
                     name="input-customer-adress"
-                    class="input-field"
+                    class="input-field order-input"
                     type="text"
                     data-name="Adress"
                     required
@@ -128,12 +129,12 @@
                 </div>
               </li>
               <li>
-                <div>
+                <div class="input-wrapper">
                   <label for="input-customer-zipcode">Postnummer*</label>
                   <input
                     id="input-customer-zipcode"
                     name="input-customer-zipcode"
-                    class="input-field"
+                    class="input-field order-input"
                     type="text"
                     data-name="Zipcode"
                     required
@@ -141,12 +142,12 @@
                 </div>
               </li>
               <li>
-                <div>
+                <div class="input-wrapper">
                   <label for="input-customer-city">Ort*</label>
                   <input
                     id="input-customer-city"
                     name="input-customer-city"
-                    class="input-field"
+                    class="input-field order-input"
                     type="text"
                     data-name="City"
                     required
@@ -154,12 +155,12 @@
                 </div>
               </li>
               <li>
-                <div>
+                <div class="input-wrapper">
                   <label for="input-customer-email">Epost*</label>
                   <input
                     id="input-customer-email"
                     name="input-customer-email"
-                    class="input-field"
+                    class="input-field order-input"
                     type="email"
                     data-name="Email"
                     required
@@ -167,37 +168,39 @@
                 </div>
               </li>
               <li>
-                <div>
+                <div class="input-wrapper">
                   <label for="input-customer-telephone">Telefonnummer</label>
                   <input
                     id="input-customer-telephone"
                     name="input-customer-telephone"
-                    class="input-field"
+                    class="input-field order-input"
                     type="tel"
                     data-name="Telephone"
                   />
                 </div>
               </li>
               <li>
-                <div>
+                <div class="input-wrapper">
                   <label for="input-customer-card">Kortnummer*</label>
                   <input
                     id="input-customer-card"
                     name="input-customer-card"
-                    class="input-field"
+                    class="input-field order-input"
                     type="tel"
                     placeholder="xxxx-xxxx-xxxx-xxxx"
                     data-name="Card"
-                    required
                   />
                 </div>
               </li>
               <li>
-                <div>
-                  <label for="input-customer-textinput">Övriga kommentarer</label>
+                <div class="input-wrapper">
+                  <label for="input-customer-textinput"
+                    >Övriga kommentarer</label
+                  >
                   <textarea
                     name="input-customer-textinput"
                     id="input-customer-textinput"
+                    class="order-textarea"
                     cols="30"
                     rows="3"
                     data-name="Comments"
@@ -208,26 +211,32 @@
                 <div class="error-box hidden">
                   <span id="error-message"></span>
                 </div>
-           
+              </li>
             </ul>
           </form>
-          <div id="product-list-descriptions"></div>
+          <div class="summary-wrapper">
+            <h2>Sammanfattning</h2>
+            <div
+              class="product-list-descriptions"
+              id="product-list-descriptions"
+            ></div>
+          </div>
         </div>
-        <div id="price-button-row">
-          <div>
-            <span id="total-price-display"></span>
-            <input 
-              type="button" 
-              class="round-button lightgreen"
-              id="send-order-btn"
-              value="Beställ" 
+        <div class="price-button-row" id="price-button-row">
+          <div class="price-and-btn-wrapper">
+            <span class="total-price-display" id="total-price-display"
+              >Total: 2000</span
             >
+            <input
+              type="button"
+              class="round-button lightgreen order-button"
+              id="send-order-btn"
+              value="Beställ"
+            />
           </div>
         </div>
       </div>
-      <div id="receipt-wrapper">
-
-      </div>
+      <div id="receipt-wrapper"></div>
     </main>
 
     <footer class="footer">
