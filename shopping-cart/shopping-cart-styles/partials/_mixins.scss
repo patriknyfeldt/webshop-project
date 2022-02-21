@@ -16,3 +16,14 @@
     margin: 20px;
   }
   
+  @mixin input-color-theme($background-colour, $foreground-colour, $hover-color, $active-colour:white){
+    color:$foreground-colour;
+    background-color: $background-colour;
+    transition: background-color 0.2s;
+    &:hover{
+        background-color: $hover-color;
+    }
+    &:active{
+        background-color: $active-colour;
+    }
+}
