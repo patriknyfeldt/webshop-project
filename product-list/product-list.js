@@ -13,7 +13,7 @@ const searchProductsInputField = document.getElementById('search-products-inputf
 
 const drawProduct = (item) =>
 
-    `<section class="products-wrapper">
+    `<div class="products-wrapper">
     <articel class="product-article "id=article-${item.id}>
     <h2>${item.name}</h2>
     <div class="article-content-wrapper">
@@ -21,7 +21,7 @@ const drawProduct = (item) =>
     <a href="../product/product.html?article=${item.id}"><img class="product-img" src=${item.image} alt="${item.alt}"></img></a>
     </div>
     <div class="article-right-wrapper">
-    <p>Description: ${item.description}<p/>
+    <p>${item.description}<p/>
     <br>
     <p>Price: ${item.price}<p/>
     <br>
@@ -29,7 +29,7 @@ const drawProduct = (item) =>
     </div>
     </div>
     </article>
-    </section>`;
+    </div>`;
     
     const getProducts = async (inputValue) => {
         const response = await fetch('../products.json');
@@ -109,13 +109,13 @@ const getSearchedProducts = ((item, inputValue) => {
     if(itemDescription.includes(inputValue)){
         searchedItems.push(item);
         console.log(searchedItems);
-        productList.innerHTML = searchedItems.map(drawProduct).join(''); 
+        productList.innerHTML = searchedItems.map(drawProduct).join('');
 
     }
     if(inputValue === itemName){
         searchedItems.push(item);
         console.log(searchedItems);
-        productList.innerHTML = searchedItems.map(drawProduct).join(''); 
+        productList.innerHTML = searchedItems.map(drawProduct).join('');
     }
     
 
@@ -125,7 +125,8 @@ searchProductsForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let inputValue = searchProductsInputField.value.toLowerCase();
     getProducts(inputValue);
-    
+    searchProductsInputField.value = "";
+
 })
 
 getProducts();

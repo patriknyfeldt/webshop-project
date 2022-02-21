@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../order/styles/order-style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
@@ -80,7 +81,104 @@
         <!--Dropdown slutar här-->
       </div>
     </header>
-    <main class="index-main"></main>
+    <main class="index-main">
+      <form id="order-form">
+        <ul>
+          <li>
+            <div>
+              <label for="customer-forname-input">Förnamn*</label>
+              <input
+                id="customer-forname-input"
+                name="customer-forname-input"
+                type="text"
+                required
+              />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-lastname-input">Efteramn*</label>
+              <input
+                id="customer-lastname-input"
+                name="customer-lastname-input"
+                type="text"
+                required
+              />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-adress-input">Adress*</label>
+              <input
+                id="customer-adress-input"
+                name="customer-adress-input"
+                type="text"
+                required
+              />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-zipcode-input">Postnummer*</label>
+              <input
+                id="customer-zipcode-input"
+                name="customer-zipcode-input"
+                type="text"
+                required
+              />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-city-input">Ort*</label>
+              <input
+                id="customer-city-input"
+                name="customer-city-input"
+                type="text"
+                required
+              />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-email-input">Epost*</label>
+              <input
+                id="customer-email-input"
+                name="customer-email-input"
+                type="email"
+                required
+              />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-phone-input">Telefonnummer</label>
+              <input
+                id="customer-phone-input"
+                name="customer-phone-input"
+                type="tel"
+              />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-comments">Övriga kommentarer</label>
+              <textarea
+                name="customer-comments-input"
+                id="customer-comments-input"
+                cols="30"
+                rows="3"
+              ></textarea>
+            </div>
+          </li>
+          <li>
+            <div>
+              <button>Skicka beställning</button>
+            </div>
+          </li>
+        </ul>
+      </form>
+    </main>
 
     <footer class="footer">
       <div class="social-media-icons">
@@ -117,6 +215,7 @@
       </div>
       <p>© 2022 PSAR, Inc. All Rights Reserved</p>
     </footer>
+    <script src="../order/order.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/nav.js"></script>
   </body>
