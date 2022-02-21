@@ -1,5 +1,7 @@
 //använd mixins och variabler istället
+
 h1 {
+  color: $login-btn-color;
   text-align: center;
   text-transform: uppercase;
 }
