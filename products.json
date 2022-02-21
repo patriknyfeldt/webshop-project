@@ -146,7 +146,7 @@
                     "image": "../images/barn/converse_kids.jpeg",
                     "price": "299",
                     "category": "BARN",
-                    "alt": "Bild på blå sneakers från New Balance"
+                    "alt": "Bild på blå sneakers från Converse"
                 },
                 {
                     "id": "16",
@@ -155,7 +155,7 @@
                     "image": "../images/barn/Jordan_kids.jpeg",
                     "price": "399",
                     "category": "BARN",
-                    "alt": "Bild på svarta sneakers från Nike"
+                    "alt": "Bild på svarta sneakers från Jordan"
                 },
                 {
                     "id": "17",
@@ -164,7 +164,7 @@
                     "image": "../images/barn/nike_kids.jpeg",
                     "price": "349",
                     "category": "BARN",
-                    "alt": "Bild på färgglada sneakers från Puma"
+                    "alt": "Bild på färgglada sneakers från Nike"
                 },
                 {
                     "id": "18",
@@ -173,7 +173,7 @@
                     "image": "../images/barn/adidass_kids.jpeg",
                     "price": "399",
                     "category": "BARN",
-                    "alt": "Bild på färgglada sneakers från Reebok"
+                    "alt": "Bild på färgglada sneakers från Adidas"
                 }
 
                 
