@@ -4,36 +4,36 @@ h1 {
   text-transform: uppercase;
 }
 
-.product-list {
+.product-list-wrapper{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
-  .products-wrapper {
-    .product-article {
-      padding: 15px;
+  
+  .product-article {
+    max-width: 400px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    // flex: 1;
+    margin: 10px;
+    background: #faf4f4;
+    h2 {
+      text-align: center;
+    }
+    .article-content-wrapper {
       display: flex;
-      flex-direction: column;
-      margin: 10px;
-      background: #faf4f4;
-      h2 {
-        text-align: center;
-      }
-      .article-content-wrapper {
+      .article-right-wrapper {
+        margin-left: 10%;
         display: flex;
-        .article-right-wrapper {
-          margin-left: 10%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-        }
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
+    }
 
-      .product-img {
-        width: 150px;
-        height: 150px;
-      }
+    .product-img {
+      width: 150px;
+      height: 150px;
     }
   }
 }
