@@ -36,6 +36,10 @@
   padding: 50px;
 }
 
+.product-article .flex-container .info-container .description {
+  line-height: 1.5;
+}
+
 .product-article .flex-container .info-container .add-to-cart {
   color: black;
   background-color: #ECFFDE;
