@@ -83,132 +83,144 @@
       </div>
     </header>
     <main class="index-main">
-      <form id="order-form" class="form-style">
-        <ul>
-          <li>
-            <div>
-              <label for="input-customer-forename">Förnamn*</label>
-              <input
-                id="input-customer-forename"
-                name="input-customer-forename"
-                class="input-field"
-                type="text"
-                required
-              />
-            </div>
-          </li>
-          <li>
-            <div>
-              <label for="input-customer-lastname">Efteramn*</label>
-              <input
-                id="input-customer-lastname"
-                name="input-customer-lastname"
-                class="input-field"
-                type="text"
-                required
-              />
-            </div>
-          </li>
-          <li>
-            <div>
-              <label for="input-customer-adress">Adress*</label>
-              <input
-                id="input-customer-adress"
-                name="input-customer-adress"
-                class="input-field"
-                type="text"
-                required
-              />
-            </div>
-          </li>
-          <li>
-            <div>
-              <label for="input-customer-zipcode">Postnummer*</label>
-              <input
-                id="input-customer-zipcode"
-                name="input-customer-zipcode"
-                class="input-field"
-                type="text"
-                required
-              />
-            </div>
-          </li>
-          <li>
-            <div>
-              <label for="input-customer-city">Ort*</label>
-              <input
-                id="input-customer-city"
-                name="input-customer-city"
-                class="input-field"
-                type="text"
-                required
-              />
-            </div>
-          </li>
-          <li>
-            <div>
-              <label for="input-customer-email">Epost*</label>
-              <input
-                id="input-customer-email"
-                name="input-customer-email"
-                class="input-field"
-                type="email"
-                required
-              />
-            </div>
-          </li>
-          <li>
-            <div>
-              <label for="input-customer-telephone">Telefonnummer</label>
-              <input
-                id="input-customer-telephone"
-                name="input-customer-telephone"
-                class="input-field"
-                type="tel"
-              />
-            </div>
-          </li>
-          <li>
-            <div>
-              <label for="input-customer-card">Kortnummer*</label>
-              <input
-                id="input-customer-card"
-                name="input-customer-card"
-                class="input-field"
-                type="tel"
-                placeholder="xxxx-xxxx-xxxx-xxxx"
-                required
-              />
-            </div>
-          </li>
-          <li>
-            <div>
-              <label for="customer-comments-textinput">Övriga kommentarer</label>
-              <textarea
-                name="customer-comments-textinput"
-                id="customer-comments-textinput"
-                cols="30"
-                rows="3"
-              ></textarea>
-            </div>
-          </li>
-          <li>
-            <div class="error-box hidden">
-              <span id="error-message"></span>
-            </div>
-        </li>
-          <li>
-            <div>
-              <input 
-                type="submit" 
-                id="send-order-btn"
-                class="round-button lightgreen"
-                value="Skicka beställning"
-              >
-            </div>
-          </li>
-        </ul>
-      </form>
+      <div id="order-description-grp">
+
+        <div id="order-form-wrapper">
+          <form id="order-form" class="form-style">
+            <ul>
+              <li>
+                <div>
+                  <label for="input-customer-forename">Förnamn*</label>
+                  <input
+                    id="input-customer-forename"
+                    name="input-customer-forename"
+                    class="input-field"
+                    type="text"
+                    required
+                  />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <label for="input-customer-lastname">Efteramn*</label>
+                  <input
+                    id="input-customer-lastname"
+                    name="input-customer-lastname"
+                    class="input-field"
+                    type="text"
+                    required
+                  />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <label for="input-customer-adress">Adress*</label>
+                  <input
+                    id="input-customer-adress"
+                    name="input-customer-adress"
+                    class="input-field"
+                    type="text"
+                    required
+                  />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <label for="input-customer-zipcode">Postnummer*</label>
+                  <input
+                    id="input-customer-zipcode"
+                    name="input-customer-zipcode"
+                    class="input-field"
+                    type="text"
+                    required
+                  />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <label for="input-customer-city">Ort*</label>
+                  <input
+                    id="input-customer-city"
+                    name="input-customer-city"
+                    class="input-field"
+                    type="text"
+                    required
+                  />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <label for="input-customer-email">Epost*</label>
+                  <input
+                    id="input-customer-email"
+                    name="input-customer-email"
+                    class="input-field"
+                    type="email"
+                    required
+                  />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <label for="input-customer-telephone">Telefonnummer</label>
+                  <input
+                    id="input-customer-telephone"
+                    name="input-customer-telephone"
+                    class="input-field"
+                    type="tel"
+                  />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <label for="input-customer-card">Kortnummer*</label>
+                  <input
+                    id="input-customer-card"
+                    name="input-customer-card"
+                    class="input-field"
+                    type="tel"
+                    placeholder="xxxx-xxxx-xxxx-xxxx"
+                    required
+                  />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <label for="customer-comments-textinput">Övriga kommentarer</label>
+                  <textarea
+                    name="customer-comments-textinput"
+                    id="customer-comments-textinput"
+                    cols="30"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </li>
+              <li>
+                <div class="error-box hidden">
+                  <span id="error-message"></span>
+                </div>
+           
+            </ul>
+          </form>
+          <div id="product-list-descriptions"></div>
+        </div>
+        <div id="price-button-row">
+          <div>
+            <span id="total-price-display"></span>
+            <input 
+              type="button" 
+              class="round-button lightgreen"
+              id="send-order-btn"
+              value="Beställ" 
+            >
+          </div>
+        </div>
+      </div>
+      <div id="receipt-wrapper">
+        <div id="receipt-product-summary"></div>
+        <div id="receipt-user-summary"></div>
+
+      </div>
     </main>
 
     <footer class="footer">
@@ -248,6 +260,6 @@
     </footer>
     <script type="module" src="../js/main.js"></script>
     <script src="../js/nav.js"></script>
-    <script type="module" src="../order/js/order.js"></script>
+    <script type="module" src="./js/order.js"></script>
   </body>
 </html>
