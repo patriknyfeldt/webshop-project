@@ -95,7 +95,7 @@
                     "image": "../images/herr/herrskor_vita_converse.jpg",
                     "price": "949",
                     "category": "HERR",
-                    "alt": "bild på vita sneakers från Fila"
+                    "alt": "bild på färgglada sneakers från Converse"
                 },
                 {
                     "id": "11",
@@ -104,7 +104,7 @@
                     "image": "../images/herr/herrskor_vita_nb.jpg",
                     "price": "999",
                     "category": "HERR",
-                    "alt": "Bild på vita sneakers från New Balance"
+                    "alt": "Bild på gröna sneakers från New Balance"
                 },
                 {
                     "id": "12",
@@ -113,7 +113,7 @@
                     "image": "../images/herr/herrskor_vita_reebok.jpg",
                     "price": "849",
                     "category": "HERR",
-                    "alt": "Bild på vita sneakers från Reebok"
+                    "alt": "Bild på bruna sneakers från Reebok"
                 }
     
             ]
