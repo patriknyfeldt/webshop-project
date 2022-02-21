@@ -2,7 +2,7 @@ let activeUser;
 
 //when page loads, sets active user info to DOM
 function userInit(){
-    userData = JSON.parse(localStorage.getItem("user"));
+    let userData = JSON.parse(localStorage.getItem("user"));
     
     //check if it's an empty object or if we fetched some data
     if(userData){
@@ -21,3 +21,5 @@ function userInit(){
 }
 
 userInit();
+
+export {activeUser};
