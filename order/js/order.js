@@ -43,8 +43,10 @@ const drawProduct = (item) =>{
 
 const drawReceiptUser = (item) =>`
     <div>
+        <p><b>${item.dataset.name}</b></p>
         <p>${item.value}</p>
     </div>`
+
 
 // function renderProductDescriptions(){
 //     document.getElementById("product-list-descriptions").innerHTML = productList.map(drawProduct).join("");
@@ -59,7 +61,6 @@ function renderListToElement(element, list, drawFunction){
 document.getElementById("send-order-btn").addEventListener("click", (e)=>{
     e.preventDefault();
     const inputFields = Array.from(document.querySelectorAll("form#order-form [id*='input']"));
-    console.log(inputFields)
 
     if(inputFields.some(input => input.required && input.validity.valueMissing)){
         printErrorMessage("Fyll in de tomma fälten med stjärnor(*).");
@@ -67,14 +68,20 @@ document.getElementById("send-order-btn").addEventListener("click", (e)=>{
         return;
     }
 
-    console.log(descriptionGrp.parentElement);
     descriptionGrp.parentElement.removeChild(descriptionGrp);
 
     const receiptWrapper = document.getElementById("receipt-wrapper");
     receiptWrapper.classList.remove("hidden");
-    const formFields = document.querySelectorAll('form#order-form [id*="customer-"]')
-    console.log(formFields)
-    // renderListToElement(document.getElementById("receipt-user-summary"), )
+    receiptWrapper.innerHTML += `
+        <div>
+            <h1>Tack för din beställning!</h1>
+            <p>Kolla din mejl för order bekräftelse</p>
+        </div>
+        <div id="receipt-product-summary"></div>
+        <div id="receipt-user-summary"></div>
+    `
+    renderListToElement(document.getElementById("receipt-user-summary"), inputFields, drawReceiptUser);
+    renderListToElement(document.getElementById("receipt-product-summary"), productList, drawProduct)
     
 })
 
