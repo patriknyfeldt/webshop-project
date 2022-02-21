@@ -1,7 +1,7 @@
 const chosenProductCart = document.getElementById("chosen-product-cart");
 
 let savedProducts = JSON.parse(localStorage.getItem("basket"));
-let savedProductList = savedProducts.list;
+let savedProductList = savedProducts;
 
 // console.log(`savedProductList:`);
 //console.log(savedProductList)
