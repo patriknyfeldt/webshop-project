@@ -9,7 +9,7 @@ h1 {
 .search-products-form {
   display: flex;
   input {
-    font-family: Arial, FontAwesome;
+    font-family: $main-font-family, FontAwesome;
     margin: 10px 0;
     display: block;
     border: 1px solid #707070;
@@ -21,21 +21,19 @@ h1 {
   }
 }
 .product-list-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex(center, center, column);
 }
 .product-list-wrapper {
-  display: flex;
-  justify-content: center;
+  @include flex(center, center, initial);
   flex-wrap: wrap;
 
   .product-article {
-    max-width: 400px;
+    max-width: 300px;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    // flex: 1;
+    align-items: center;
+    justify-content: center;
     margin: 10px;
     background: #faf4f4;
     h2 {
@@ -44,12 +42,21 @@ h1 {
     }
     .article-content-wrapper {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @media (min-width: $breakpointMedium) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .article-left-wrapper {
+        @include flex(center, center, column);
+      }
       .article-right-wrapper {
         margin-left: 10%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flex(center, center, column);
         .add-to-cart {
           background: $login-btn-color;
         }
@@ -57,8 +64,11 @@ h1 {
     }
 
     .product-img {
-      width: 150px;
-      height: 150px;
+      width: 80%;
+      @media ($breakpointMedium) {
+        width: 150px;
+        height: 150px;
+      }
     }
   }
 }
