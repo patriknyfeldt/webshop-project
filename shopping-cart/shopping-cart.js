@@ -12,16 +12,26 @@ savedProductList.forEach(product => {
         `<section id="chosen-product-cart-${article.id}">
             <article class="product-cart-container "id=article-${article.id}>
                 <div class="shopping-cart-img"><img src=${article.image}></img></div>
-                <div class="layout-text-counter">
-                    <div class="shopping-cart-text">
-                        <h2>${article.name}</h2>
-                        <p>Description: ${article.description}</p>
+                
+                <div class="name-and-counter">
+                
+                        <div class="shopping-cart-text">
+                            <h2>${article.name}</h2>
+                            <p>Description: ${article.description}</p>
+                        </div>
+
+                    <div class="counter-and-price">
+                        <div class="counter">
+                            <div class="number-of-items"><span id="count-input-${article.id}">${product.quantity}</span></div>
+                            <div class="arrows">
+                                <input class="number-inputs arrow-up" type="button" id="increment-${article.id}" value=">">
+                                
+                                <input class="number-inputs arrow-down" type="button" id="decrement-${article.id}" value="<" >
+                            </div>
+                        </div>
+                            <b>price: ${article.price}</b>
+                            <button class="remove-btn" id="remove-${article.id}"><i class="fa-solid fa-trash-can"></i></button>
                     </div>
-                    <span id="count-input-${article.id}">${product.quantity}</span>
-                    <input class="number-inputs" type="button" id="decrement-${article.id}" value="<" >
-                    <input class="number-inputs" type="button" id="increment-${article.id}" value=">">
-                    <b>price: ${article.price}</b>
-                    <input type="button" id="remove-${article.id}" value="remove">
                 </div>
             </article>
         </section>
@@ -30,10 +40,10 @@ savedProductList.forEach(product => {
 if(savedProductList.length){
     console.log("create price and order display")
     chosenProductCart.innerHTML += `
-        <div id="order-row">
+        <div id="order-row" class="checkout">
             <span id="total-price">Total: 0
             </span>
-            <span>|</span>
+            
             <span>
                 <a href="../order/order.html">Till beställning</a>
             </span>
@@ -75,7 +85,7 @@ document.querySelectorAll('input[id*="decrement"]').forEach(input => {
     })
 })
 
-document.querySelectorAll('input[id*="remove"]').forEach(input =>{
+document.querySelectorAll('button[id*="remove"]').forEach(input =>{
     const inputID = input.id.slice(7);
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
     document.getElementById(`remove-${inputID}`).addEventListener("click", ()=>{
@@ -91,13 +101,13 @@ function calculateSum(){
     console.log(savedProductList)
     if(savedProductList.length === 0){
         if(document.getElementById("order-row")){
-
             document.getElementById("order-row").classList.add("hidden");
         }  
         document.getElementById("empty-cart-message").classList.remove("hidden");
+        /* totalPriceDisplay.textContent = "Total: 0"; */
     }
     else{
-        totalPriceDisplay.textContent ="Total: " + savedProductList.reduce((total, p) => total += p.article.price * p.quantity, 0);
+        totalPriceDisplay.textContent ="Total: " +  savedProductList.reduce((total, p) => total += p.article.price * p.quantity, 0);
 
     }
 }
