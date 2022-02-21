@@ -63,7 +63,7 @@ const drawProduct = (item) =>
                 let productID = e.target.id.slice(7);
                 
                 const chosenProduct = listedProducts.find(product => product.id === productID);
-               
+            
                 
                 /* console.log(chosenProduct); */
 
