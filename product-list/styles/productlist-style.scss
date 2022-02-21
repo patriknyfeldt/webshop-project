@@ -1,41 +1,98 @@
 //använd mixins och variabler istället
+@import "partials/variables";
+@import "partials/mixins";
 
 h1 {
-  color: $login-btn-color;
   text-align: center;
   text-transform: uppercase;
 }
-
-.product-list-wrapper{
+.search-products-form {
   display: flex;
-  justify-content: center;
+  input {
+    font-family: $main-font-family, FontAwesome;
+    margin: 10px 0;
+    display: block;
+    border: 1px solid #707070;
+    border-radius: 15px;
+    height: 50px;
+    max-width: 300px;
+    font-size: 30px;
+    padding: 0 10px;
+  }
+}
+.product-list-main {
+  @include flex(center, center, column);
+}
+.product-list-wrapper {
+  @include flex(center, center, initial);
   flex-wrap: wrap;
-  
+
   .product-article {
-    max-width: 400px;
+    font-family: $main-font-family;
+    max-width: 350px;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    // flex: 1;
+    align-items: center;
+    justify-content: center;
     margin: 10px;
     background: #faf4f4;
-    h2 {
-      text-align: center;
-    }
     .article-content-wrapper {
       display: flex;
-      .article-right-wrapper {
-        margin-left: 10%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @media (min-width: $breakpointMedium) {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
       }
-    }
-
-    .product-img {
-      width: 150px;
-      height: 150px;
+      .article-left-wrapper {
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        h2 {
+          text-align: center;
+          margin-bottom: 5px;
+        }
+        .img-link {
+          display: flex;
+          justify-content: center;
+        }
+        .product-img {
+          width: 80%;
+          transition: width 0.2s;
+          &:hover {
+            width: 100%;
+          }
+          @media ($breakpointMedium) {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+      .article-right-wrapper {
+        margin: 0 auto;
+        // margin-left: 10%;
+        .description-paragraph {
+          text-align: center;
+        }
+        @include flex(center, center, column);
+        .add-to-cart {
+          @include input-color-theme($login-btn-color, black, #daf3c8, #f4ffec);
+          height: 50px;
+          border-radius: 30px;
+          min-width: 300px;
+          font-size: 15px;
+          border: 1px solid $border-color-btn;
+          cursor: pointer;
+          @media (min-width: $breakpointMedium) {
+            min-width: 150px;
+            height: 35px;
+          }
+        }
+      }
     }
   }
 }

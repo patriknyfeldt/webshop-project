@@ -16,15 +16,15 @@ const drawProduct = (item) =>
 
     `<div class="products-wrapper">
     <articel class="product-article "id=article-${item.id}>
-    <h2>${item.name}</h2>
     <div class="article-content-wrapper">
     <div class="article-left-wrapper">
-    <a href="../product/product.html?article=${item.id}"><img class="product-img" src=${item.image} alt="${item.alt}"></img></a>
+    <h2>${item.name}</h2>
+    <a class="img-link" href="../product/product.html?article=${item.id}"><img class="product-img" src=${item.image} alt="${item.alt}"></img></a>
     </div>
     <div class="article-right-wrapper">
-    <p>${item.description}<p/>
+    <p class="description-paragraph">${item.description}<p/>
     <br>
-    <p>Price: ${item.price}<p/>
+    <p class="price-paragraph" >Pris: ${item.price}<p/>
     <br>
     <button class="add-to-cart" id="addbtn-${item.id}">lägg till i varukorgen</button>
     </div>
@@ -53,6 +53,7 @@ const drawProduct = (item) =>
 
         // TILLHÖR VARUKORGS FUNKTIONEN
 
+        
         buttons = productList.querySelectorAll(".add-to-cart");
         articles = productList.querySelectorAll(".product-article");
         // Behövs här eller i shopping-cart.js?
@@ -65,7 +66,6 @@ const drawProduct = (item) =>
                 
 
                 const chosenProduct = listedProducts.find(product => product.id === productID);
-
 
                 /* console.log(chosenProduct); */
 

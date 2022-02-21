@@ -45,7 +45,7 @@ const getArticles = async () => {
                   </article>`;  
       }
 
-document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
+      document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
 
       let basketListObject = JSON.parse(localStorage.getItem("basket"));
       let basketList = [];
@@ -64,18 +64,13 @@ document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
                   article: product
             }
             basketList.push(articleObj);
+
       }
       console.log(basketList)
       
       localStorage.setItem("basket", JSON.stringify(basketList));
-})
+
 // addToShoppingCart();
-      
+      })
 }
 getArticles();
-
-
-
-
-
-
