@@ -65,7 +65,7 @@ const drawProduct = (item) =>
                 
 
                 const chosenProduct = listedProducts.find(product => product.id === productID);
-               
+
                 
                 /* console.log(chosenProduct); */
 
