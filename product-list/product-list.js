@@ -11,6 +11,7 @@ let searchedItems = [];
 const searchProductsForm = document.getElementById('search-products-form');
 const searchProductsInputField = document.getElementById('search-products-inputfield');
 
+
 const drawProduct = (item) =>
 
     `<div class="products-wrapper">
@@ -62,9 +63,10 @@ const drawProduct = (item) =>
             button.addEventListener('click', (e) => {
                 let productID = e.target.id.slice(7);
                 
+
                 const chosenProduct = listedProducts.find(product => product.id === productID);
-               
-                
+
+
                 /* console.log(chosenProduct); */
 
                 let articlesForChartObject = JSON.parse(localStorage.getItem("basket"));
