@@ -2,6 +2,9 @@
 const queryString = new URLSearchParams(location.search);
 const qsArticles = queryString.get('article');
 const productContainer = document.getElementById('product-info');
+let idButtton = "";
+
+console.log(qsArticles);
 
 let products = []; // Array to store the data in products.json
 let allItems = []; // Array to store products that are copied ^
@@ -22,9 +25,10 @@ const getArticles = async () => {
       console.log(allItems);
       console.log(qsArticles);
 
-      allItems.forEach(item => {
+      const item = allItems.find(item => item.id === qsArticles);
+      console.log(item);
 
-            if(item.id === qsArticles){
+      if(item){
                   
             productContainer.innerHTML += 
                   `<articel class="product-article "id=article-${item.id}>
@@ -42,8 +46,38 @@ const getArticles = async () => {
                   </div>
                   </div>
                   </article>`;  
+      }
+
+console.log(document.getElementById(`addbtn-${item.id}`));
+document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
+      console.log("add to basket");
+            // const chosenProduct = listedProducts.find(product => product.id === productID);
+            /* console.log(chosenProduct); */
+
+            let articlesForChartObject = JSON.parse(localStorage.getItem("basket"));
+            let articlesForChart = [];
+            if(articlesForChartObject){
+                  articlesForChart = articlesForChartObject.list;
             }
+
+            const existingProduct = articlesForChart.find(a => a.item.id === chosenProduct.id)
+            if(existingProduct){
+                  existingProduct.quantity++
+            }
+            else if(!existingProduct){
+                  const articleObj = {
+                  quantity: 1,
+                  article: chosenProduct
+                  }
+                        articlesForChart.push(articleObj);
+            }
+                  const basketList = {
+                  list: articlesForChart
+            }
+            
+            localStorage.setItem("basket", JSON.stringify(basketList));
       })
+      addToShoppingCart();
       
 }
 getArticles();

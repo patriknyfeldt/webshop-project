@@ -1,4 +1,4 @@
-const writeMyName = () => {
+const addToShoppingCart = () => {
     buttons = productList.querySelectorAll(".add-to-cart");
     articles = productList.querySelectorAll(".product-article");
     // Behövs här eller i shopping-cart.js?

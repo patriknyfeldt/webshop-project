@@ -53,6 +53,7 @@ const drawProduct = (item) =>
 
         // TILLHÖR VARUKORGS FUNKTIONEN
 
+        addToShoppingCart();
         // buttons = productList.querySelectorAll(".add-to-cart");
         // articles = productList.querySelectorAll(".product-article");
         // // Behövs här eller i shopping-cart.js?
