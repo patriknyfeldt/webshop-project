@@ -86,49 +86,93 @@
         <ul>
           <li>
             <div>
-              <label for="customer-name-input">Namn*</label>
-              <input id="customer-name-input" type="text" required />
+              <label for="customer-forname-input">Förnamn*</label>
+              <input
+                id="customer-forname-input"
+                name="customer-forname-input"
+                type="text"
+                required
+              />
+            </div>
+          </li>
+          <li>
+            <div>
+              <label for="customer-lastname-input">Efteramn*</label>
+              <input
+                id="customer-lastname-input"
+                name="customer-lastname-input"
+                type="text"
+                required
+              />
             </div>
           </li>
           <li>
             <div>
               <label for="customer-adress-input">Adress*</label>
-              <input id="customer-adress-input" type="text" required />
+              <input
+                id="customer-adress-input"
+                name="customer-adress-input"
+                type="text"
+                required
+              />
             </div>
           </li>
           <li>
             <div>
               <label for="customer-zipcode-input">Postnummer*</label>
-              <input id="customer-zipcode-input" type="text" required />
+              <input
+                id="customer-zipcode-input"
+                name="customer-zipcode-input"
+                type="text"
+                required
+              />
             </div>
           </li>
           <li>
             <div>
               <label for="customer-city-input">Ort*</label>
-              <input id="customer-city-input" type="text" required />
+              <input
+                id="customer-city-input"
+                name="customer-city-input"
+                type="text"
+                required
+              />
             </div>
           </li>
           <li>
             <div>
               <label for="customer-email-input">Epost*</label>
-              <input id="customer-email-input" type="email" required />
+              <input
+                id="customer-email-input"
+                name="customer-email-input"
+                type="email"
+                required
+              />
             </div>
           </li>
           <li>
             <div>
               <label for="customer-phone-input">Telefonnummer</label>
-              <input id="customer-phone-input" type="tel" />
+              <input
+                id="customer-phone-input"
+                name="customer-phone-input"
+                type="tel"
+              />
             </div>
           </li>
           <li>
             <div>
               <label for="customer-comments">Övriga kommentarer</label>
               <textarea
-                name=""
-                id="customer-comments"
+                name="customer-comments-input"
+                id="customer-comments-input"
                 cols="30"
                 rows="3"
               ></textarea>
+            </div>
+          </li>
+          <li>
+            <div>
               <button>Skicka beställning</button>
             </div>
           </li>
@@ -171,6 +215,7 @@
       </div>
       <p>© 2022 PSAR, Inc. All Rights Reserved</p>
     </footer>
+    <script src="../order/order.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/nav.js"></script>
   </body>
