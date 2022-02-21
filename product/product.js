@@ -35,7 +35,7 @@ const getArticles = async () => {
                               </div>
                         <div class="info-container">
                               <h2>${item.name}</h2>
-                              <p>Beskrivning: ${item.description}</p>
+                              <p class="description">Beskrivning: ${item.description}</p>
                               <br>
                               <p class="price">Pris: ${item.price} kr</p>
                               <br>

@@ -24,7 +24,6 @@ $main-font-family: 'Montserrat', sans-serif;
             align-content: center;
             .image-container, .info-container {
                   max-width: 400px;
-            
             h2 {
                   margin-bottom: 20px;
             }
@@ -38,6 +37,9 @@ $main-font-family: 'Montserrat', sans-serif;
             }
             .info-container {
                   padding: 50px;
+                  .description {
+                        line-height: 1.5;
+                  }
                   .add-to-cart{
                         @include input-color-theme(#ECFFDE, black, #daf3c8, #f4ffec);
                         height: 50px;
