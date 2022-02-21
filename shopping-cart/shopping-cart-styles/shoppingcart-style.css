@@ -125,9 +125,11 @@ h1 {
   border-top: 1px solid black;
 }
 
-.checkout-wrapper .checkout .line {
-  width: 2px;
-  color: black;
-  height: 20px;
+.checkout-wrapper .checkout .checkout-btn {
+  list-style: none;
+}
+
+.checkout-wrapper .checkout .checkout-btn a {
+  background-color: #5c717e;
 }
 /*# sourceMappingURL=shoppingcart-style.css.map */
