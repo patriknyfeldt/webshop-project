@@ -1,3 +1,11 @@
+@import "../shopping-cart-styles/partials/variables";
+@import "../shopping-cart-styles/partials/mixins";
+
+// Font-style options
+
+
+
+
 h1{
     text-align: center;
     margin-bottom: 50px;
@@ -80,10 +88,16 @@ h1{
     height: 200px;
     width: 80%;
     border-top: 1px solid black;
-    .line{
-        width: 2px;
-        color: black;
-        height: 20px;
-    }
+    
+        .checkout-btn{
+            list-style: none;
+            a{
+                
+                background-color: $register-border-color;
+            }
+          
+           }
+    
+   
 }
 }

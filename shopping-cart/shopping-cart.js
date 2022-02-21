@@ -40,13 +40,15 @@ savedProductList.forEach(product => {
 if(savedProductList.length){
     console.log("create price and order display")
     chosenProductCart.innerHTML += `
-        <div id="order-row" class="checkout">
-            <span id="total-price">Total: 0
-            </span>
-            
-            <span>
-                <a href="../order/order.html">Till beställning</a>
-            </span>
+        <div id="order-row" class="checkout-wrapper">
+            <div class="checkout">
+                <span id="total-price">Total: 0
+                </span>
+                
+                <span>
+                    <button class="checkout-btn"><a href="../order/order.html">Till beställning</a></button>
+                </span>
+            </div>
         </div>
     `;
 }
