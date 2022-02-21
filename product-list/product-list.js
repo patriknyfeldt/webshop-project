@@ -64,6 +64,7 @@ const drawProduct = (item) =>
         //     button.addEventListener('click', (e) => {
         //         let productID = e.target.id.slice(7);
                 
+
         //         const chosenProduct = listedProducts.find(product => product.id === productID);
                
                 
