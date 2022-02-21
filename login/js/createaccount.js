@@ -1,4 +1,4 @@
-const errorMessage = document.getElementById("error-message");
+const errorMessage = document.getElementById("error-message").parentElement;
 console.log(errorMessage);
 
 document.getElementById("createaccount-btn").addEventListener("click", e =>{

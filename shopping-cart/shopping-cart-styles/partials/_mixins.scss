@@ -1,0 +1,29 @@
+@mixin flex($justify, $align, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+  }
+  @mixin list-style {
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  @mixin category-img { //till bildlänkarna på startsidan
+    height: 380px;
+    background-size: cover;
+    background-position: center center;
+    margin: 20px;
+  }
+  
+  @mixin input-color-theme($background-colour, $foreground-colour, $hover-color, $active-colour:white){
+    color:$foreground-colour;
+    background-color: $background-colour;
+    transition: background-color 0.2s;
+    &:hover{
+        background-color: $hover-color;
+    }
+    &:active{
+        background-color: $active-colour;
+    }
+}

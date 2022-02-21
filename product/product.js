@@ -47,14 +47,14 @@ const getArticles = async () => {
 
 document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
 
-      let articlesForChartObject = JSON.parse(localStorage.getItem("basket"));
-      let articlesForChart = [];
-      if(articlesForChartObject){
-            articlesForChart = articlesForChartObject.list;
+      let basketListObject = JSON.parse(localStorage.getItem("basket"));
+      let basketList = [];
+      if(basketListObject){
+            basketList = basketListObject;
       }
       
-      console.log(articlesForChart)
-      const existingProduct = articlesForChart.find(a => a.article.id === product.id)
+      console.log(basketList)
+      const existingProduct = basketList.find(a => a.article.id === product.id)
       if(existingProduct){
             existingProduct.quantity++
       }
@@ -63,10 +63,7 @@ document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
                   quantity: 1,
                   article: product
             }
-            articlesForChart.push(articleObj);
-      }
-      const basketList = {
-            list: articlesForChart
+            basketList.push(articleObj);
       }
       console.log(basketList)
       

@@ -1,7 +1,7 @@
 const chosenProductCart = document.getElementById("chosen-product-cart");
 
 let savedProducts = JSON.parse(localStorage.getItem("basket"));
-let savedProductList = savedProducts.list;
+let savedProductList = savedProducts;
 
 // console.log(`savedProductList:`);
 //console.log(savedProductList)
@@ -40,16 +40,22 @@ savedProductList.forEach(product => {
 if(savedProductList.length){
     console.log("create price and order display")
     chosenProductCart.innerHTML += `
-        <div id="order-row" class="checkout">
-            <span id="total-price">Total: 0
-            </span>
-            
-            <span>
-                <a href="../order/order.html">Till beställning</a>
-            </span>
+        <div id="order-row" class="checkout-wrapper">
+            <div class="checkout">
+                <span id="total-price" class="total-sum">Total: 0
+                </span>
+                
+                <span>
+                <a href="../order/order.html"><button class="checkout-btn lightgreen">Kassa</button></a>
+                </span>
+            </div>
         </div>
     `;
 }
+
+
+
+
 else{
     document.getElementById("empty-cart-message").classList.remove("hidden");
 }
