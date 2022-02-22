@@ -3,6 +3,7 @@ import {activeUser} from "../../js/main.js"
 const errorMessageDisplay = document.getElementById("error-message");
 const productListData = JSON.parse(localStorage.getItem("basket"));
 const descriptionGrp = document.getElementById("order-description-grp");
+const cardInputField = document.getElementById("input-customer-card");
 
 let productList;
 
@@ -31,13 +32,15 @@ function printErrorMessage(text){
 
 const drawProduct = (item) =>{
     const article = item.article
+    const quantity = item.quantity
     return `<div class="article-wrapper">
                 <article class="article">
                     <img class="article-img" src="${article.image}" width="200px" height="150px">
                     <div class="article-info-wrapper">
                     <h3>${article.name}</h3>
                     <p>${article.description}</p>
-                    <p>Price: ${article.price}</p>
+                    <p>Pris: ${article.price}</p>
+                    <p>Antal: ${quantity}</p>
                     </div>
                 </article>
             </div>`
@@ -103,3 +106,25 @@ document.getElementById("send-order-btn").addEventListener("click", (e)=>{
 fillUserFormData(activeUser);
 renderListToElement(document.getElementById("product-list-descriptions"), productList, drawProduct)
 document.getElementById("total-price-display").innerText = "Total: " +  productList.reduce((total, p) => total += p.article.price * p.quantity, 0);
+
+cardInputField.addEventListener("input", ()=>{
+
+    //remove dashes
+    
+    let cardValue = cardInputField.value.split("-").join("");
+    if(cardValue.length > 16){
+        cardValue = cardValue.slice(0, cardValue.length-1);
+        calculateCardField();
+        return;
+    }
+
+    // add dashes
+    function calculateCardField(){
+        const textArray = [];
+        for(let i = 0; i < cardValue.length; i+=4){
+            textArray.push(`${cardValue.slice(i, i+4)}`);
+        }
+        cardInputField.value = textArray.join("-");
+    }
+    calculateCardField();
+})
