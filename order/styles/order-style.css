@@ -157,6 +157,7 @@ h2 {
 .order-main .summary-wrapper .product-list-descriptions .article-wrapper .article .article-img {
   width: 160px;
   height: 160px;
+  margin: 10px;
 }
 
 .order-main .summary-wrapper .product-list-descriptions .article-wrapper .article .article-info-wrapper {
@@ -172,6 +173,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-left: 10px;
   max-width: 200px;
 }
 
