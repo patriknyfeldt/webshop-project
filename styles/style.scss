@@ -105,14 +105,17 @@ main {
   }
   }
   .nav-btn {
+    display: block;
     height: 50px;
     border-radius: 30px;
-    min-width: 300px;
+    max-width: 300px;
     font-size: 20px;
     border:1px solid $border-color-btn;
     cursor:pointer;
-    margin: inherit;
+    margin: 0 auto;
     margin-top: 20px;
+    padding-top: 10px;
+    @include list-style;
   }
   .login-button {
     @include input-color-theme(#ECFFDE, black, #daf3c8, #f4ffec);
