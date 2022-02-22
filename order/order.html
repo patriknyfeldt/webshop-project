@@ -34,13 +34,14 @@
         </ul>
       </nav>
       <div>
-        <li>
-          <a href="../shopping-cart/shopping-cart.html"
-            ><i class="cart fa-solid fa-cart-shopping"></i
-          ></a>
-        </li>
-        <li id="user-name" class="hidden"><a href="../index.html"></a></li>
-        <li id="log-in-link" class="hidden"><a href="../login/login.html">Logga in</a></li>
+        <ul class="hidden log-in">
+          <li>
+            <a href="../shopping-cart/shopping-cart.html"
+              ><i class="cart fa-solid fa-cart-shopping"></i
+            ></a>
+          </li>
+          <li id="user-name" class="hidden"><a href="../index.html"></a></li>
+          <li id="log-in-link" class="hidden"><a href="../login/login.html">Logga in</a></li>
           <li><a href="../login/logincreate.html">Registrera</a></li>
         </ul>
         <!--Dropdown menu börjar här-->
@@ -98,7 +99,6 @@
                     name="input-customer-forename"
                     class="input-field order-input"
                     type="text"
-                    data-name="Forename"
                   />
                 </div>
               </li>
@@ -110,7 +110,6 @@
                     name="input-customer-lastname"
                     class="input-field order-input"
                     type="text"
-                    data-name="Lastname"
                   />
                 </div>
               </li>
@@ -122,7 +121,6 @@
                     name="input-customer-adress"
                     class="input-field order-input"
                     type="text"
-                    data-name="Adress"
                   />
                 </div>
               </li>
@@ -134,7 +132,6 @@
                     name="input-customer-zipcode"
                     class="input-field order-input"
                     type="text"
-                    data-name="Zipcode"
                   />
                 </div>
               </li>
@@ -146,7 +143,6 @@
                     name="input-customer-city"
                     class="input-field order-input"
                     type="text"
-                    data-name="City"
                   />
                 </div>
               </li>
@@ -158,7 +154,6 @@
                     name="input-customer-email"
                     class="input-field order-input"
                     type="email"
-                    data-name="Email"
                   />
                 </div>
               </li>
@@ -170,7 +165,6 @@
                     name="input-customer-telephone"
                     class="input-field order-input"
                     type="tel"
-                    data-name="Telephone"
                   />
                 </div>
               </li>
@@ -183,7 +177,6 @@
                     class="input-field order-input"
                     type="tel"
                     placeholder="xxxx-xxxx-xxxx-xxxx"
-                    data-name="Card"
                   />
                 </div>
               </li>
@@ -198,7 +191,6 @@
                     class="order-textarea"
                     cols="30"
                     rows="3"
-                    data-name="Comments"
                   ></textarea>
                 </div>
               </li>
