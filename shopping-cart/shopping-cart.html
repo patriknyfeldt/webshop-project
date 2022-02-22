@@ -10,6 +10,7 @@
       href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
     />
     <link rel="stylesheet" href="shopping-cart-styles/shoppingcart-style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap" rel="stylesheet">
     
     <title>PSAR varukorg</title>
   </head>
@@ -83,14 +84,18 @@
     </header>
     <main class="shopping-cart-main">
       <h1>Kundvagnen</h1>
-      <h2 id="empty-cart-message" class="hidden">Din varukorg äs tom</h2>
+      <div id="empty-cart-message"  class="hidden">
+        <i class="fa-regular fa-face-frown-open sad-emoji"></i>
+        <div class="chat-bubble"><h2 class="chat-bubble-text">Kundvagnen<br>är tom!</h2></div>
+      </div>
       <section id="chosen-product-cart">
         
-        <!-- <article class="product-cart-container"></article> -->
+        
+        
       </section>
     </main>
 
-    <!--   <footer class="footer">
+      <footer class="footer">
       <div class="social-media-icons">
         <a><i class="fa-brands fa-youtube"></i></a>
         <a><i class="fa-brands fa-twitter"></i></a>
@@ -124,7 +129,7 @@
         </div>
       </div>
       <p>© 2022 PSAR, Inc. All Rights Reserved</p>
-    </footer> -->
+    </footer>
     <script type="module" src="../js/main.js"></script>
     <script src="./shopping-cart.js"></script>
     <script src="../js/nav.js"></script>

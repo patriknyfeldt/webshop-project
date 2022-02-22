@@ -107,7 +107,7 @@ function calculateSum(){
     console.log(savedProductList)
     if(savedProductList.length === 0){
         if(document.getElementById("order-row")){
-            document.getElementById("order-row").classList.add("hidden");
+            document.getElementById("order-row").innerHTML = "  ";
         }  
         document.getElementById("empty-cart-message").classList.remove("hidden");
         /* totalPriceDisplay.textContent = "Total: 0"; */
