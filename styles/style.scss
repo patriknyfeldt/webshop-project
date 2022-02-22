@@ -15,6 +15,7 @@ body {
   margin:0;
   display:grid;
   grid-template-rows: 1fr auto;
+  font-family: $main-font-family;
 }
 
 main {
@@ -32,9 +33,9 @@ main {
   padding: 20px 10px;
   min-height:100px;
   .navigation-icons{
-    display: flex;
-    font-size: 40px;
-    gap: 20px;
+    // display: flex;
+    // font-size: 40px;
+    // gap: 20px;
   }
 }
 
@@ -46,7 +47,8 @@ main {
   right: 1rem;
   .cart {
     margin-right: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    color: black;
   }
 }
 .hamburger {
@@ -67,6 +69,7 @@ main {
 .menu-hamburger {
   position: fixed;
   text-align: center;
+  top: 12%;
   left: 0;
   right: 0;
   bottom: 50%;
@@ -110,7 +113,7 @@ main {
   padding: 10px;
   height: 300px;
   background-color: #FAF4F4;
- 
+  
 }
 .social-media-icons {
   @include flex(center, center, row);
@@ -161,8 +164,11 @@ ul {
   .nav-links{
       display: flex;
       height: 100%;
+      font-size: 1.5rem;
       align-items: flex-end;
+      justify-items: center;
       margin-bottom: 30px;
+      margin-left: 75px;
       
       ul{
           display: flex;
