@@ -8,6 +8,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 25px;
 }
 
 .search-products-form input {
@@ -54,6 +55,7 @@ h1 {
           flex-direction: initial;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 50px 0;
 }
 
 .product-list-wrapper .product-article {
