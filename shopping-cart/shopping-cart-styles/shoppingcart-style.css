@@ -1,4 +1,12 @@
 .shopping-cart-main {
+  text-align: center;
+}
+
+.shopping-cart-main h1 {
+  margin-bottom: 20px;
+}
+
+.empty-cart-message-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,7 +20,7 @@
           flex-direction: column;
 }
 
-.shopping-cart-main h1 {
+.empty-cart-message-wrapper h1 {
   margin-bottom: 100px;
 }
 
