@@ -112,14 +112,18 @@ main {
 }
 
 .menu-hamburger .nav-btn {
+  display: block;
   height: 50px;
   border-radius: 30px;
-  min-width: 300px;
+  max-width: 300px;
   font-size: 20px;
   border: 1px solid #a7be97;
   cursor: pointer;
-  margin: inherit;
+  margin: 0 auto;
   margin-top: 20px;
+  padding-top: 10px;
+  list-style: none;
+  text-decoration: none;
 }
 
 .menu-hamburger .login-button {
