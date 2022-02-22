@@ -4,6 +4,18 @@
 // Font-style options
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Roboto&family=Teko:wght@300&display=swap');
 
+@mixin input-color-theme($background-colour, $foreground-colour, $hover-color, $active-colour:white){
+  color:$foreground-colour;
+  background-color: $background-colour;
+  transition: background-color 0.2s;
+  &:hover{
+        background-color: $hover-color;
+  }
+  &:active{
+        background-color: $active-colour;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,15 +39,16 @@ main {
 }
 .header {
   @include flex(space-between, center);
+  box-shadow: 0 5px 20px rgba(57, 63, 72, 0.3);
   position: fixed;
   background: white;
   width: 100%;
   padding: 20px 10px;
-  min-height:100px;
+  min-height: 110px;
   .navigation-icons{
-    // display: flex;
-    // font-size: 40px;
-    // gap: 20px;
+    display: flex;
+    font-size: 40px;
+    gap: 20px;
   }
 }
 
@@ -77,27 +90,37 @@ main {
   color: white;
   background: white;
   list-style: none;
-  min-height: 250px;
+  min-height: 430px;
   
   .menu-item { 
   display: block;
   color: black;
   font-size: 1.6rem;
   text-decoration:none;
-  margin: 1.3rem 0;
+  padding-bottom: 10px;
+  margin: 30px auto;
+  max-width: 90px;
+  &:hover {
+    border-bottom: 2px solid rgb(34, 33, 33);
+  }
   }
   .nav-btn {
-    border-style: none;
-    width: 100px;
-    padding: 5px 0;
-    border-radius: 20px;
-    margin-top: 2rem;
+    height: 50px;
+    border-radius: 30px;
+    min-width: 300px;
+    font-size: 20px;
+    border:1px solid $border-color-btn;
+    cursor:pointer;
+    margin: inherit;
+    margin-top: 20px;
   }
   .login-button {
+    @include input-color-theme(#ECFFDE, black, #daf3c8, #f4ffec);
     background: $login-btn-color;
     border: 1px solid $border-color-btn;
   }
   .register-button {
+    @include input-color-theme(#89A3B3, white, #708592,#a3becf);
     background: $register-btn-color;
     border: 1px solid $register-border-color;
     color: white;
@@ -161,7 +184,7 @@ ul {
     display: none;
   }
 
-  .nav-links{
+  .nav-links {
       display: flex;
       height: 100%;
       font-size: 1.5rem;
@@ -170,12 +193,16 @@ ul {
       margin-bottom: 30px;
       margin-left: 75px;
       
-      ul{
+      ul {
           display: flex;
           gap: 30px;
-          li a{
+          li a {
               @include list-style;
               color: black;
+              padding: 0px 10px 10px 10px;
+              &:hover {
+                border-bottom: 2px solid rgb(34, 33, 33);
+              }
           }
           
       }

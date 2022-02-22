@@ -3,6 +3,7 @@ import {activeUser} from "../../js/main.js"
 const errorMessageDisplay = document.getElementById("error-message");
 const productListData = JSON.parse(localStorage.getItem("basket"));
 const descriptionGrp = document.getElementById("order-description-grp");
+const cardInputField = document.getElementById("input-customer-card");
 
 let productList;
 
@@ -105,3 +106,25 @@ document.getElementById("send-order-btn").addEventListener("click", (e)=>{
 fillUserFormData(activeUser);
 renderListToElement(document.getElementById("product-list-descriptions"), productList, drawProduct)
 document.getElementById("total-price-display").innerText = "Total: " +  productList.reduce((total, p) => total += p.article.price * p.quantity, 0);
+
+cardInputField.addEventListener("input", ()=>{
+
+    //remove dashes
+    
+    let cardValue = cardInputField.value.split("-").join("");
+    if(cardValue.length > 16){
+        cardValue = cardValue.slice(0, cardValue.length-1);
+        calculateCardField();
+        return;
+    }
+
+    // add dashes
+    function calculateCardField(){
+        const textArray = [];
+        for(let i = 0; i < cardValue.length; i+=4){
+            textArray.push(`${cardValue.slice(i, i+4)}`);
+        }
+        cardInputField.value = textArray.join("-");
+    }
+    calculateCardField();
+})
