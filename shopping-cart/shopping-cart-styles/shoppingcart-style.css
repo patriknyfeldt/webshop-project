@@ -32,6 +32,8 @@
   min-height: 250px;
   width: 100%;
   margin: 10px 0 0 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .product-cart-container .name-and-counter {
@@ -48,6 +50,7 @@
 
 .product-cart-container .name-and-counter .shopping-cart-text {
   text-align: left;
+  width: 200px;
 }
 
 .product-cart-container .name-and-counter .counter-and-price {
@@ -85,7 +88,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 5px;
+  gap: 7px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -94,17 +97,17 @@
 .product-cart-container .name-and-counter .counter-and-price .counter .arrows .arrow-up {
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 10px solid black;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 11px solid black;
 }
 
 .product-cart-container .name-and-counter .counter-and-price .counter .arrows .arrow-down {
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 10px solid black;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 11px solid black;
 }
 
 .product-cart-container .name-and-counter .counter-and-price .counter .number-of-items {
@@ -194,9 +197,14 @@
 
 @media (min-width: 550px) {
   .product-cart-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .product-cart-container .name-and-counter {
     -webkit-box-orient: horizontal;
@@ -204,9 +212,8 @@
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .product-cart-container .shopping-cart-img img {
-    height: 160px;
-    width: 160px;
+  .product-cart-container .name-and-counter .counter-and-price .counter {
+    margin-right: 100px;
   }
 }
 /*# sourceMappingURL=shoppingcart-style.css.map */

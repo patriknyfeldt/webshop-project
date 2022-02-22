@@ -38,6 +38,7 @@
     min-height: 250px;
     width: 100%;
     margin: 10px 0 0 10px;
+    flex-wrap: wrap;
 
     .name-and-counter{
         display: flex;
@@ -47,6 +48,7 @@
 
     .shopping-cart-text{
         text-align: left; 
+        width: 200px;
     }
 
     .counter-and-price{
@@ -64,23 +66,23 @@
             .arrows{
                 display: flex;
                 flex-direction: column;
-                gap: 5px;
+                gap: 7px;
                 justify-content: center;
 
                 .arrow-up{
                     width: 0; 
                     height: 0; 
-                    border-left: 7px solid transparent;
-                    border-right: 7px solid transparent;
-                    border-bottom: 10px solid black;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-bottom: 11px solid black;
 
                 }
                 .arrow-down{
                     width: 0; 
                     height: 0; 
-                    border-left: 7px solid transparent;
-                    border-right: 7px solid transparent;
-                    border-top: 10px solid black;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-top: 11px solid black;
 
                 }
             }
@@ -147,21 +149,28 @@
 
 @media (min-width: $breakpointMedium){
     .product-cart-container{
-       
+       justify-content: center;
         align-items: center;
+        flex-wrap: nowrap;
         .name-and-counter{
-            
             flex-direction: row;
+
+            
+        
+            .counter-and-price{
+                .counter{
+                    margin-right: 100px;
+        
+                
+                }
+              
+            }
+            
             
     
         
     }
-        .shopping-cart-img{
-            img{
-                height: 160px;
-                width: 160px;
-            }
-            
-        }
+    
+        
     }
 }

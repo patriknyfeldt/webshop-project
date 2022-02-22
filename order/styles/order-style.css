@@ -15,16 +15,25 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
+=======
   -webkit-box-pack: initial;
       -ms-flex-pack: initial;
           justify-content: initial;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+=======
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
 }
 
 @media (min-width: 550px) {
@@ -45,32 +54,50 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
+=======
   -webkit-box-pack: initial;
       -ms-flex-pack: initial;
           justify-content: initial;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+=======
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
 }
 
 .order-main .order-description-grp .order-form-wrapper .order-form ul li .input-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
+=======
   -webkit-box-pack: initial;
       -ms-flex-pack: initial;
           justify-content: initial;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+=======
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
 }
 
 .order-main .order-description-grp .order-form-wrapper .order-form ul li .input-wrapper label {
@@ -89,6 +116,12 @@ h2 {
   padding: 0 10px;
 }
 
+<<<<<<< HEAD
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+=======
 .order-main .summary-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,10 +132,22 @@ h2 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+=======
 }
 
 .order-main .summary-wrapper .product-list-descriptions {
@@ -115,10 +160,39 @@ h2 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+@media (min-width: 550px) {
+  .order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper {
+  margin: 2px;
+}
+
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article {
+  color: #5a5454;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+=======
 }
 
 .order-main .summary-wrapper .product-list-descriptions .article-wrapper {
@@ -135,10 +209,20 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 550px) {
+  .order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article {
+=======
   color: #5a5454;
   margin-top: 20px;
   font-family: "Montserrat", sans-serif;
@@ -147,6 +231,7 @@ h2 {
 
 @media (min-width: 550px) {
   .order-main .summary-wrapper .product-list-descriptions .article-wrapper .article {
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -154,11 +239,21 @@ h2 {
   }
 }
 
+<<<<<<< HEAD
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article .article-img {
+=======
 .order-main .summary-wrapper .product-list-descriptions .article-wrapper .article .article-img {
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
   width: 160px;
   height: 160px;
 }
 
+<<<<<<< HEAD
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article .article-info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+=======
 .order-main .summary-wrapper .product-list-descriptions .article-wrapper .article .article-info-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,14 +263,24 @@ h2 {
   -webkit-box-align: initial;
       -ms-flex-align: initial;
           align-items: initial;
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 200px;
+}
+
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article .article-info-wrapper h3 {
+=======
   max-width: 200px;
 }
 
 .order-main .summary-wrapper .product-list-descriptions .article-wrapper .article .article-info-wrapper h3 {
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
   margin: 5px 0;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -185,6 +290,18 @@ h2 {
 .order-main .price-button-row {
   display: -webkit-box;
   display: -ms-flexbox;
+<<<<<<< HEAD
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.order-main .price-button-row .price-and-btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+=======
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -240,10 +357,29 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+  width: 80%;
+  margin-top: 20px;
+  border-top: 1px solid black;
+  gap: 30px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (min-width: 550px) {
+  .order-main .price-button-row .price-and-btn-wrapper {
+=======
 }
 
 .order-main .receipt-and-total-wrapper .receipt-wrapper {
@@ -265,12 +401,19 @@ h2 {
 
 @media (min-width: 550px) {
   .order-main .receipt-and-total-wrapper .receipt-wrapper {
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+<<<<<<< HEAD
+  }
+}
+
+.order-main .price-button-row .price-and-btn-wrapper .total-price-display {
+=======
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -295,6 +438,7 @@ h2 {
 }
 
 .order-main .receipt-and-total-wrapper .receipt-wrapper .user-info-wrapper .user-info {
+>>>>>>> c40207b20ad834ae8ff2d66d851d073096669a2e
   font-family: "Montserrat", sans-serif;
 }
 /*# sourceMappingURL=order-style.css.map */
