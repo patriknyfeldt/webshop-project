@@ -30,6 +30,7 @@
   display: -ms-flexbox;
   display: flex;
   min-height: 250px;
+  width: 100%;
   margin: 10px 0 0 10px;
 }
 
@@ -46,13 +47,7 @@
 }
 
 .product-cart-container .name-and-counter .shopping-cart-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  text-align: left;
 }
 
 .product-cart-container .name-and-counter .counter-and-price {
@@ -195,5 +190,23 @@
 
 .dimblue:active {
   background-color: #a3becf;
+}
+
+@media (min-width: 550px) {
+  .product-cart-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .product-cart-container .name-and-counter {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .product-cart-container .shopping-cart-img img {
+    height: 160px;
+    width: 160px;
+  }
 }
 /*# sourceMappingURL=shoppingcart-style.css.map */

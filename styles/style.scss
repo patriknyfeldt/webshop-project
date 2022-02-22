@@ -11,10 +11,10 @@
   
 }
 body {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  
+  min-height: 100vh;
+  margin:0;
+  display:grid;
+  grid-template-rows: 1fr auto;
 }
 
 main {
@@ -30,6 +30,7 @@ main {
   background: white;
   width: 100%;
   padding: 20px 10px;
+  min-height:100px;
   .navigation-icons{
     display: flex;
     font-size: 40px;

@@ -4,6 +4,16 @@
 // Font-style options
 .shopping-cart-main{
 
+    // height: 300px;
+    text-align: center;
+    h1{
+        margin-bottom: 20px;
+       
+        
+    }
+}
+
+.empty-cart-message-wrapper{
     display: flex;
     justify-content: center;
     text-align: center;
@@ -20,27 +30,32 @@
 .chat-bubble{
     margin-bottom: 30px;
 }
+
+
+
 .product-cart-container{
-    
     display: flex;
     min-height: 250px;
+    width: 100%;
     margin: 10px 0 0 10px;
+
     .name-and-counter{
         display: flex;
         flex-direction: column;
         gap: 80px;
         margin-left: 30px;
+
     .shopping-cart-text{
-        display: flex;
-        flex-direction: column;
-        
+        text-align: left; 
     }
+
     .counter-and-price{
         display: flex;
         flex-direction: row;
         gap: 20px;
         align-items: center;
         flex-wrap: wrap ;
+
         .counter{
             display: flex;
             flex-direction: row;
@@ -51,6 +66,7 @@
                 flex-direction: column;
                 gap: 5px;
                 justify-content: center;
+
                 .arrow-up{
                     width: 0; 
                     height: 0; 
@@ -69,7 +85,6 @@
                 }
             }
             .number-of-items{
-                
                 border: 1px solid black;
                 text-align: center;
                 width: 30px;
@@ -94,8 +109,8 @@
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
+
 .checkout{
-    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -118,8 +133,7 @@
                 font-size:$input-font-size;
                 padding: 0px 30px;
                 cursor:pointer;
-                
-            }
+        }
 }
 }
 
@@ -129,4 +143,25 @@
 
 .dimblue{
     @include input-color-theme(#89A3B3, white, #708592,#a3becf);
+}
+
+@media (min-width: $breakpointMedium){
+    .product-cart-container{
+       
+        align-items: center;
+        .name-and-counter{
+            
+            flex-direction: row;
+            
+    
+        
+    }
+        .shopping-cart-img{
+            img{
+                height: 160px;
+                width: 160px;
+            }
+            
+        }
+    }
 }
