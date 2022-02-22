@@ -11,7 +11,7 @@ h2 {
   margin: 10px 0;
 }
 
-.order-main .order-form-wrapper {
+.order-main .order-description-grp .order-form-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +25,7 @@ h2 {
 }
 
 @media (min-width: 550px) {
-  .order-main .order-form-wrapper {
+  .order-main .order-description-grp .order-form-wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -38,7 +38,7 @@ h2 {
   }
 }
 
-.order-main .order-form-wrapper .order-form {
+.order-main .order-description-grp .order-form-wrapper .order-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,7 +51,7 @@ h2 {
           align-items: center;
 }
 
-.order-main .order-form-wrapper .order-form ul li .input-wrapper {
+.order-main .order-description-grp .order-form-wrapper .order-form ul li .input-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,13 +64,13 @@ h2 {
           align-items: center;
 }
 
-.order-main .order-form-wrapper .order-form ul li .input-wrapper label {
+.order-main .order-description-grp .order-form-wrapper .order-form ul li .input-wrapper label {
   margin-left: 20px;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
-.order-main .order-form-wrapper .order-form ul li .input-wrapper .order-textarea {
+.order-main .order-description-grp .order-form-wrapper .order-form ul li .input-wrapper .order-textarea {
   display: block;
   border: 1px solid #707070;
   border-radius: 15px;
@@ -80,7 +80,7 @@ h2 {
   padding: 0 10px;
 }
 
-.order-main .order-form-wrapper .summary-wrapper {
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,7 +93,7 @@ h2 {
           align-items: flex-start;
 }
 
-.order-main .order-form-wrapper .summary-wrapper .product-list-descriptions {
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,17 +109,17 @@ h2 {
 }
 
 @media (min-width: 550px) {
-  .order-main .order-form-wrapper .summary-wrapper .product-list-descriptions {
+  .order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions {
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
 }
 
-.order-main .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper {
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper {
   margin: 2px;
 }
 
-.order-main .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article {
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article {
   color: #5a5454;
   margin-top: 20px;
   font-family: "Montserrat", sans-serif;
@@ -137,7 +137,7 @@ h2 {
 }
 
 @media (min-width: 550px) {
-  .order-main .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article {
+  .order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -145,12 +145,12 @@ h2 {
   }
 }
 
-.order-main .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article .article-img {
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article .article-img {
   width: 160px;
   height: 160px;
 }
 
-.order-main .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article .article-info-wrapper {
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article .article-info-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,7 +163,7 @@ h2 {
   max-width: 200px;
 }
 
-.order-main .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article .article-info-wrapper h3 {
+.order-main .order-description-grp .order-form-wrapper .summary-wrapper .product-list-descriptions .article-wrapper .article .article-info-wrapper h3 {
   margin: 5px 0;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;

@@ -2,19 +2,28 @@
 @import "../shopping-cart-styles/partials/mixins";
 
 // Font-style options
+.shopping-cart-main{
 
-
-
-
-
-h1{
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 50px;
+    flex-direction: column;
+    h1{
+        margin-bottom: 100px;
+       }
+}
+
+.sad-emoji{
+    font-size: 10rem;
+    margin-bottom: 60px;
+}
+.chat-bubble{
+    margin-bottom: 30px;
 }
 .product-cart-container{
     
     display: flex;
-    height: 250px;
+    min-height: 250px;
     margin: 10px 0 0 10px;
     .name-and-counter{
         display: flex;
@@ -31,6 +40,7 @@ h1{
         flex-direction: row;
         gap: 20px;
         align-items: center;
+        flex-wrap: wrap ;
         .counter{
             display: flex;
             flex-direction: row;
@@ -83,6 +93,7 @@ h1{
 .checkout-wrapper{
     display: flex;
     justify-content: center;
+    margin-bottom: 100px;
 .checkout{
     
     display: flex;
@@ -107,6 +118,7 @@ h1{
                 font-size:$input-font-size;
                 padding: 0px 30px;
                 cursor:pointer;
+                
             }
 }
 }

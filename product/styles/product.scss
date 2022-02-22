@@ -12,9 +12,12 @@ $main-font-family: 'Montserrat', sans-serif;
             background-color: $active-colour;
       }
 }
+.product-info {
+      margin: 60px auto;
+}
 
 .product-article {
-      margin:50px auto;
+      
       font-family: $main-font-family;
 
       .flex-container {
