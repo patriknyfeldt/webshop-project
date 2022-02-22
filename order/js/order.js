@@ -32,17 +32,18 @@ function printErrorMessage(text){
 const drawProduct = (item) =>{
     const article = item.article
     return `<div class="article-wrapper">
-            <article class="article">
-                <img class="article-img" src="${article.image}" width="200px" height="150px">
-                <div class="article-info-wrapper">
-                <h3>${article.name}</h3>
-                <p>${article.description}</p>
-                <p>Price: ${article.price}</p>
-                </div>
-            </article>
-    </div>`
+                <article class="article">
+                    <img class="article-img" src="${article.image}" width="200px" height="150px">
+                    <div class="article-info-wrapper">
+                    <h3>${article.name}</h3>
+                    <p>${article.description}</p>
+                    <p>Price: ${article.price}</p>
+                    </div>
+                </article>
+            </div>`
 }
 
+//
 const drawReceiptUser = (item) =>`
     <div>
         <p><b>${item.dataset.name}</b></p>
@@ -73,19 +74,23 @@ document.getElementById("send-order-btn").addEventListener("click", (e)=>{
     descriptionGrp.parentElement.removeChild(descriptionGrp);
 
     const receiptWrapper = document.getElementById("receipt-wrapper");
-    receiptWrapper.classList.remove("hidden");
+    // receiptWrapper.classList.remove("hidden");
     receiptWrapper.innerHTML += `
         <div>
             <h1>Tack för din beställning!</h1>
             <p>Kolla din mejl för order bekräftelse</p>
         </div>
         <div id="receipt-product-summary"></div>
-        <div id="receipt-user-summary"></div>
+        <div class="summary-wrapper">
+            <div id="receipt-user-summary" class="product-list-descriptions"></div>
+        </div>
     `
     renderListToElement(document.getElementById("receipt-user-summary"), inputFields, drawReceiptUser);
-    renderListToElement(document.getElementById("receipt-product-summary"), productList, drawProduct)
+    renderListToElement(document.getElementById("receipt-product-summary"), productList, drawProduct);
+    localStorage.setItem("basket", JSON.stringify([]))
     
 })
 
 fillUserFormData(activeUser);
 renderListToElement(document.getElementById("product-list-descriptions"), productList, drawProduct)
+document.getElementById("total-price-display").innerText = "Total: " +  productList.reduce((total, p) => total += p.article.price * p.quantity, 0);

@@ -10,12 +10,12 @@ const closeIcon = document.querySelector('.close-icon');
 function toggleMenu(){
       if(menuHamburger.style.display === 'none'){
             menuHamburger.style.display = 'block';
-            closeIcon.style.display = 'none';
-            menuIcon.style.display = 'block';
-      } else {
-            menuHamburger.style.display = 'none';
             closeIcon.style.display = 'block';
             menuIcon.style.display = 'none';
+      } else {
+            menuHamburger.style.display = 'none';
+            closeIcon.style.display = 'none';
+            menuIcon.style.display = 'block';
       }
 }
 
