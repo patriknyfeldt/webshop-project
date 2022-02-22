@@ -31,13 +31,15 @@ function printErrorMessage(text){
 
 const drawProduct = (item) =>{
     const article = item.article
-    return `<div>
-        <article>
-            <img src="${article.image}" width="200px" height="150px">
-            <h2>${article.name}</h2>
-            <p>${article.description}</p>
-            <p>Price: ${article.price}</p>
-        </article>
+    return `<div class="article-wrapper">
+            <article class="article">
+                <img class="article-img" src="${article.image}" width="200px" height="150px">
+                <div class="article-info-wrapper">
+                <h3>${article.name}</h3>
+                <p>${article.description}</p>
+                <p>Price: ${article.price}</p>
+                </div>
+            </article>
     </div>`
 }
 
