@@ -46,7 +46,7 @@ const drawProduct = (item) =>{
 //
 const drawReceiptUser = (item) =>`
     <div class="user-info">
-        <p><b>${item.dataset.name}</b></p>
+        <p><b>${item.labelName}</b></p>
         <p>${item.value}</p>
     </div>`
 
@@ -88,8 +88,13 @@ document.getElementById("send-order-btn").addEventListener("click", (e)=>{
             <div id="receipt-user-summary"></div>
         </div>
     `
+    const inputFieldsNameValues = inputFields.map(input => {
+        let fieldName = input.previousElementSibling.innerText;
+        fieldName = fieldName.includes("*") ? fieldName.slice(0, fieldName.length-1) : fieldName;
+        return {labelName: fieldName, value:input.value}
+    })
     document.getElementById("receipt-total-price-display").innerText = "Total: " +  productList.reduce((total, p) => total += p.article.price * p.quantity, 0);
-    renderListToElement(document.getElementById("receipt-user-summary"), inputFields, drawReceiptUser);
+    renderListToElement(document.getElementById("receipt-user-summary"), inputFieldsNameValues, drawReceiptUser);
     renderListToElement(document.getElementById("receipt-product-summary"), productList, drawProduct);
     localStorage.setItem("basket", JSON.stringify([]))
     
