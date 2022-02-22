@@ -37,7 +37,7 @@
     display: flex;
     min-height: 250px;
     width: 100%;
-    margin: 10px 0 0 10px;
+    margin: 10px 0 0px 10px;
     flex-wrap: wrap;
 
     .name-and-counter{
@@ -58,10 +58,18 @@
         align-items: center;
         flex-wrap: wrap ;
 
+        .price-remove{
+            .remove-btn{
+                margin-left:10px ;
+                font-size: 1.5rem;
+            }    
+        }
+      
         .counter{
             display: flex;
             flex-direction: row;
-            gap: 10px;
+            gap: 15px;
+
 
             .arrows{
                 display: flex;
@@ -154,23 +162,14 @@
         flex-wrap: nowrap;
         .name-and-counter{
             flex-direction: row;
-
-            
-        
             .counter-and-price{
                 .counter{
                     margin-right: 100px;
-        
-                
                 }
               
             }
             
-            
+        }
     
-        
-    }
-    
-        
     }
 }
