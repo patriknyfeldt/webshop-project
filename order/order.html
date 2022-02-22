@@ -85,7 +85,7 @@
       </div>
     </header>
     <main class="index-main order-main">
-      <h1>Beställ</h1>
+      <h1 id="h1">Beställ</h1>
       <div class="order-description-grp" id="order-description-grp">
         <div class="order-form-wrapper" id="order-form-wrapper">
           <form id="order-form" class="form-style order-form">
@@ -100,7 +100,6 @@
                     class="input-field order-input"
                     type="text"
                     data-name="Forename"
-                    required
                   />
                 </div>
               </li>
@@ -113,7 +112,6 @@
                     class="input-field order-input"
                     type="text"
                     data-name="Lastname"
-                    required
                   />
                 </div>
               </li>
@@ -126,7 +124,6 @@
                     class="input-field order-input"
                     type="text"
                     data-name="Adress"
-                    required
                   />
                 </div>
               </li>
@@ -139,7 +136,6 @@
                     class="input-field order-input"
                     type="text"
                     data-name="Zipcode"
-                    required
                   />
                 </div>
               </li>
@@ -152,7 +148,6 @@
                     class="input-field order-input"
                     type="text"
                     data-name="City"
-                    required
                   />
                 </div>
               </li>
@@ -165,7 +160,6 @@
                     class="input-field order-input"
                     type="email"
                     data-name="Email"
-                    required
                   />
                 </div>
               </li>
@@ -191,7 +185,6 @@
                     type="tel"
                     placeholder="xxxx-xxxx-xxxx-xxxx"
                     data-name="Card"
-                    required
                   />
                 </div>
               </li>
@@ -227,9 +220,7 @@
         </div>
         <div class="price-button-row" id="price-button-row">
           <div class="price-and-btn-wrapper">
-            <span class="total-price-display" id="total-price-display"
-              ></span
-            >
+            <span class="total-price-display" id="total-price-display"></span>
             <input
               type="button"
               class="round-button lightgreen order-button"
@@ -239,7 +230,15 @@
           </div>
         </div>
       </div>
-      <div id="receipt-wrapper"></div>
+      <div class="receipt-and-total-wrapper">
+        <div class="receipt-wrapper" id="receipt-wrapper"></div>
+        <div class="price-and-btn-wrapper">
+          <span
+            class="total-price-display"
+            id="receipt-total-price-display"
+          ></span>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
