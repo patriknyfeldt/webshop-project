@@ -29,10 +29,8 @@ savedProductList.forEach(product => {
                                 <input class="number-inputs arrow-down" type="button" id="decrement-${article.id}" value="<" >
                             </div>
                         </div>
-                            <div class="price-remove">
                             <b>price: ${article.price}</b>
                             <button class="remove-btn" id="remove-${article.id}"><i class="fa-solid fa-trash-can"></i></button>
-                            </div>
                     </div>
                 </div>
             </article>
@@ -54,13 +52,10 @@ if(savedProductList.length){
         </div>
     `;
 }
-
-
-
-
 else{
     document.getElementById("empty-cart-message").classList.remove("hidden");
 }
+
 let totalPriceDisplay = document.getElementById("total-price");
 calculateSum();
 

@@ -11,7 +11,7 @@ let searchedItems = [];
 const searchProductsForm = document.getElementById('search-products-form');
 const searchProductsInputField = document.getElementById('search-products-inputfield');
 
-
+// RITAR UT PRODUKTERNA
 const drawProduct = (item) =>
 
     `<div class="products-wrapper">
@@ -19,7 +19,9 @@ const drawProduct = (item) =>
     <div class="article-content-wrapper">
     <div class="article-left-wrapper">
     <h2>${item.name}</h2>
-    <a class="img-link" href="../product/product.html?article=${item.id}"><img class="product-img" src=${item.image} alt="${item.alt}"></img></a>
+    <a class="img-link" href="../product/product.html?article=${item.id}">
+    <img class="product-img" src=${item.image} alt="${item.alt}"></img>
+    <p class="click-para">Visa produkt</p></a>
     </div>
     <div class="article-right-wrapper">
     <p class="description-paragraph">${item.description}<p/>
@@ -31,7 +33,8 @@ const drawProduct = (item) =>
     </div>
     </article>
     </div>`;
-    
+
+    // HÄMTAR DATA FRÅN JSON OCH KÖR DRAWPRODUCT FÖR VARJE ITEM PÅ AKTUELL SIDA
     const getProducts = async (inputValue) => {
         const response = await fetch('../products.json');
         const data = await response.json();
@@ -48,7 +51,6 @@ const drawProduct = (item) =>
                     getSearchedProducts(item, inputValue);
                 })
             }
-
         })
 
         // TILLHÖR VARUKORGS FUNKTIONEN

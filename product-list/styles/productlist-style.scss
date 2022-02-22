@@ -29,43 +29,45 @@ h1 {
   flex-wrap: wrap;
 
   .product-article {
+    @include flex(center, center, column);
     font-family: $main-font-family;
     max-width: 350px;
     padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin: 10px;
     background: #faf4f4;
     .article-content-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include flex(center, center, column);
       @media (min-width: $breakpointMedium) {
-        display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
       }
       .article-left-wrapper {
-        display: flex;
-        align-content: center;
-        flex-direction: column;
+        @include flex(initial, center, column);
         h2 {
           text-align: center;
           margin-bottom: 5px;
         }
         .img-link {
+          @include flex(center, initial, row);
           display: flex;
-          justify-content: center;
+          flex-direction: column;
+          text-decoration: none;
+        }
+        .click-para {
+          font-weight: bold;
+          font-family: $main-font-family;
+          text-align: center;
+          color: $text-color;
+          display: none;
+          transition: display 0.2s;
         }
         .product-img {
           width: 80%;
           transition: width 0.2s;
           &:hover {
             width: 100%;
+            + .click-para {
+              display: initial;
+            }
           }
           @media ($breakpointMedium) {
             width: 150px;
@@ -75,7 +77,6 @@ h1 {
       }
       .article-right-wrapper {
         margin: 0 auto;
-        // margin-left: 10%;
         .description-paragraph {
           text-align: center;
         }
