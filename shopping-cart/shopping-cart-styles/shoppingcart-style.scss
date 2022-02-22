@@ -1,6 +1,9 @@
 @import "../shopping-cart-styles/partials/variables";
 @import "../shopping-cart-styles/partials/mixins";
-
+main{
+    font-family: $main-font-family;
+    color: $text-color;
+}
 // Font-style options
 .shopping-cart-main{
 
@@ -44,7 +47,7 @@
         display: flex;
         flex-direction: column;
         gap: 80px;
-        margin-left: 30px;
+        margin-left: 20px;
 
     .shopping-cart-text{
         text-align: left; 
@@ -58,12 +61,12 @@
         align-items: center;
         flex-wrap: wrap ;
 
-        .price-remove{
+        
             .remove-btn{
-                margin-left:10px ;
+                
                 font-size: 1.5rem;
             }    
-        }
+        
       
         .counter{
             display: flex;

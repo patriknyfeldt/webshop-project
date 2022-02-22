@@ -1,3 +1,8 @@
+main {
+  font-family: "Montserrat", sans-serif;
+  color: #5a5454;
+}
+
 .shopping-cart-main {
   text-align: center;
 }
@@ -53,7 +58,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 80px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .product-cart-container .name-and-counter .shopping-cart-text {
@@ -77,8 +82,7 @@
       flex-wrap: wrap;
 }
 
-.product-cart-container .name-and-counter .counter-and-price .price-remove .remove-btn {
-  margin-left: 10px;
+.product-cart-container .name-and-counter .counter-and-price .remove-btn {
   font-size: 1.5rem;
 }
 
