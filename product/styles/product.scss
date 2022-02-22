@@ -23,13 +23,11 @@ $main-font-family: 'Montserrat', sans-serif;
                   flex-wrap: wrap;
                   justify-content: center;
                   align-content: center;
-                  width: 100%;
             .image-container {
                   margin: 0 0 20px 0;
                   .product-img {
-                        width: 100%;
-                        max-width: 450px;
-                        
+                        max-width: 100%;
+                        height: auto;
                         }
                   }
             }      
@@ -60,6 +58,7 @@ $main-font-family: 'Montserrat', sans-serif;
                   }
             
             }
+
       
 
 
