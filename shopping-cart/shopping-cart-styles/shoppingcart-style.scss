@@ -1,6 +1,9 @@
 @import "../shopping-cart-styles/partials/variables";
 @import "../shopping-cart-styles/partials/mixins";
-
+main{
+    font-family: $main-font-family;
+    color: $text-color;
+}
 // Font-style options
 .shopping-cart-main{
 
@@ -37,14 +40,14 @@
     display: flex;
     min-height: 250px;
     width: 100%;
-    margin: 10px 0 0 10px;
+    margin: 10px 0 0px 10px;
     flex-wrap: wrap;
 
     .name-and-counter{
         display: flex;
         flex-direction: column;
         gap: 80px;
-        margin-left: 30px;
+        margin-left: 20px;
 
     .shopping-cart-text{
         text-align: left; 
@@ -58,10 +61,18 @@
         align-items: center;
         flex-wrap: wrap ;
 
+        
+            .remove-btn{
+                
+                font-size: 1.5rem;
+            }    
+        
+      
         .counter{
             display: flex;
             flex-direction: row;
-            gap: 10px;
+            gap: 15px;
+
 
             .arrows{
                 display: flex;
@@ -154,23 +165,14 @@
         flex-wrap: nowrap;
         .name-and-counter{
             flex-direction: row;
-
-            
-        
             .counter-and-price{
                 .counter{
                     margin-right: 100px;
-        
-                
                 }
               
             }
             
-            
+        }
     
-        
-    }
-    
-        
     }
 }
