@@ -1,37 +1,28 @@
 .shopping-cart-main {
-  height: 300px;
-  text-align: center;
-}
-
-.shopping-cart-main h1 {
-  margin-bottom: 20px;
-}
-
-.empty-cart-message-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.shopping-cart-main h1 {
+  margin-bottom: 100px;
 }
 
 .sad-emoji {
   font-size: 10rem;
-}
-
-.chat-bubble-pointer {
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 10px solid blue;
+  margin-bottom: 60px;
 }
 
 .chat-bubble {
-  background: #5ac4ed;
-  border-radius: 10px;
-  height: 50%;
+  margin-bottom: 30px;
 }
 
 .product-cart-container {
