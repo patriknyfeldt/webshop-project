@@ -67,9 +67,11 @@ h2 {
           .article-img {
             width: 160px;
             height: 160px;
+            margin: 10px;
           }
           .article-info-wrapper {
             @include flex(space-around, initial, column);
+            margin-left: 10px;
             max-width: 200px;
             h3 {
               margin: 5px 0;
