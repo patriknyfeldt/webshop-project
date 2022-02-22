@@ -215,4 +215,18 @@ h2 {
 .order-main .price-button-row .price-and-btn-wrapper .total-price-display {
   font-family: "Montserrat", sans-serif;
 }
+
+.order-main .receipt-wrapper {
+  background-color: orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=order-style.css.map */
