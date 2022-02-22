@@ -45,7 +45,7 @@ const drawProduct = (item) =>{
 
 //
 const drawReceiptUser = (item) =>`
-    <div>
+    <div class="user-info">
         <p><b>${item.dataset.name}</b></p>
         <p>${item.value}</p>
     </div>`
@@ -74,17 +74,21 @@ document.getElementById("send-order-btn").addEventListener("click", (e)=>{
     descriptionGrp.parentElement.removeChild(descriptionGrp);
 
     const receiptWrapper = document.getElementById("receipt-wrapper");
-    // receiptWrapper.classList.remove("hidden");
+    const pageHeading =  document.getElementById("h1");
+    pageHeading.innerText = "Tack för din beställning!";
     receiptWrapper.innerHTML += `
-        <div>
-            <h1>Tack för din beställning!</h1>
-            <p>Kolla din mejl för order bekräftelse</p>
+    <div class="summary-wrapper">
+            <h2>Summering</h2>
+            <div class="product-list-descriptions">
+                <div id="receipt-product-summary"></div>
+            </div>
         </div>
-        <div id="receipt-product-summary"></div>
-        <div class="summary-wrapper">
-            <div id="receipt-user-summary" class="product-list-descriptions"></div>
+        <div class="user-info-wrapper">
+            <h2>Dina uppgifter</h2>
+            <div id="receipt-user-summary"></div>
         </div>
     `
+    document.getElementById("receipt-total-price-display").innerText = "Total: " +  productList.reduce((total, p) => total += p.article.price * p.quantity, 0);
     renderListToElement(document.getElementById("receipt-user-summary"), inputFields, drawReceiptUser);
     renderListToElement(document.getElementById("receipt-product-summary"), productList, drawProduct);
     localStorage.setItem("basket", JSON.stringify([]))
