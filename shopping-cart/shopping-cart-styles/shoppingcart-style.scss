@@ -4,41 +4,22 @@
 // Font-style options
 .shopping-cart-main{
 
-    height: 300px;
-    text-align: center;
-    h1{
-        margin-bottom: 20px;
-       
-        
-    }
-}
-
-.empty-cart-message-wrapper{
     display: flex;
     justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    h1{
+        margin-bottom: 100px;
+       }
 }
 
 .sad-emoji{
     font-size: 10rem;
+    margin-bottom: 60px;
 }
-
-.chat-bubble-pointer{
-    width: 0; 
-    height: 0; 
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent; 
-    
-    border-right:10px solid blue; 
+.chat-bubble{
+    margin-bottom: 30px;
 }
-.chat-bubble {
-    background: #5ac4ed;
-    border-radius: 10px;
-    height: 50%;
-    
- }
-
-
-
 .product-cart-container{
     
     display: flex;
