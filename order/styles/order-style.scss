@@ -15,91 +15,92 @@ h2 {
 
 .order-main {
   .order-description-grp {
-  }
-  .order-form-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media (min-width: $breakpointMedium) {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: flex-start;
-    }
-
-    .order-form {
+    .order-form-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
-      ul {
-        li {
-          .input-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            label {
-              margin-left: 20px;
-              align-self: flex-start;
-            }
-            .order-textarea {
-              display: block;
-              border: 1px solid #707070;
-              border-radius: 15px;
-              height: 100px;
-              max-width: 300px;
-              font-size: 30px;
-              padding: 0 10px;
+      @media (min-width: $breakpointMedium) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+      }
+  
+      .order-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ul {
+          li {
+            .input-wrapper {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+  
+              label {
+                margin-left: 20px;
+                align-self: flex-start;
+              }
+              .order-textarea {
+                display: block;
+                border: 1px solid #707070;
+                border-radius: 15px;
+                height: 100px;
+                max-width: 300px;
+                font-size: 30px;
+                padding: 0 10px;
+              }
             }
           }
         }
       }
-    }
-    .summary-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      .product-list-descriptions {
+      .summary-wrapper {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        align-self: flex-start;
-
-        @media (min-width: $breakpointMedium) {
+        .product-list-descriptions {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
           align-self: flex-start;
-        }
-        .article-wrapper {
-          margin: 2px;
-          .article {
-            color: $text-color;
-            margin-top: 20px;
-            font-family: $main-font-family;
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            @media (min-width: $breakpointMedium) {
-              flex-direction: row;
-            }
-            .article-img {
-              width: 160px;
-              height: 160px;
-            }
-            .article-info-wrapper {
+  
+          @media (min-width: $breakpointMedium) {
+            align-self: flex-start;
+          }
+          .article-wrapper {
+            margin: 2px;
+            .article {
+              color: $text-color;
+              margin-top: 20px;
+              font-family: $main-font-family;
+              max-width: 400px;
               display: flex;
               flex-direction: column;
-              justify-content: space-around;
-              max-width: 200px;
-              h3 {
-                margin: 5px 0;
-                align-self: center;
+              align-items: center;
+              @media (min-width: $breakpointMedium) {
+                flex-direction: row;
               }
-              p {
+              .article-img {
+                width: 160px;
+                height: 160px;
+              }
+              .article-info-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                max-width: 200px;
+                h3 {
+                  margin: 5px 0;
+                  align-self: center;
+                }
+                p {
+                }
               }
             }
           }
         }
       }
     }
+
   }
   .price-button-row {
     display: flex;
@@ -124,10 +125,8 @@ h2 {
         font-family: $main-font-family;
       }
       .order-button {
+
       }
     }
-  }
-
-  .order-description-grp {
   }
 }
