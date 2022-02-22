@@ -28,8 +28,8 @@ const getArticles = async () => {
       if(item){
                   
             productContainer.innerHTML += 
-                  `<articel class="product-article "id=article-${item.id}>
-                        <div class="flex-container">
+            
+                  `<div class="flex-container" id=article-${item.id}>
                               <div class="image-container">
                                     <img class="product-img" src=${item.image} alt= ${item.alt}></img>
                               </div>
@@ -41,8 +41,7 @@ const getArticles = async () => {
                               <br>
                               <button class="add-to-cart" id="addbtn-${item.id}">Köp</button>
                               </div>
-                        </div>
-                  </article>`;  
+                        </div>`;  
       }
 
       document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
