@@ -52,13 +52,10 @@ if(savedProductList.length){
         </div>
     `;
 }
-
-
-
-
 else{
     document.getElementById("empty-cart-message").classList.remove("hidden");
 }
+
 let totalPriceDisplay = document.getElementById("total-price");
 calculateSum();
 

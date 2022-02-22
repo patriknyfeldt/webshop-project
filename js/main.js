@@ -5,18 +5,26 @@ function userInit(){
     let userData = JSON.parse(localStorage.getItem("user"));
     
     //check if it's an empty object or if we fetched some data
+    const userNameDisplay = document.getElementById("user-name");
+    const loginBtn = document.getElementById("log-in-link");
+    console.log(userNameDisplay)
+    console.log(loginBtn);
     if(userData){
+        console.log("true");
         activeUser = userData;
-        const userNameDisplay = document.getElementById("user-name");
-        const loginDisplay = document.getElementById("log-in-link");
         if(userNameDisplay){
             userNameDisplay.classList.remove("hidden");
-            userNameDisplay.innerText = activeUser.forename;
+            userNameDisplay.querySelector("a").innerText = activeUser.forename;
 
         }
-        if(loginDisplay){
-            loginDisplay.classList.add("hidden");
+        if(loginBtn){
+            loginBtn.parentElement.removeChild(loginBtn);
         }
+    }
+    else{
+        console.log("false")
+        userNameDisplay.parentElement.removeChild(userNameDisplay);
+        loginBtn.classList.remove("hidden");
     }
 }
 
