@@ -2,19 +2,47 @@
 @import "../shopping-cart-styles/partials/mixins";
 
 // Font-style options
+.shopping-cart-main{
 
-
-
-
-
-h1{
+    height: 300px;
     text-align: center;
-    margin-bottom: 50px;
+    h1{
+        margin-bottom: 20px;
+       
+        
+    }
 }
+
+.empty-cart-message-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.sad-emoji{
+    font-size: 10rem;
+}
+
+.chat-bubble-pointer{
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    
+    border-right:10px solid blue; 
+}
+.chat-bubble {
+    background: #5ac4ed;
+    border-radius: 10px;
+    height: 50%;
+    
+ }
+
+
+
 .product-cart-container{
     
     display: flex;
-    height: 250px;
+    min-height: 250px;
     margin: 10px 0 0 10px;
     .name-and-counter{
         display: flex;
@@ -31,6 +59,7 @@ h1{
         flex-direction: row;
         gap: 20px;
         align-items: center;
+        flex-wrap: wrap ;
         .counter{
             display: flex;
             flex-direction: row;
@@ -83,6 +112,7 @@ h1{
 .checkout-wrapper{
     display: flex;
     justify-content: center;
+    margin-bottom: 100px;
 .checkout{
     
     display: flex;
@@ -107,6 +137,7 @@ h1{
                 font-size:$input-font-size;
                 padding: 0px 30px;
                 cursor:pointer;
+                
             }
 }
 }
