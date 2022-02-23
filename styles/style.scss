@@ -4,22 +4,22 @@
 // Font-style options
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Roboto&family=Teko:wght@300&display=swap");
 
-@mixin input-color-theme(
-  $background-colour,
-  $foreground-colour,
-  $hover-color,
-  $active-colour: white
-) {
-  color: $foreground-colour;
-  background-color: $background-colour;
-  transition: background-color 0.2s;
-  &:hover {
-    background-color: $hover-color;
-  }
-  &:active {
-    background-color: $active-colour;
-  }
-}
+// @mixin input-color-theme(
+//   $background-colour,
+//   $foreground-colour,
+//   $hover-color,
+//   $active-colour: white
+// ) {
+//   color: $foreground-colour;
+//   background-color: $background-colour;
+//   transition: background-color 0.2s;
+//   &:hover {
+//     background-color: $hover-color;
+//   }
+//   &:active {
+//     background-color: $active-colour;
+//   }
+// }
 
 * {
   margin: 0;

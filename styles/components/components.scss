@@ -23,3 +23,67 @@
     align-items: center;
   }
 }
+
+.content-column {
+  margin: 20px 0px;
+}
+.center-content {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .error-box {
+    border: 1px solid red;
+    border-radius: 20px;
+    padding: 40px 50px;
+    max-width: 300px;
+    & > * {
+      font-size: 1.3 em;
+    }
+  }
+}
+
+input.input-field {
+  display: block;
+  border: 1px solid #707070;
+  border-radius: 15px;
+  height: 50px;
+  max-width: 300px;
+  font-size: 30px;
+  padding: 0 10px;
+}
+.round-button {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid $input-border-colour;
+  border-radius: 25px;
+  height: 50px;
+  min-width: 300px;
+  font-size: $input-font-size;
+  padding: 0px 30px;
+  cursor: pointer;
+}
+a.round-link-button {
+  &:link {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid $input-border-colour;
+    border-radius: 25px;
+    height: 50px;
+    min-width: 300px;
+    font-size: $input-font-size;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-align: center;
+  }
+  &:visited {
+    border-color: $input-border-colour;
+  }
+}
+.lightgreen {
+  @include input-color-theme(#ecffde, black, #daf3c8, #f4ffec);
+}
+
+.dimblue {
+  @include input-color-theme(#89a3b3, white, #708592, #a3becf);
+}
