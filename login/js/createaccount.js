@@ -1,14 +1,14 @@
-const errorMessage = document.getElementById("error-message").parentElement;
-console.log(errorMessage);
+const errorMessage = document.getElementById("error-message");
 
 document.getElementById("createaccount-btn").addEventListener("click", e =>{
     e.preventDefault();
     //get every input fields from form
     const inputFields = Array.from(document.querySelectorAll("form input[type='text'],form input[type='email'], form input[type='password']"));
-
+    
     let hasEmptyField = false;
     inputFields.forEach(field =>{
         if(field.required && field.validity.valueMissing){
+            console.log("empty field");
             field.setCustomValidity("Fyll in de tomma fälten med stjärnor(*).")
             printErrorMessage("Fyll in de tomma fälten med stjärnor(*).");
             hasEmptyField = true;
@@ -26,7 +26,6 @@ document.getElementById("createaccount-btn").addEventListener("click", e =>{
         printErrorMessage("Du måste acceptera villkoren.")
         return;
     }
-    console.log("create account function");
     const newUser = new Object();
 
     //from inputfields, get fields that have id with -fields. Then create variables for object from array
@@ -59,6 +58,7 @@ document.getElementById("createaccount-btn").addEventListener("click", e =>{
 })
 
 function printErrorMessage(text){
+    console.log(errorMessage);
     if(errorMessage.parentElement.classList.contains("hidden")){
         errorMessage.parentElement.classList.remove("hidden");
     }
