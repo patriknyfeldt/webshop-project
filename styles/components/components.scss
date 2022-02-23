@@ -1,0 +1,25 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.form-style {
+  label {
+    display: inline-block;
+    margin: 5px 0px;
+    font-size: 1.2em;
+    color: #5a5454;
+  }
+
+  input[type="checkbox"] + label {
+    user-select: none;
+  }
+
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .form-row {
+    display: flex;
+    align-items: center;
+  }
+}

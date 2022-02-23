@@ -3,8 +3,8 @@
     "mappings": "",
     "sources": [
         "components.scss",
-        "partials/_variables.scss",
-        "partials/_mixins.scss"
+        "../partials/_variables.scss",
+        "../partials/_mixins.scss"
     ],
     "names": [],
     "file": "components.css"
