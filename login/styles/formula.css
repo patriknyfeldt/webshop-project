@@ -44,15 +44,22 @@
           align-items: center;
 }
 
-.error-box {
-  border: 1px solid red;
-  border-radius: 20px;
-  padding: 40px 50px;
-  max-width: 300px;
+.center-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 80px;
 }
 
-.error-box > * {
-  font-size: 1.3em;
+.title-container {
+  margin-top: 100px;
 }
 
 .font-size-medium {
