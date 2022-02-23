@@ -4,6 +4,62 @@
   height: 230px;
   background-size: cover;
   background-position: center center;
+  position: relative;
+  z-index: -100;
+
+  -webkit-filter: grayscale(30%);
+          filter: grayscale(30%);
+}
+
+.hero-div .hero-text {
+  font-family: "Teko", sans-serif;
+  font-size: 45px;
+  color: white;
+  padding: 5px;
+  text-align: right;
+}
+
+@media (min-width: 550px) {
+  .hero-div .hero-text {
+    font-size: 120px;
+    padding: 100px 50px;
+    text-align: right;
+  }
+  .hero-div .hero-text .hero-text {
+    color: white;
+  }
+  .hero-div .hero-text span {
+    text-align: left;
+    margin-bottom: -120px;
+  }
+  .hero-div .hero-text .hide {
+    display: none;
+  }
+
+  padding-top: 1px;
+  text-align: center;
+
+}
+
+.hero-div .hero-text span {
+  display: block;
+  color: black;
+
+  text-align: left;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.category-div-container .category {
+  border-radius: 20px;
+}
+
+.category-div-container .category-title {
+  padding: 30px;
+  font-size: 2rem;
+
+  margin-top: 30px;
+
 }
 
 .category-div-container a {

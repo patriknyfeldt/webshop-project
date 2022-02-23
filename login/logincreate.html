@@ -18,7 +18,11 @@
     <header class="header">
       <div>
         <a href="../index.html"
-          ><img src="../images/sneakers_svg.svg" width="100" alt=""
+          ><img
+            class="logo"
+            src="../images/sneakers_svg.svg"
+            width="100"
+            alt=""
         /></a>
       </div>
       <nav class="hidden nav-links">
@@ -87,7 +91,9 @@
           </div>
         </div>
         <div class="navigation-icons">
-          <a><i class="cart fa-solid fa-cart-shopping"></i></a>
+          <a href="/shopping-cart/shopping-cart.html"
+            ><i class="cart fa-solid fa-cart-shopping"></i
+          ></a>
           <button class="hamburger">
             <i class="menu-icon fa-solid fa-bars"></i>
             <i class="close-icon fa-solid fa-xmark"></i>
@@ -102,76 +108,132 @@
         <h1>Skapa konto</h1>
       </div>
       <div>
-          <form id="createaccount-form" class="form-style">
-              <ul>
-                  <li>
-                      <div class="content-column">
-                          <label for="forename-field">Förnamn*</label>
-                          <input type="text" name="forename-field" id="forename-field" class="input-field" required>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="content-column">
-                          <label for="lastname-field">Efternamn*</label>
-                          <input type="text" name="lastname-field" id="lastname-field" class="input-field" required>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="content-column">
-                          <label for="adress-field">Gatuadress*</label>
-                          <input type="text" name="adress-field" id="adress-field" class="input-field" required>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="content-column">
-                          <label for="zipcode-field">Postnummer*</label>
-                          <input type="text" name="zipcode-field" id="zipcode-field" class="input-field" required>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="content-column">
-                          <label for="city-field">Ort*</label>
-                          <input type="text" name="city-field" id="city-field" class="input-field" required>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="content-column">
-                          <label for="email-field">E-postadress*</label>
-                          <input type="email" name="email-field" id="email-field" class="input-field" required>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="content-column">
-                          <label for="password-field">Lösenord*</label>
-                          <input type="password" name="password-field" id="password-field" class="input-field" required>
-                      </div>
-
-                  </li>
-                  <li>
-                    <div class="content-column">
-                      <label for="verifypassword">Verifiera Lösenord*</label>
-                      <input type="password" name="verifypassword" id="password-verify" class="input-field" required>
-                    </div>
-                  </li>
-                  <li>
-                      <div class="content-column">
-                          <label for="telephone-field">Telefon</label>
-                          <input type="tel" name="telephone" class="input-field" id="telephone-field">
-                      </div>
-                  </li>
-                  <li>
-                    <dov class="form-row">
-                      <input type="checkbox" name="checkbox-terms" id="checkbox-terms" required>
-                      <label for="checkbox-terms">Acceptera villkor</label>
-
-                    </dov>
-                  </li>
-                  <li>
-                      <div class="error-box hidden">
-                        <span id="error-message"></span>
-                      </div>
-                  </li>
-              </ul>      
+        <form id="createaccount-form" class="form-style">
+          <ul>
+            <li>
+              <div class="content-column">
+                <label for="forename-field">Förnamn*</label>
+                <input
+                  type="text"
+                  name="forename-field"
+                  id="forename-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="lastname-field">Efternamn*</label>
+                <input
+                  type="text"
+                  name="lastname-field"
+                  id="lastname-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="adress-field">Gatuadress*</label>
+                <input
+                  type="text"
+                  name="adress-field"
+                  id="adress-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="zipcode-field">Postnummer*</label>
+                <input
+                  type="text"
+                  name="zipcode-field"
+                  id="zipcode-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="city-field">Ort*</label>
+                <input
+                  type="text"
+                  name="city-field"
+                  id="city-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="email-field">E-postadress*</label>
+                <input
+                  type="email"
+                  name="email-field"
+                  id="email-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="password-field">Lösenord*</label>
+                <input
+                  type="password"
+                  name="password-field"
+                  id="password-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="verifypassword">Verifiera Lösenord*</label>
+                <input
+                  type="password"
+                  name="verifypassword"
+                  id="password-verify"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="telephone-field">Telefon</label>
+                <input
+                  type="tel"
+                  name="telephone"
+                  class="input-field"
+                  id="telephone-field"
+                />
+              </div>
+            </li>
+            <li>
+              <dov class="form-row">
+                <input
+                  type="checkbox"
+                  name="checkbox-terms"
+                  id="checkbox-terms"
+                  required
+                />
+                <label for="checkbox-terms">Acceptera villkor</label>
+              </dov>
+            </li>
+            <li>
+              <div class="error-box hidden">
+                <span id="error-message"></span>
+              </div>
+            </li>
+          </ul>
           <div class="content-column">
             <input
               type="submit"

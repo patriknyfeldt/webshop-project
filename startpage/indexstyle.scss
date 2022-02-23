@@ -5,9 +5,60 @@
   height: 230px;
   background-size: cover;
   background-position: center center;
+  position: relative;
+  z-index: -100;
+
+  filter: grayscale(30%);
+
+ 
+  .hero-text {
+    font-family: $big2-font-family;
+    font-size: 45px;
+    color: white;
+
+    padding: 5px;
+    text-align: right;
+    @media(min-width:$breakpointMedium){
+      font-size: 120px;
+      padding: 100px 50px;
+      text-align: right;
+      .hero-text{
+        color: white;
+      }
+      span {
+        text-align: left;
+        margin-bottom: -120px;
+      }
+      .hide {
+        display: none;
+      }
+    }
+    span {
+      display: block;
+      color: black;
+      text-align: left;
+      padding: 5px;
+      margin-top: 20px;
+
+    padding-top: 1px;
+    text-align: center;
+    span {
+      display: block;
+      color: black;
+      margin-top: 30px;
+
+    }
+  }
 }
 
 .category-div-container {
+  .category {
+    border-radius: 20px;
+  }
+.category-title {
+  padding: 30px;
+  font-size: 2rem;
+}
   a {
     @include list-style;
   }

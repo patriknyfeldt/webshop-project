@@ -146,16 +146,6 @@ h1 {
   text-decoration: none;
 }
 
-.product-list-wrapper .product-article .article-content-wrapper .article-left-wrapper .click-para {
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  color: #5a5454;
-  display: none;
-  -webkit-transition: display 0.2s;
-  transition: display 0.2s;
-}
-
 .product-list-wrapper .product-article .article-content-wrapper .article-left-wrapper .product-img {
   width: 80%;
   -webkit-transition: width 0.2s;
@@ -164,10 +154,6 @@ h1 {
 
 .product-list-wrapper .product-article .article-content-wrapper .article-left-wrapper .product-img:hover {
   width: 100%;
-}
-
-.product-list-wrapper .product-article .article-content-wrapper .article-left-wrapper .product-img:hover + .click-para {
-  display: initial;
 }
 
 @media (550px) {

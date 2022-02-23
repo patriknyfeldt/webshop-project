@@ -5,7 +5,7 @@
             {
                 "id": "1",
                 "name": "Puma",
-                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "description": "Orangea sneakers med blomdetalhjer.",
                 "image": "../images/dam/damskor_svarta_puma.jpg",
                 "price": "899",
                 "category": "DAM",
@@ -14,7 +14,7 @@
             {
                 "id": "2",
                 "name": "Adidas",
-                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "description": "Vita löparskor med mintgrön detalj.",
                 "image": "../images/dam/damskor_vit_adidas.jpg",
                 "price": "699",
                 "category": "DAM",
@@ -23,7 +23,7 @@
             {
                 "id": "3",
                 "name": "Converse",
-                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "description": "Höga sneakers med blommigt tyg.",
                 "image": "../images/dam/damskor_vita_converse.jpg",
                 "price": "799",
                 "category": "DAM",
@@ -32,7 +32,7 @@
             {
                 "id": "4",
                 "name": "Fila",
-                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "description": "Klassiska tennisskor, vit och blå.",
                 "image": "../images/dam/damskor_vita_reebok.jpg",
                 "price": "949",
                 "category": "DAM",
@@ -41,7 +41,7 @@
             {
                 "id": "5",
                 "name": "New Balance",
-                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "description": "Gul och blå mocca sneakers.",
                 "image": "../images/dam/damskor_vita_nb.jpg",
                 "price": "999",
                 "category": "DAM",
@@ -50,7 +50,7 @@
             {
                 "id": "6",
                 "name": "Nike",
-                "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                "description": "Sneakers med högre sula med färgglada detaljer.",
                 "image": "../images/dam/damskor_vita_nike.jpg",
                 "price": "849",
                 "category": "DAM",
@@ -64,7 +64,7 @@
                 {
                     "id": "7",
                     "name": "Puma",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "description": "Blå vita mocca sneakers med läder detaljer.",
                     "image": "../images/herr/herrskor_blue_puma.jpg",
                     "price": "899",
                     "category": "HERR",
@@ -73,7 +73,7 @@
                 {
                     "id": "8",
                     "name": "Vans",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "description": "Grön vita mocca sneakers med läder detaljer.",
                     "image": "../images/herr/herrskor_vans.jpg",
                     "price": "699",
                     "category": "HERR",
@@ -82,7 +82,7 @@
                 {
                     "id": "9",
                     "name": "Adidas",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "description": "Vita basketskor med guldlogga och röd kant.",
                     "image": "../images/herr/herrskor_vita_adidas.jpg",
                     "price": "799",
                     "category": "HERR",
@@ -91,7 +91,7 @@
                 {
                     "id": "10",
                     "name": "Converse",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "description": "Färglada tygskor med högt skaft.",
                     "image": "../images/herr/herrskor_vita_converse.jpg",
                     "price": "949",
                     "category": "HERR",
@@ -100,7 +100,7 @@
                 {
                     "id": "11",
                     "name": "New Balance",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "description": "Grön blåa sneakers med specialsula.",
                     "image": "../images/herr/herrskor_vita_nb.jpg",
                     "price": "999",
                     "category": "HERR",
@@ -109,7 +109,7 @@
                 {
                     "id": "12",
                     "name": "Reebok",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "description": "Läder sneakers i hög modell. Fodrade för vinter.",
                     "image": "../images/herr/herrskor_vita_reebok.jpg",
                     "price": "849",
                     "category": "HERR",
@@ -124,7 +124,7 @@
                 {
                     "id": "13",
                     "name": "Adidas",
-                    "description": "barnsko est qui dolorem ipsum quia.",
+                    "description": "Blåa sneakers med gula och röda detaljer.",
                     "image": "../images/barn/adidas_kids.jpeg",
                     "price": "399",
                     "category": "BARN",
@@ -133,7 +133,7 @@
                 {
                     "id": "14",
                     "name": "Adidas",
-                    "description": "sneaker porro quisquam est qui dolorem ipsum quia.",
+                    "description": "Färgglad tyg sneakers med smart snörning.",
                     "image": "../images/barn/adidas_LEGO.jpeg",
                     "price": "499",
                     "category": "BARN",
@@ -142,7 +142,7 @@
                 {
                     "id": "15",
                     "name": "Converse",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "description": "Svarta, höga sneakers med röda och blå detaljer.",
                     "image": "../images/barn/converse_kids.jpeg",
                     "price": "299",
                     "category": "BARN",
@@ -151,7 +151,7 @@
                 {
                     "id": "16",
                     "name": "Jordan",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "description": "Gråa basketskor med specialsula.",
                     "image": "../images/barn/Jordan_kids.jpeg",
                     "price": "399",
                     "category": "BARN",
@@ -160,7 +160,7 @@
                 {
                     "id": "17",
                     "name": "Nike",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "description": "Sneakers i rosa, svart och vitt läder.",
                     "image": "../images/barn/nike_kids.jpeg",
                     "price": "349",
                     "category": "BARN",
@@ -169,7 +169,7 @@
                 {
                     "id": "18",
                     "name": "Adidas",
-                    "description": "Neque porro quisquam est qui dolorem ipsum quia.",
+                    "description": "Gula sneakers med svarta och vita detaljer.",
                     "image": "../images/barn/adidass_kids.jpeg",
                     "price": "399",
                     "category": "BARN",
