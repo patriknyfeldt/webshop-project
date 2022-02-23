@@ -7,10 +7,7 @@ function userInit(){
     //check if it's an empty object or if we fetched some data
     const userNameDisplay = document.getElementById("user-name");
     const loginBtn = document.getElementById("log-in-link");
-    console.log(userNameDisplay)
-    console.log(loginBtn);
     if(userData){
-        console.log("true");
         activeUser = userData;
         if(userNameDisplay){
             userNameDisplay.classList.remove("hidden");
@@ -22,7 +19,6 @@ function userInit(){
         }
     }
     else{
-        console.log("false")
         userNameDisplay.parentElement.removeChild(userNameDisplay);
         loginBtn.classList.remove("hidden");
     }

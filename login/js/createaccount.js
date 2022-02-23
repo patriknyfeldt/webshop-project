@@ -3,22 +3,13 @@ const errorMessage = document.getElementById("error-message");
 document.getElementById("createaccount-btn").addEventListener("click", e =>{
     e.preventDefault();
     //get every input fields from form
-    const inputFields = Array.from(document.querySelectorAll("form input[type='text'],form input[type='email'], form input[type='password']"));
+    const inputFields = Array.from(document.querySelectorAll(".input-field"));
     
-    let hasEmptyField = false;
-    inputFields.forEach(field =>{
-        if(field.required && field.validity.valueMissing){
-            console.log("empty field");
-            field.setCustomValidity("Fyll in de tomma fälten med stjärnor(*).")
-            printErrorMessage("Fyll in de tomma fälten med stjärnor(*).");
-            hasEmptyField = true;
-        }
-    });
-
-    if(hasEmptyField){
+    if(inputFields.some(input => input.required && input.validity.valueMissing)){
+        printErrorMessage("Fyll in de tomma fälten med stjärnor(*).");
         return;
     }
-    else if(document.getElementById("password-field").value !== document.getElementById("verifypassword").value){
+    else if(document.getElementById("password-field").value !== document.getElementById("password-verify").value){
         printErrorMessage("Lösenord är inte matchade.")
         return;
     }
@@ -29,9 +20,11 @@ document.getElementById("createaccount-btn").addEventListener("click", e =>{
     const newUser = new Object();
 
     //from inputfields, get fields that have id with -fields. Then create variables for object from array
-    inputFields.filter(e=>e.id.includes("-field")).forEach(field =>{
+    inputFields.filter(e =>e.id.includes("-field")).forEach(field =>{
         const variableName =  field.id.substring(0, field.id.indexOf("-field"));
-        newUser[variableName] = field.value;
+        if(!newUser.hasOwnProperty(variableName)){
+            newUser[variableName] = field.value;
+        }
     })
     let userList = JSON.parse(localStorage.getItem("userList"));
     if(!userList){
@@ -46,7 +39,6 @@ document.getElementById("createaccount-btn").addEventListener("click", e =>{
     else{
         userList.push(newUser);
         localStorage.setItem("userList", JSON.stringify(userList));
-        console.log("created account!");
         inputFields.forEach(e=>{
             e.value = "";
         })
@@ -58,7 +50,6 @@ document.getElementById("createaccount-btn").addEventListener("click", e =>{
 })
 
 function printErrorMessage(text){
-    console.log(errorMessage);
     if(errorMessage.parentElement.classList.contains("hidden")){
         errorMessage.parentElement.classList.remove("hidden");
     }
