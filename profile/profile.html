@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../login/styles/formula.css">
+    <link rel="stylesheet" href="../styles/components/components.css" />
+
+    <!-- <link rel="stylesheet" href="../login/styles/formula.css"> -->
     <!-- <link rel="stylesheet" href="./startpage/indexstyle.css" /> -->
     <link
       rel="stylesheet"
@@ -41,21 +43,47 @@
               ><i class="cart fa-solid fa-cart-shopping"></i
             ></a>
           </li>
-          <li id="user-name" class="hidden"><a href="../profile/profile.html"></a></li>
-          <li id="log-in-link" class="hidden"><a href="../login/login.html">Logga in</a></li>
+          <li id="user-name" class="hidden">
+            <a href="../profile/profile.html"></a>
+          </li>
+          <li id="log-in-link" class="hidden">
+            <a href="../login/login.html">Logga in</a>
+          </li>
           <li><a href="../login/logincreate.html">Registrera</a></li>
         </ul>
 
         <!--Dropdown menu börjar här-->
         <div class="menu-hamburger">
           <ul>
-            <li><a class="menu-item" href="../product-list/product-list.html?category=dam">DAM</a></li>
-            <li><a class="menu-item" href="../product-list/product-list.html?category=herr">HERR</a></li>
-            <li><a class="menu-item" href="../product-list/product-list.html?category=barn">BARN</a></li>
+            <li>
+              <a
+                class="menu-item"
+                href="../product-list/product-list.html?category=dam"
+                >DAM</a
+              >
+            </li>
+            <li>
+              <a
+                class="menu-item"
+                href="../product-list/product-list.html?category=herr"
+                >HERR</a
+              >
+            </li>
+            <li>
+              <a
+                class="menu-item"
+                href="../product-list/product-list.html?category=barn"
+                >BARN</a
+              >
+            </li>
           </ul>
           <div>
-            <a href="../login/login.html" class="nav-btn login-button">Logga in</a>
-            <a href="../login/logincreate.html" class="nav-btn register-button">Registrera dig</a>
+            <a href="../login/login.html" class="nav-btn login-button"
+              >Logga in</a
+            >
+            <a href="../login/logincreate.html" class="nav-btn register-button"
+              >Registrera dig</a
+            >
           </div>
         </div>
         <div class="navigation-icons">
@@ -72,133 +100,137 @@
     </header>
 
     <main class="index-main center-content">
-        <h1>Profil</h1>
-        <div>
-            <form id="createaccount-form" class="form-style">
-                <ul>
-                    <li>
-                        <div class="content-column">
-                            <label for="email-field">E-postadress</label>
-                            <input 
-                                type="email" 
-                                name="email-field" 
-                                id="email-field" 
-                                class="input-field" 
-                                disabled
-                                required
-                                >
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content-column">
-                            <label for="forename-field">Förnamn*</label>
-                            <input 
-                                type="text" 
-                                name="forename-field" 
-                                id="forename-field" 
-                                class="input-field" 
-                                required
-                                >
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content-column">
-                            <label for="lastname-field">Efternamn*</label>
-                            <input 
-                                type="text" 
-                                name="lastname-field" 
-                                id="lastname-field" 
-                                class="input-field" 
-                                required
-                                >
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content-column">
-                            <label for="adress-field">Gatuadress*</label>
-                            <input 
-                                type="text" 
-                                name="adress-field" 
-                                id="adress-field" 
-                                class="input-field" 
-                                required
-                                
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content-column">
-                            <label for="zipcode-field">Postnummer*</label>
-                            <input 
-                                type="text" 
-                                name="zipcode-field" 
-                                id="zipcode-field" 
-                                class="input-field" 
-                                required
-                                >
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content-column">
-                            <label for="city-field">Ort*</label>
-                            <input 
-                                type="text" 
-                                name="city-field" 
-                                id="city-field" 
-                                class="input-field" 
-                                required
-                                >
-                        </div>
-                    </li>
-                    <li>
-                        <div class="content-column">
-                            <label for="password-field">Lösenord*</label>
-                            <input 
-                                type="password" 
-                                name="password-field" 
-                                id="password-field" 
-                                class="input-field" 
-                                required
-                                >
-                        </div>
-  
-                    </li>
-                    <li>
-                      <div class="content-column">
-                        <label for="password-verify-field">Verifiera Lösenord*</label>
-                        <input 
-                            type="password" 
-                            name="password-verify-field" 
-                            id="password-verify-field" 
-                            class="input-field" 
-                            required
-                            >
-                      </div>
-                    </li>
-                    <li>
-                        <div class="content-column">
-                            <label for="telephone-field">Telefon</label>
-                            <input 
-                                type="tel" 
-                                name="telephone" 
-                                class="input-field" 
-                                id="telephone-field"
-                                >
-                        </div>
-                    </li>
-                    <li>
-                        <div class="error-box hidden">
-                          <span id="error-message"></span>
-                        </div>
-                    </li>
-                </ul>
-                <div class="content-column">
-                    <input type="submit" value="Updatera" id="update-btn" class="round-button lightgreen">
-                </div>
-            </form>
-            <div class="content-column">
-                <input type="button" value="Logga ut" id="logout-btn" class="round-button dimblue">
-            </div>
+      <h1>Profil</h1>
+      <div>
+        <form id="createaccount-form" class="form-style">
+          <ul>
+            <li>
+              <div class="content-column">
+                <label for="email-field">E-postadress</label>
+                <input
+                  type="email"
+                  name="email-field"
+                  id="email-field"
+                  class="input-field"
+                  disabled
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="forename-field">Förnamn*</label>
+                <input
+                  type="text"
+                  name="forename-field"
+                  id="forename-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="lastname-field">Efternamn*</label>
+                <input
+                  type="text"
+                  name="lastname-field"
+                  id="lastname-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="adress-field">Gatuadress*</label>
+                <input type="text" name="adress-field" id="adress-field"
+                class="input-field" required
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="zipcode-field">Postnummer*</label>
+                <input
+                  type="text"
+                  name="zipcode-field"
+                  id="zipcode-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="city-field">Ort*</label>
+                <input
+                  type="text"
+                  name="city-field"
+                  id="city-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="password-field">Lösenord*</label>
+                <input
+                  type="password"
+                  name="password-field"
+                  id="password-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="password-verify-field">Verifiera Lösenord*</label>
+                <input
+                  type="password"
+                  name="password-verify-field"
+                  id="password-verify-field"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </li>
+            <li>
+              <div class="content-column">
+                <label for="telephone-field">Telefon</label>
+                <input
+                  type="tel"
+                  name="telephone"
+                  class="input-field"
+                  id="telephone-field"
+                />
+              </div>
+            </li>
+            <li>
+              <div class="error-box hidden">
+                <span id="error-message"></span>
+              </div>
+            </li>
+          </ul>
+          <div class="content-column">
+            <input
+              type="submit"
+              value="Updatera"
+              id="update-btn"
+              class="round-button lightgreen"
+            />
+          </div>
+        </form>
+        <div class="content-column">
+          <input
+            type="button"
+            value="Logga ut"
+            id="logout-btn"
+            class="round-button dimblue"
+          />
         </div>
+      </div>
     </main>
 
     <footer class="footer">
