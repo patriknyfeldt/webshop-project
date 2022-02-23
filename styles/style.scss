@@ -2,17 +2,22 @@
 @import "partials/mixins";
 
 // Font-style options
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Roboto&family=Teko:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Roboto&family=Teko:wght@300&display=swap");
 
-@mixin input-color-theme($background-colour, $foreground-colour, $hover-color, $active-colour:white){
-  color:$foreground-colour;
+@mixin input-color-theme(
+  $background-colour,
+  $foreground-colour,
+  $hover-color,
+  $active-colour: white
+) {
+  color: $foreground-colour;
   background-color: $background-colour;
   transition: background-color 0.2s;
-  &:hover{
-        background-color: $hover-color;
+  &:hover {
+    background-color: $hover-color;
   }
-  &:active{
-        background-color: $active-colour;
+  &:active {
+    background-color: $active-colour;
   }
 }
 
@@ -20,11 +25,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 body {
   min-height: 100vh;
-  margin:0;
+  margin: 0;
   // display:grid;
   // grid-template-rows: 1fr auto;
   font-family: $main-font-family;
@@ -74,10 +78,10 @@ main {
   .close-icon {
     display: none;
   }
-  .menu-icon, .close-icon {
+  .menu-icon,
+  .close-icon {
     font-size: 3rem;
   }
-  
 }
 
 .menu-hamburger {
@@ -92,18 +96,18 @@ main {
   background: white;
   list-style: none;
   min-height: 430px;
-  
-  .menu-item { 
-  display: block;
-  color: black;
-  font-size: 1.6rem;
-  text-decoration:none;
-  padding-bottom: 10px;
-  margin: 30px auto;
-  max-width: 90px;
-  &:hover {
-    border-bottom: 2px solid rgb(34, 33, 33);
-  }
+
+  .menu-item {
+    display: block;
+    color: black;
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding-bottom: 10px;
+    margin: 30px auto;
+    max-width: 90px;
+    &:hover {
+      border-bottom: 2px solid rgb(34, 33, 33);
+    }
   }
   .nav-btn {
     display: block;
@@ -111,20 +115,20 @@ main {
     border-radius: 30px;
     max-width: 300px;
     font-size: 20px;
-    border:1px solid $border-color-btn;
-    cursor:pointer;
+    border: 1px solid $border-color-btn;
+    cursor: pointer;
     margin: 0 auto;
     margin-top: 20px;
     padding-top: 10px;
     @include list-style;
   }
   .login-button {
-    @include input-color-theme(#ECFFDE, black, #daf3c8, #f4ffec);
+    @include input-color-theme(#ecffde, black, #daf3c8, #f4ffec);
     background: $login-btn-color;
     border: 1px solid $border-color-btn;
   }
   .register-button {
-    @include input-color-theme(#89A3B3, white, #708592,#a3becf);
+    @include input-color-theme(#89a3b3, white, #708592, #a3becf);
     background: $register-btn-color;
     border: 1px solid $register-border-color;
     color: white;
@@ -139,8 +143,7 @@ main {
   @include flex(space-between, center, column);
   padding: 10px;
   height: 300px;
-  background-color: #FAF4F4;
-  
+  background-color: #faf4f4;
 }
 .social-media-icons {
   @include flex(center, center, row);
@@ -150,37 +153,35 @@ main {
 }
 .footer-links {
   @include flex(space-between, center);
-  width: 80%
-
+  width: 80%;
 }
 .footer-link-wrapper {
   @include flex(space-between, center, column);
   line-height: 2em;
-  
 }
 ul {
   @include list-style;
 }
 
-@media (min-width: $breakpointMedium){
-  .header{
-      height: 120px;
-      .cart {
-        font-size: 25px;
-      }
+@media (min-width: $breakpointMedium) {
+  .header {
+    height: 120px;
+    .cart {
+      font-size: 25px;
+    }
   }
-  .hero-div{
+  .hero-div {
     min-height: 450px;
   }
-  .log-in{
-      display: flex;
-      gap: 10px;
-      li a{
-          @include list-style;
-          color: black;
-      }
+  .log-in {
+    display: flex;
+    gap: 10px;
+    li a {
+      @include list-style;
+      color: black;
+    }
   }
-  .navigation-icons{
+  .navigation-icons {
     visibility: hidden;
   }
 
@@ -189,26 +190,25 @@ ul {
   }
 
   .nav-links {
+    display: flex;
+    height: 100%;
+    font-size: 1.5rem;
+    align-items: flex-end;
+    justify-items: center;
+    margin-bottom: 30px;
+    margin-left: 75px;
+
+    ul {
       display: flex;
-      height: 100%;
-      font-size: 1.5rem;
-      align-items: flex-end;
-      justify-items: center;
-      margin-bottom: 30px;
-      margin-left: 75px;
-      
-      ul {
-          display: flex;
-          gap: 30px;
-          li a {
-              @include list-style;
-              color: black;
-              padding: 0px 10px 10px 10px;
-              &:hover {
-                border-bottom: 2px solid rgb(34, 33, 33);
-              }
-          }
-          
+      gap: 30px;
+      li a {
+        @include list-style;
+        color: black;
+        padding: 0px 10px 10px 10px;
+        &:hover {
+          border-bottom: 2px solid rgb(34, 33, 33);
+        }
       }
+    }
   }
 }
