@@ -31,7 +31,7 @@ const getArticles = async () => {
             
                   `<div class="flex-container" id=article-${item.id}>
                               <div class="image-container">
-                                    <img class="product-img" src=${item.image} alt= ${item.alt}></img>
+                                    <img class="product-img" src=${item.image} alt= ${item.alt}/>
                               </div>
                         <div class="info-container">
                               <h2>${item.name}</h2>
