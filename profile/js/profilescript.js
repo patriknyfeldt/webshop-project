@@ -2,6 +2,13 @@ import { activeUser } from "../../js/main.js";
 
 const inputFields = document.querySelectorAll(".input-field")
 const errorMessage = document.getElementById("error-message");
+const userListData = JSON.parse(localStorage.getItem("userList"));
+let userList;
+
+if(userListData){
+    userList = userListData;
+}
+
 
 function fillInform(){
     if(activeUser){
@@ -18,7 +25,6 @@ function fillInform(){
 fillInform();
 
 function printErrorMessage(text){
-    console.log(errorMessage);
     if(errorMessage.parentElement.classList.contains("hidden")){
         errorMessage.parentElement.classList.remove("hidden");
     }
@@ -27,7 +33,6 @@ function printErrorMessage(text){
 
 document.getElementById("update-btn").addEventListener("click", (e)=>{
     e.preventDefault();
-    console.log("update")
 
     if(Array.from(inputFields).some(input => input.required && input.validity.valueMissing)){
         printErrorMessage("Fyll in de tomma fälten med stjärnor(*).");
@@ -38,11 +43,14 @@ document.getElementById("update-btn").addEventListener("click", (e)=>{
         return;
     }
 
+    const user = userList.find(u => u.email === activeUser.email);
+    
     inputFields.forEach(field =>{
         const fieldName = field.id.split("-")[0]
-        activeUser[fieldName] = field.value;
+        user[fieldName] = field.value;
     })
-    localStorage.setItem("user", JSON.stringify(activeUser))
+    localStorage.setItem("userList", JSON.stringify(userList));
+    localStorage.setItem("user", JSON.stringify(user));
     location.reload();
 })
 

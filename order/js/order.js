@@ -70,7 +70,6 @@ document.getElementById("send-order-btn").addEventListener("click", (e)=>{
 
     if(inputFields.some(input => input.required && input.validity.valueMissing)){
         printErrorMessage("Fyll in de tomma fälten med stjärnor(*).");
-        console.log("emtpy field");
         return;
     }
 
