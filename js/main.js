@@ -11,6 +11,7 @@ function userInit(){
     const logOutBtn = document.getElementById("logout-btn");
     const userRow = loginBtn.parentElement;
     const mobileUserRow = document.getElementById("mobile-user-row");
+    const mobileProfileLink = mobileUserRow.querySelector("#mobile-profile-link");
 
     if(userData){
         //desktop
@@ -25,6 +26,7 @@ function userInit(){
         mobileUserRow.removeChild(mobileUserRow.querySelector("#mobile-register-link"));
         
         userNameDisplay.querySelector("a").innerText = activeUser.forename;
+        mobileProfileLink.innerText = activeUser.forename;
         
     }
     else{
@@ -34,8 +36,9 @@ function userInit(){
         userRow.removeChild(logOutBtn.parentElement);
 
         //mobile menu
-        mobileUserRow.removeChild(mobileUserRow.querySelector("#mobile-profile-link"));
+        mobileUserRow.removeChild(mobileProfileLink);
         mobileUserRow.removeChild(mobileUserRow.querySelector("#mobile-logout-btn"));
+
     }
 }
 
