@@ -28,17 +28,26 @@
   margin: 20px 0px;
 }
 
-.center-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+// .center-content {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
 
 .center-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 80px;
+    .error-box{
+      border: 1px solid red;
+      border-radius: 20px;
+      padding: 40px 50px;
+      max-width:300px;
+      & > *{
+          font-size: 1.3em;
+      }
+    
 }
 .title-container {
     margin-top: 100px;
@@ -93,4 +102,5 @@ a.round-link-button {
 
 .dimblue {
   @include input-color-theme(#89a3b3, white, #708592, #a3becf);
+} 
 }
