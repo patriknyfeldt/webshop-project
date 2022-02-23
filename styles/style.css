@@ -85,7 +85,6 @@ main {
   left: 0;
   right: 0;
   bottom: 50%;
-  z-index: 99;
   color: white;
   background: white;
   list-style: none;
