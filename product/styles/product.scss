@@ -1,66 +1,62 @@
-$border-color-btn: #a7be97;
-$main-font-family: 'Montserrat', sans-serif;
+@import "../../partials/variables";
+@import "../../partials/mixins";
 
+// variabler och mixins behöver inte deklareras här längre utan importeras nu från partials i roten
+// $border-color-btn: #a7be97;
+// $main-font-family: 'Montserrat', sans-serif;
 
-@mixin input-color-theme($background-colour, $foreground-colour, $hover-color, $active-colour:white){
-      color:$foreground-colour;
-      background-color: $background-colour;
-      transition: background-color 0.2s;
-      &:hover{
-            background-color: $hover-color;
-      }
-      &:active{
-            background-color: $active-colour;
-      }
-}
-
+// @mixin input-color-theme($background-colour, $foreground-colour, $hover-color, $active-colour:white){
+//       color:$foreground-colour;
+//       background-color: $background-colour;
+//       transition: background-color 0.2s;
+//       &:hover{
+//             background-color: $hover-color;
+//       }
+//       &:active{
+//             background-color: $active-colour;
+//       }
+// }
 
 .product-info {
-      margin: 50px auto;
-      font-family: $main-font-family;
+  margin: 50px auto;
+  font-family: $main-font-family;
 
-            .flex-container {
-                  display: flex;
-                  flex-wrap: wrap;
-                  justify-content: center;
-                  align-content: center;
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 
-            .image-container {
-                  margin-bottom: 20px;
-                  .product-img {
-                        max-width: 450px;
-                        height: auto;
-                        }
-                  }
-                  .info-container {
-                        max-width: 500px;
-                        margin: 10px 50px;
-                  h2 {
-                        margin-bottom: 40px;
-                  }
-                  p {
-                        font-size: 1.1rem;
-                  }
-                  .description {
-                        line-height: 1.5;
-                  }
-                  .add-to-cart {
-                        @include input-color-theme(#ECFFDE, black, #daf3c8, #f4ffec);
-                        height: 50px;
-                        border-radius: 30px;
-                        min-width: 300px;
-                        font-size: 20px;
-                        border:1px solid $border-color-btn;
-                        cursor:pointer;
-                        margin: inherit;
-                        margin-top: 50px;
-                        }
-            
-                  }
-            
-            }
-      }       
-
-
-
-
+    .image-container {
+      margin-bottom: 20px;
+      .product-img {
+        max-width: 450px;
+        height: auto;
+      }
+    }
+    .info-container {
+      max-width: 500px;
+      margin: 10px 50px;
+      h2 {
+        margin-bottom: 40px;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+      .description {
+        line-height: 1.5;
+      }
+      .add-to-cart {
+        @include input-color-theme(#ecffde, black, #daf3c8, #f4ffec);
+        height: 50px;
+        border-radius: 30px;
+        min-width: 300px;
+        font-size: 20px;
+        border: 1px solid $border-color-btn;
+        cursor: pointer;
+        margin: inherit;
+        margin-top: 50px;
+      }
+    }
+  }
+}
