@@ -44,7 +44,7 @@ main {
   display: flex;
   min-height: 250px;
   width: 100%;
-  margin: 10px 0 0px 10px;
+  margin-top: 10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -83,7 +83,10 @@ main {
 }
 
 .product-cart-container .name-and-counter .counter-and-price .remove-btn {
+  border: none;
+  background-color: white;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .product-cart-container .name-and-counter .counter-and-price .counter {
