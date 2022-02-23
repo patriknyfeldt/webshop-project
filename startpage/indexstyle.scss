@@ -5,6 +5,21 @@
   height: 230px;
   background-size: cover;
   background-position: center center;
+  position: relative;
+  z-index: -100;
+  filter: grayscale(20%);
+  .hero-text {
+    font-family: $big2-font-family;
+    font-size: 45px;
+    color: white;
+    padding-top: 1px;
+    text-align: center;
+    span {
+      display: block;
+      color: black;
+      margin-top: 30px;
+    }
+  }
 }
 
 .category-div-container {
