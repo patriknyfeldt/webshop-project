@@ -1,8 +1,5 @@
-// @use "/styles/partials/mixins" as mixin;
-$input-font-size: 20px;
-$input-border-colour: rgb(112, 112, 112);
-@import "../../partials/mixins";
-@import "../../partials/variables";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
 
 .form-style {
   label {
