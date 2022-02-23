@@ -6,7 +6,6 @@
   background-position: center center;
   position: relative;
   z-index: -100;
-
   -webkit-filter: grayscale(30%);
           filter: grayscale(30%);
 }
@@ -35,16 +34,11 @@
   .hero-div .hero-text .hide {
     display: none;
   }
-
-  padding-top: 1px;
-  text-align: center;
-
 }
 
 .hero-div .hero-text span {
   display: block;
   color: black;
-
   text-align: left;
   padding: 5px;
   margin-top: 20px;
@@ -57,9 +51,6 @@
 .category-div-container .category-title {
   padding: 30px;
   font-size: 2rem;
-
-  margin-top: 30px;
-
 }
 
 .category-div-container a {
