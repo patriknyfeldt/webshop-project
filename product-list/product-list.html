@@ -43,9 +43,18 @@
               ><i class="cart fa-solid fa-cart-shopping"></i
             ></a>
           </li>
-          <li id="user-name" class="hidden"><a href="../profile/profile.html"></a></li>
-          <li id="log-in-link" class="hidden"><a href="../login/login.html">Logga in</a></li>
-          <li><a href="../login/logincreate.html">Registrera</a></li>
+          <li id="user-name" class="hidden">
+            <a href="../profile/profile.html"></a>
+          </li>
+          <li id="log-in-link" class="hidden">
+            <a href="../login/login.html">Logga in</a>
+          </li>
+          <li id="register-link">
+            <a href="../login/logincreate.html">Registrera</a>
+          </li>
+          <li class="hidden">
+            <input type="button" class="" value="Logga ut" id="logout-btn">
+          </li>
         </ul>
 
         <!--Dropdown menu börjar här-->
@@ -73,9 +82,11 @@
               >
             </li>
           </ul>
-          <div>
-            <a href="../login/login.html" class="nav-btn login-button">Logga in</a>
-            <a href="../login/logincreate.html" class="nav-btn register-button">Registrera dig</a>
+          <div id="mobile-user-row">
+            <a href="../login/login.html" class="nav-btn login-button" id="mobile-login-link">Logga in</a>
+            <a href="../login/logincreate.html" class="nav-btn register-button" id="mobile-register-link">Registrera dig</a>
+            <a href="../profile/profile.html" id="mobile-profile-link">Profile</a>
+            <input type="button" class="" value="Logga ut" id="mobile-logout-btn">
           </div>
         </div>
         <div class="navigation-icons">
