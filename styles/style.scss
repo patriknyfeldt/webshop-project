@@ -31,11 +31,11 @@ main {
   width: 100%;
   padding: 20px 10px;
   min-height: 110px;
-  // .navigation-icons{
-  //   // display: flex;
-  //   // font-size: 40px;
-  //   // gap: 20px;
-  // }
+
+  .logo {
+    position: relative;
+    z-index: 100;
+  }
 }
 
 // Dropdown meny
