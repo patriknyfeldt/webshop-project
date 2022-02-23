@@ -4,7 +4,9 @@ main {
 }
 
 .shopping-cart-main {
+  min-height: 65vh;
   text-align: center;
+  margin-top: 200px;
 }
 
 .shopping-cart-main h1 {

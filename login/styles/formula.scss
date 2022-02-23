@@ -45,6 +45,10 @@ $input-border-colour: rgb(112, 112, 112);
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 80px;
+}
+.title-container {
+    margin-top: 100px;
 }
 
 .error-box{

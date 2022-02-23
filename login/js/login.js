@@ -26,7 +26,8 @@ document.getElementById("login-button").addEventListener("click", e =>{
         localStorage.setItem("user", JSON.stringify(user));
         emailField.value = "";
         passwordField.value = "";
-        location.reload();
+        // location.reload();
+        window.location.pathname = ('../index.html');
     }
     else{
         printErrorMessage("Finns ingen användare med den eposten.")

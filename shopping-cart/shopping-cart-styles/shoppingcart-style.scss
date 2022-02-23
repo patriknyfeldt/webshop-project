@@ -6,13 +6,12 @@ main{
 }
 // Font-style options
 .shopping-cart-main{
-
+    min-height: 65vh;
     // height: 300px;
     text-align: center;
+    margin-top: 200px;
     h1{
         margin-bottom: 20px;
-       
-        
     }
 }
 
@@ -23,7 +22,7 @@ main{
     flex-direction: column;
     h1{
         margin-bottom: 100px;
-       }
+    }
 }
 
 .sad-emoji{
