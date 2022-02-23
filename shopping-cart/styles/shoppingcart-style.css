@@ -4,13 +4,12 @@ main {
 }
 
 .shopping-cart-main {
-  min-height: 65vh;
   text-align: center;
-  margin-top: 200px;
 }
 
 .shopping-cart-main h1 {
   margin-bottom: 20px;
+  margin-top: 160px;
 }
 
 .empty-cart-message-wrapper {

@@ -1,96 +1,97 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/variables";
 
-.form-style {
-  label {
-    display: inline-block;
-    margin: 5px 0px;
-    font-size: 1.2em;
-    color: #5a5454;
-  }
-
-  input[type="checkbox"] + label {
-    user-select: none;
-  }
-
-  input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-  }
-  .form-row {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.content-column {
-  margin: 20px 0px;
-}
-
-.center-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.center-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
-}
 .title-container {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .font-size-medium {
   font-size: 1.6em;
 }
 
-input.input-field {
-  display: block;
-  border: 1px solid #707070;
-  border-radius: 15px;
-  height: 50px;
-  max-width: 300px;
-  font-size: 30px;
-  padding: 0 10px;
-}
+// .form-style {
+//   label {
+//     display: inline-block;
+//     margin: 5px 0px;
+//     font-size: 1.2em;
+//     color: #5a5454;
+//   }
 
-.round-button {
-  font-family: Arial, Helvetica, sans-serif;
-  border: 1px solid $input-border-colour;
-  border-radius: 25px;
-  height: 50px;
-  min-width: 300px;
-  font-size: $input-font-size;
-  padding: 0px 30px;
-  cursor: pointer;
-}
+//   input[type="checkbox"] + label {
+//     user-select: none;
+//   }
 
-a.round-link-button {
-  &:link {
-    display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid $input-border-colour;
-    border-radius: 25px;
-    height: 50px;
-    min-width: 300px;
-    font-size: $input-font-size;
-    padding: 12px 30px;
-    text-decoration: none;
-    text-align: center;
-  }
-  &:visited {
-    border-color: $input-border-colour;
-  }
-}
+//   input[type="checkbox"] {
+//     width: 20px;
+//     height: 20px;
+//     margin-right: 10px;
+//   }
+//   .form-row {
+//     display: flex;
+//     align-items: center;
+//   }
+// }
 
-.lightgreen {
-  @include input-color-theme(#ecffde, black, #daf3c8, #f4ffec);
-}
+// .content-column {
+//   margin: 20px 0px;
+// }
 
-.dimblue {
-  @include input-color-theme(#89a3b3, white, #708592, #a3becf);
-}
+// .center-content {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+// .center-content {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin-top: 80px;
+// }
+
+// input.input-field {
+//   display: block;
+//   border: 1px solid #707070;
+//   border-radius: 15px;
+//   height: 50px;
+//   max-width: 300px;
+//   font-size: 30px;
+//   padding: 0 10px;
+// }
+
+// .round-button {
+//   font-family: Arial, Helvetica, sans-serif;
+//   border: 1px solid $input-border-colour;
+//   border-radius: 25px;
+//   height: 50px;
+//   min-width: 300px;
+//   font-size: $input-font-size;
+//   padding: 0px 30px;
+//   cursor: pointer;
+// }
+
+// a.round-link-button {
+//   &:link {
+//     display: inline-block;
+//     font-family: Arial, Helvetica, sans-serif;
+//     border: 1px solid $input-border-colour;
+//     border-radius: 25px;
+//     height: 50px;
+//     min-width: 300px;
+//     font-size: $input-font-size;
+//     padding: 12px 30px;
+//     text-decoration: none;
+//     text-align: center;
+//   }
+//   &:visited {
+//     border-color: $input-border-colour;
+//   }
+// }
+
+// .lightgreen {
+//   @include input-color-theme(#ecffde, black, #daf3c8, #f4ffec);
+// }
+
+// .dimblue {
+//   @include input-color-theme(#89a3b3, white, #708592, #a3becf);
+// }
