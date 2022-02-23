@@ -9,10 +9,6 @@
 body {
   min-height: 100vh;
   margin: 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr auto;
-      grid-template-rows: 1fr auto;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -41,6 +37,7 @@ main {
   -webkit-box-shadow: 0 5px 20px rgba(57, 63, 72, 0.3);
           box-shadow: 0 5px 20px rgba(57, 63, 72, 0.3);
   position: fixed;
+  top: 0;
   background: white;
   width: 100%;
   padding: 20px 10px;
