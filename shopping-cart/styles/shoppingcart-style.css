@@ -186,7 +186,7 @@ main {
 
 .lightgreen {
   color: black;
-  background-color: #ECFFDE;
+  background-color: #ecffde;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
@@ -201,7 +201,7 @@ main {
 
 .dimblue {
   color: white;
-  background-color: #89A3B3;
+  background-color: #89a3b3;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }

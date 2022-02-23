@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../login/styles/formula.css">
+    <!-- <link rel="stylesheet" href="./startpage/indexstyle.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+    />
+    <title>PSAR - Profil</title>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <a href="../index.html"
+          ><img src="../images/sneakers_svg.svg" width="100" alt=""
+        /></a>
+      </div>
+      <nav class="hidden nav-links">
+        <ul class="nav-category">
+          <li>
+            <a href="../product-list/product-list.html?category=dam">DAM</a>
+          </li>
+          <li>
+            <a href="../product-list/product-list.html?category=herr">HERR</a>
+          </li>
+          <li>
+            <a href="../product-list/product-list.html?category=barn">BARN</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <ul class="hidden log-in">
+          <li>
+            <a href="../shopping-cart/shopping-cart.html"
+              ><i class="cart fa-solid fa-cart-shopping"></i
+            ></a>
+          </li>
+          <li id="user-name" class="hidden"><a href="../profile/profile.html"></a></li>
+          <li id="log-in-link" class="hidden"><a href="../login/login.html">Logga in</a></li>
+          <li><a href="../login/logincreate.html">Registrera</a></li>
+        </ul>
+
+        <!--Dropdown menu börjar här-->
+        <div class="menu-hamburger">
+          <ul>
+            <li><a class="menu-item" href="../product-list/product-list.html?category=dam">DAM</a></li>
+            <li><a class="menu-item" href="../product-list/product-list.html?category=herr">HERR</a></li>
+            <li><a class="menu-item" href="../product-list/product-list.html?category=barn">BARN</a></li>
+          </ul>
+          <div>
+            <a href="../login/login.html" class="nav-btn login-button">Logga in</a>
+            <a href="../login/logincreate.html" class="nav-btn register-button">Registrera dig</a>
+          </div>
+        </div>
+        <div class="navigation-icons">
+          <a href="../shopping-cart/shopping-cart.html"
+            ><i class="cart fa-solid fa-cart-shopping"></i
+          ></a>
+          <button class="hamburger">
+            <i class="menu-icon fa-solid fa-bars"></i>
+            <i class="close-icon fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <!--Dropdown slutar här-->
+      </div>
+    </header>
+
+    <main class="index-main center-content">
+        <h1>Profil</h1>
+        <div>
+            <form id="createaccount-form" class="form-style">
+                <ul>
+                    <li>
+                        <div class="content-column">
+                            <label for="email-field">E-postadress</label>
+                            <input 
+                                type="email" 
+                                name="email-field" 
+                                id="email-field" 
+                                class="input-field" 
+                                disabled
+                                required
+                                >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content-column">
+                            <label for="forename-field">Förnamn*</label>
+                            <input 
+                                type="text" 
+                                name="forename-field" 
+                                id="forename-field" 
+                                class="input-field" 
+                                required
+                                >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content-column">
+                            <label for="lastname-field">Efternamn*</label>
+                            <input 
+                                type="text" 
+                                name="lastname-field" 
+                                id="lastname-field" 
+                                class="input-field" 
+                                required
+                                >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content-column">
+                            <label for="adress-field">Gatuadress*</label>
+                            <input 
+                                type="text" 
+                                name="adress-field" 
+                                id="adress-field" 
+                                class="input-field" 
+                                required
+                                
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content-column">
+                            <label for="zipcode-field">Postnummer*</label>
+                            <input 
+                                type="text" 
+                                name="zipcode-field" 
+                                id="zipcode-field" 
+                                class="input-field" 
+                                required
+                                >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content-column">
+                            <label for="city-field">Ort*</label>
+                            <input 
+                                type="text" 
+                                name="city-field" 
+                                id="city-field" 
+                                class="input-field" 
+                                required
+                                >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content-column">
+                            <label for="password-field">Lösenord*</label>
+                            <input 
+                                type="password" 
+                                name="password-field" 
+                                id="password-field" 
+                                class="input-field" 
+                                required
+                                >
+                        </div>
+  
+                    </li>
+                    <li>
+                      <div class="content-column">
+                        <label for="password-verify-field">Verifiera Lösenord*</label>
+                        <input 
+                            type="password" 
+                            name="password-verify-field" 
+                            id="password-verify-field" 
+                            class="input-field" 
+                            required
+                            >
+                      </div>
+                    </li>
+                    <li>
+                        <div class="content-column">
+                            <label for="telephone-field">Telefon</label>
+                            <input 
+                                type="tel" 
+                                name="telephone" 
+                                class="input-field" 
+                                id="telephone-field"
+                                >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="error-box hidden">
+                          <span id="error-message"></span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="content-column">
+                    <input type="submit" value="Updatera" id="update-btn" class="round-button lightgreen">
+                </div>
+            </form>
+            <div class="content-column">
+                <input type="button" value="Logga ut" id="logout-btn" class="round-button dimblue">
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+      <div class="social-media-icons">
+        <a><i class="fa-brands fa-youtube"></i></a>
+        <a><i class="fa-brands fa-twitter"></i></a>
+        <a><i class="fa-brands fa-instagram"></i></a>
+        <a><i class="fa-brands fa-facebook"></i></a>
+      </div>
+      <div class="footer-links">
+        <div class="footer-link-wrapper">
+          <h3>about</h3>
+          <ul>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </div>
+        <div class="footer-link-wrapper">
+          <h3>Kontakt</h3>
+          <ul>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </div>
+        <div class="footer-link-wrapper">
+          <h3>about</h3>
+          <ul>
+            <li>Link</li>
+            <li>Link</li>
+            <li>Link</li>
+          </ul>
+        </div>
+      </div>
+      <small class="copyright">© 2022 PSAR, Inc. All Rights Reserved</small>
+    </footer>
+    <script type="module" src="../js/main.js"></script>
+    <script src="../js/nav.js"></script>
+    <script type="module" src="./js/profilescript.js"></script>
+  </body>
+</html>

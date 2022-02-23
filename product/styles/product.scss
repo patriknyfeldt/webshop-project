@@ -1,18 +1,5 @@
-$border-color-btn: #a7be97;
-$main-font-family: 'Montserrat', sans-serif;
-
-
-@mixin input-color-theme($background-colour, $foreground-colour, $hover-color, $active-colour:white){
-      color:$foreground-colour;
-      background-color: $background-colour;
-      transition: background-color 0.2s;
-      &:hover{
-            background-color: $hover-color;
-      }
-      &:active{
-            background-color: $active-colour;
-      }
-}
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
 
 
 .product-info {

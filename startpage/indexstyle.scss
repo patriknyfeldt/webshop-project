@@ -1,66 +1,59 @@
-
 @import "../styles/partials/variables";
 @import "../styles/partials/mixins";
-.hero-div{
-    background-image: url(../images/hero-löpande-man.jpg);
-    height: 230px;
-    background-size: cover;
-    background-position: center center;
+.hero-div {
+  background-image: url(../images/hero-löpande-man.jpg);
+  height: 230px;
+  background-size: cover;
+  background-position: center center;
 }
 
-.category-div-container{
-    
-    a{
-        @include list-style;
-    }
-    a:visited { 
-        text-decoration: none; 
-        color: black; 
-       }
+.category-div-container {
+  a {
+    @include list-style;
+  }
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
 
-    #damsko-category{
-        background-image: url(../images/kategori-damskor.jpg);
-        @include category-img;
-    }
-
-    #herrsko-category{
-        background-image: url(../images/kategori-herrskor.jpg);
-        @include category-img;
-    }
-    #barnsko-category {
-        background-image: url(../images/kategori-barnskor.jpg);
-        @include category-img;
-    }
-    
-    
-}
-.aside-img{
-    background-image: url(../images/reklam-knyta-sko.jpg);
+  #damsko-category {
+    background-image: url(../images/kategori-damskor.jpg);
     @include category-img;
-    height: 150px;
-    
+  }
+
+  #herrsko-category {
+    background-image: url(../images/kategori-herrskor.jpg);
+    @include category-img;
+  }
+  #barnsko-category {
+    background-image: url(../images/kategori-barnskor.jpg);
+    @include category-img;
+  }
+}
+.aside-img {
+  background-image: url(../images/reklam-knyta-sko.jpg);
+  @include category-img;
+  height: 150px;
 }
 
-@media (min-width: $breakpointMedium){
-    .category-div-container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        
-    .category{
-        width: 350px;
+@media (min-width: $breakpointMedium) {
+  .category-div-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .category {
+      width: 350px;
     }
-}
-.rea-aside{
+  }
+  .rea-aside {
     height: auto;
     display: flex;
     justify-content: center;
-    
-    .aside-img{
-        height: 400px;
-        width: 70%;
-    }
-    
-}
 
+    .aside-img {
+      height: 400px;
+      width: 70%;
+    }
+  }
 }
