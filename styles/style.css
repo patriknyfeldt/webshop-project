@@ -68,7 +68,8 @@ main {
   display: none;
 }
 
-.hamburger .menu-icon, .hamburger .close-icon {
+.hamburger .menu-icon,
+.hamburger .close-icon {
   font-size: 3rem;
 }
 
@@ -117,7 +118,7 @@ main {
 
 .menu-hamburger .login-button {
   color: black;
-  background-color: #ECFFDE;
+  background-color: #ecffde;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   background: #ecffde;
@@ -134,7 +135,7 @@ main {
 
 .menu-hamburger .register-button {
   color: white;
-  background-color: #89A3B3;
+  background-color: #89a3b3;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   background: #89a3b3;
@@ -169,7 +170,7 @@ main {
           flex-direction: column;
   padding: 10px;
   height: 300px;
-  background-color: #FAF4F4;
+  background-color: #faf4f4;
 }
 
 .social-media-icons {
