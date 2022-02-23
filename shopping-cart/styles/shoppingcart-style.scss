@@ -37,7 +37,7 @@ main {
   display: flex;
   min-height: 250px;
   width: 100%;
-  margin: 10px 0 0px 10px;
+  margin-top: 10px;
   flex-wrap: wrap;
 
   .name-and-counter {
@@ -60,37 +60,41 @@ main {
 
       .remove-btn {
         font-size: 1.5rem;
+        background-color: white;
+        border: none;
       }
 
       .counter {
         display: flex;
         flex-direction: row;
         gap: 15px;
+        align-items: center;
 
         .arrows {
           display: flex;
           flex-direction: column;
-          gap: 7px;
+          gap: 15px;
           justify-content: center;
 
           .arrow-up {
             width: 0;
             height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-bottom: 11px solid black;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 14px solid black;
+            background: white;
           }
           .arrow-down {
             width: 0;
             height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-top: 11px solid black;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 14px solid black;
           }
         }
         .number-of-items {
+          @include flex(center, center);
           border: 1px solid black;
-          text-align: center;
           width: 30px;
           height: 30px;
         }
