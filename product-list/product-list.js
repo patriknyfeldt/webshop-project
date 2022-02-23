@@ -20,8 +20,7 @@ const drawProduct = (item) =>
     <div class="article-left-wrapper">
     <h2>${item.name}</h2>
     <a class="img-link" href="../product/product.html?article=${item.id}">
-    <img class="product-img" src=${item.image} alt="${item.alt}"></img>
-    <p class="click-para">Visa produkt</p></a>
+    <img class="product-img" src=${item.image} alt="${item.alt}"></img></a>
     </div>
     <div class="article-right-wrapper">
     <p class="description-paragraph">${item.description}<p/>
