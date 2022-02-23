@@ -45,14 +45,14 @@
           align-items: center;
 }
 
-.center-content .error-box {
+.error-box {
   border: 1px solid red;
   border-radius: 20px;
   padding: 40px 50px;
   max-width: 300px;
 }
 
-.center-content .error-box > * {
+.error-box > * {
   font-size: 1.3 em;
 }
 
