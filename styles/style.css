@@ -120,20 +120,24 @@ main {
   text-decoration: none;
 }
 
-.menu-hamburger .login-button {
+.menu-hamburger .login-button, .menu-hamburger .logout-button {
   color: black;
   background-color: #ecffde;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   background: #ecffde;
   border: 1px solid #a7be97;
+  text-align: center;
+  padding-bottom: 10px;
+  width: 300px;
+  font-family: inherit;
 }
 
-.menu-hamburger .login-button:hover {
+.menu-hamburger .login-button:hover, .menu-hamburger .logout-button:hover {
   background-color: #daf3c8;
 }
 
-.menu-hamburger .login-button:active {
+.menu-hamburger .login-button:active, .menu-hamburger .logout-button:active {
   background-color: #f4ffec;
 }
 
