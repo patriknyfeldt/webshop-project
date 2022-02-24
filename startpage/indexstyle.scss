@@ -77,11 +77,28 @@
     @include category-img;
   }
 }
-.aside-img {
-  background-image: url(../images/reklam-knyta-sko.jpg);
-  @include category-img;
-  height: 150px;
+.rea-aside {
+  margin-top: 50px;
+  border-top: 1px solid rgb(71, 70, 70);
+  .aside-container {
+    padding: 30px;
+    max-width: 600px;
+    .aside-title {
+      margin-bottom: 20px;
+      font-size: 1.7rem;
+    }
+    .aside-text{
+      font-size: 1.3rem;
+      line-height: 1.5;
+    }
+  }
+  .aside-img {
+    background-image: url(../images/reklam-knyta-sko.jpg);
+    @include category-img;
+    height: 150px;
+  }
 }
+
 
 @media (min-width: $breakpointMedium) {
   .category-div-container {

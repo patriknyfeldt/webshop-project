@@ -97,7 +97,27 @@
   margin: 20px;
 }
 
-.aside-img {
+.rea-aside {
+  margin-top: 50px;
+  border-top: 1px solid #474646;
+}
+
+.rea-aside .aside-container {
+  padding: 30px;
+  max-width: 600px;
+}
+
+.rea-aside .aside-container .aside-title {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+}
+
+.rea-aside .aside-container .aside-text {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.rea-aside .aside-img {
   background-image: url(../images/reklam-knyta-sko.jpg);
   height: 380px;
   background-size: cover;
