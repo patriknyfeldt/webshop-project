@@ -118,6 +118,7 @@ main {
   padding-top: 10px;
   list-style: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .menu-hamburger .login-button, .menu-hamburger .logout-button {
@@ -198,6 +199,7 @@ main {
   font-size: 30px;
   gap: 15px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .footer-links {
@@ -237,6 +239,7 @@ main {
 ul {
   list-style: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
 @media (min-width: 550px) {
@@ -258,6 +261,7 @@ ul {
   .log-in li a {
     list-style: none;
     text-decoration: none;
+    cursor: pointer;
     color: black;
   }
   .navigation-icons {
@@ -288,6 +292,7 @@ ul {
   .nav-links ul li a {
     list-style: none;
     text-decoration: none;
+    cursor: pointer;
     color: black;
     padding: 0px 10px 10px 10px;
   }
