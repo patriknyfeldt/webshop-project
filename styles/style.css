@@ -142,6 +142,15 @@ main {
   background-color: #f4ffec;
 }
 
+.menu-hamburger .logout-button {
+  background: #FFD6AA;
+  border: 1px solid #f1a14c;
+}
+
+.menu-hamburger .logout-button:hover {
+  background: #e9af71;
+}
+
 .menu-hamburger .register-button {
   color: white;
   background-color: #89a3b3;

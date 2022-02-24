@@ -111,6 +111,13 @@ main {
     width: 300px;
     font-family: inherit;
   }
+  .logout-button{
+    background: #FFD6AA;
+    border: 1px solid rgb(241, 161, 76);
+    &:hover {
+      background: rgb(233, 175, 113);
+    }
+  }
   .register-button {
     @include input-color-theme(#89a3b3, white, #708592, #a3becf);
     background: $register-btn-color;
@@ -197,3 +204,4 @@ ul {
     }
   }
 }
+
