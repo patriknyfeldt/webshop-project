@@ -134,6 +134,7 @@ main {
   font-size: 30px;
   gap: 15px;
   margin-top: 20px;
+  cursor: pointer;
 }
 .footer-links {
   @include flex(space-between, center);
