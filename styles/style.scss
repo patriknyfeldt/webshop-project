@@ -102,10 +102,14 @@ main {
     padding-top: 10px;
     @include list-style;
   }
-  .login-button {
+  .login-button, .logout-button {
     @include input-color-theme(#ecffde, black, #daf3c8, #f4ffec);
     background: $login-btn-color;
     border: 1px solid $border-color-btn;
+    text-align: center;
+    padding-bottom: 10px;
+    width: 300px;
+    font-family: inherit;
   }
   .register-button {
     @include input-color-theme(#89a3b3, white, #708592, #a3becf);
