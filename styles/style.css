@@ -256,7 +256,22 @@ ul {
     height: 120px;
   }
   .header .cart {
+    position: relative;
     font-size: 25px;
+  }
+  .header .cart:after {
+    position: absolute;
+    content: attr(data-count);
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    font-size: 12px;
+    line-height: 25px;
+    top: -20px;
+    right: -14px;
+    text-align: center;
+    background-color: #f5b8b8;
+    z-index: 20;
   }
   .hero-div {
     min-height: 450px;
