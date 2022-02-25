@@ -99,11 +99,11 @@
 
 .rea-aside {
   margin-top: 50px;
-  border-top: 1px solid gray;
+  background: #D1EEFF;
+  padding: 30px;
 }
 
 .rea-aside .aside-container {
-  padding: 30px;
   max-width: 600px;
 }
 
