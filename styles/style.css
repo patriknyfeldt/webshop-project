@@ -46,6 +46,8 @@ main {
 
 .header .logo {
   position: relative;
+  top: 10px;
+  left: 12px;
   z-index: 100;
 }
 
@@ -58,7 +60,7 @@ main {
 
 .navigation-icons .cart {
   margin-right: 1rem;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: black;
 }
 
@@ -102,7 +104,7 @@ main {
 }
 
 .menu-hamburger .menu-item:hover {
-  border-bottom: 2px solid #222121;
+  border-bottom: 3px solid #89A3B3;
 }
 
 .menu-hamburger .nav-btn {
@@ -321,7 +323,7 @@ ul {
     padding: 0px 10px 10px 10px;
   }
   .nav-links ul li a:hover {
-    border-bottom: 2px solid #222121;
+    border-bottom: 4px solid #89A3B3;
   }
 }
 /*# sourceMappingURL=style.css.map */
