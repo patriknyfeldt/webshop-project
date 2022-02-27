@@ -12,6 +12,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+#user-name {
+  color: red;
+}
+
 main {
   margin-top: 100px;
 }
@@ -104,7 +108,7 @@ main {
 }
 
 .menu-hamburger .menu-item:hover {
-  border-bottom: 3px solid #89A3B3;
+  border-bottom: 3px solid #89a3b3;
 }
 
 .menu-hamburger .nav-btn {
@@ -123,7 +127,8 @@ main {
   cursor: pointer;
 }
 
-.menu-hamburger .login-button, .menu-hamburger .logout-button {
+.menu-hamburger .login-button,
+.menu-hamburger .logout-button {
   color: black;
   background-color: #ecffde;
   -webkit-transition: background-color 0.2s;
@@ -136,16 +141,18 @@ main {
   font-family: inherit;
 }
 
-.menu-hamburger .login-button:hover, .menu-hamburger .logout-button:hover {
+.menu-hamburger .login-button:hover,
+.menu-hamburger .logout-button:hover {
   background-color: #daf3c8;
 }
 
-.menu-hamburger .login-button:active, .menu-hamburger .logout-button:active {
+.menu-hamburger .login-button:active,
+.menu-hamburger .logout-button:active {
   background-color: #f4ffec;
 }
 
 .menu-hamburger .logout-button {
-  background: #FFD6AA;
+  background: #ffd6aa;
   border: 1px solid #f1a14c;
 }
 
@@ -323,7 +330,7 @@ ul {
     padding: 0px 10px 10px 10px;
   }
   .nav-links ul li a:hover {
-    border-bottom: 4px solid #89A3B3;
+    border-bottom: 4px solid #89a3b3;
   }
 }
 /*# sourceMappingURL=style.css.map */
