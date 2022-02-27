@@ -3,8 +3,6 @@ const chosenProductCart = document.getElementById("chosen-product-cart");
 let savedProducts = JSON.parse(localStorage.getItem("basket"));
 let savedProductList = savedProducts;
 
-// console.log(`savedProductList:`);
-//console.log(savedProductList)
 
 savedProductList.forEach(product => {
     const article = product.article;
@@ -38,7 +36,6 @@ savedProductList.forEach(product => {
     `;
 });
 if(savedProductList.length){
-    console.log("create price and order display")
     chosenProductCart.innerHTML += `
         <div id="order-row" class="checkout-wrapper">
             <div class="checkout">
@@ -62,7 +59,6 @@ calculateSum();
 document.querySelectorAll('input[id*="increment"]').forEach(input => {
     const inputID = input.id.slice(10);
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
-    // console.log(chosenProduct);
     
     input.addEventListener('click', (e) => {
         chosenProduct.quantity++;
@@ -75,7 +71,6 @@ document.querySelectorAll('input[id*="increment"]').forEach(input => {
 document.querySelectorAll('input[id*="decrement"]').forEach(input => {
     const inputID = input.id.slice(10);
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
-    // console.log(chosenProduct);
     
     input.addEventListener('click', (e) => {
         if(chosenProduct.quantity <= 1){
@@ -93,7 +88,6 @@ document.querySelectorAll('button[id*="remove"]').forEach(input =>{
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
     document.getElementById(`remove-${inputID}`).addEventListener("click", ()=>{
         savedProductList.splice(savedProductList.indexOf(chosenProduct), 1);
-        console.log(savedProducts);
         document.getElementById(`chosen-product-cart-${inputID}`).remove();
         localStorage.setItem("basket", JSON.stringify(savedProducts));
         calculateSum();
