@@ -45,7 +45,7 @@ main {
   display: flex;
   min-height: 250px;
   width: 100%;
-  margin: 10px 0 0px 10px;
+  margin-top: 10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -85,6 +85,8 @@ main {
 
 .product-cart-container .name-and-counter .counter-and-price .remove-btn {
   font-size: 1.5rem;
+  background-color: white;
+  border: none;
 }
 
 .product-cart-container .name-and-counter .counter-and-price .counter {
@@ -96,6 +98,9 @@ main {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product-cart-container .name-and-counter .counter-and-price .counter .arrows {
@@ -106,7 +111,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 7px;
+  gap: 15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -115,22 +120,35 @@ main {
 .product-cart-container .name-and-counter .counter-and-price .counter .arrows .arrow-up {
   width: 0;
   height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 11px solid black;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 14px solid black;
+  background: white;
 }
 
 .product-cart-container .name-and-counter .counter-and-price .counter .arrows .arrow-down {
   width: 0;
   height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 11px solid black;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 14px solid black;
 }
 
 .product-cart-container .name-and-counter .counter-and-price .counter .number-of-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border: 1px solid black;
-  text-align: center;
   width: 30px;
   height: 30px;
 }
