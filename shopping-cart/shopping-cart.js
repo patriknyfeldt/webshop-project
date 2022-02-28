@@ -8,32 +8,34 @@ if(savedProductList){
 savedProductList.forEach(product => {
     const article = product.article;
     chosenProductCart.innerHTML += 
-        `<section id="chosen-product-cart-${article.id}">
-            <article class="product-cart-container "id=article-${article.id}>
-                <div class="shopping-cart-img"><img src=${article.image}></img></div>
-                
-                <div class="name-and-counter">
-                
-                        <div class="shopping-cart-text">
-                            <h2>${article.name}</h2>
-                            <p>Description: ${article.description}</p>
-                        </div>
-
-                    <div class="counter-and-price">
-                        <div class="counter">
-                            <div class="number-of-items"><span id="count-input-${article.id}">${product.quantity}</span></div>
-                            <div class="arrows">
-                                <button class="number-inputs arrow-up" type="button" id="increment-${article.id}"><i class="fa-solid fa-plus"></i></button>
-                                
-                                <button class="number-inputs arrow-down" type="button" id="decrement-${article.id}"><i class="fa-solid fa-minus"></i></button>
-                            </div>
-                                <b>price: ${article.price}</b>
-                                <button class="remove-btn" id="remove-${article.id}"><i class="fa-solid fa-trash-can"></i></button>
-                        </div>
+    `<section id="chosen-product-cart-${article.id}">
+    <article class="product-cart-container "id=article-${article.id}>
+        <div class="shopping-cart-img"><img src=${article.image}></img></div>
+        
+        <div class="name-and-counter">
+        
+                <div class="shopping-cart-text">
+                    <h2>${article.name}</h2>
+                    <p>Description: ${article.description}</p>
+                </div>
+            <div class="counter-and-price">
+                <div class="counter">
+                    
+                    <div class="arrows">
+                    <button class="number-inputs arrow-up" type="button" id="decrement-${article.id}"><i class="fa-solid fa-minus"></i></button>
+                        <div class="number-of-items"><span id="count-input-${article.id}">${product.quantity}</span></div>
+                        <button class="number-inputs arrow-up" type="button" id="increment-${article.id}"><i class="fa-solid fa-plus"></i></button>
+                        
                     </div>
-                </article>
-            </section>
-        `;
+                    <div class="price-remove">
+                        <b>price: ${article.price}</b>
+                        <button class="remove-btn" id="remove-${article.id}"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+`;
     });
     if(savedProductList.length){
         chosenProductCart.innerHTML += `
