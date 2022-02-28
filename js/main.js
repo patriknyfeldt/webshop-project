@@ -56,7 +56,7 @@ export {activeUser};
 
 
 
-// Add / remove number of Products to Cart Icon ( KEEPS SCORE ON ALL PAGES. Code added for functionality to each eventlistener on the seperate pages )
+// Add / remove number of Products to Cart Icon ( KEEPS SCORE ON ALL PAGES. Code is added for functionality to each eventlistener on all seperate pages )
 
 function cartIconCount() {
     let savedProductList = JSON.parse(localStorage.getItem("basket"));
