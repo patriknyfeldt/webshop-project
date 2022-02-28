@@ -9,6 +9,7 @@ main {
 .shopping-cart-main {
   // height: 300px;
   text-align: center;
+  min-height: 70vh;
   h1 {
     margin-bottom: 20px;
     margin-top: 160px;
@@ -77,19 +78,23 @@ main {
           justify-content: center;
 
           .arrow-up {
-            width: 0;
+           /*  width: 0;
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-bottom: 14px solid black;
-            background: white;
+            background: white; */
+            border: none;
+            background-color: white;
           }
           .arrow-down {
-            width: 0;
+          /*   width: 0;
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
-            border-top: 14px solid black;
+            border-top: 14px solid black; */
+            border: none;
+            background-color: white
           }
         }
         .number-of-items {

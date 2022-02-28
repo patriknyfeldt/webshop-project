@@ -5,6 +5,7 @@ main {
 
 .shopping-cart-main {
   text-align: center;
+  min-height: 70vh;
 }
 
 .shopping-cart-main h1 {
@@ -118,20 +119,24 @@ main {
 }
 
 .product-cart-container .name-and-counter .counter-and-price .counter .arrows .arrow-up {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 14px solid black;
-  background: white;
+  /*  width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 14px solid black;
+            background: white; */
+  border: none;
+  background-color: white;
 }
 
 .product-cart-container .name-and-counter .counter-and-price .counter .arrows .arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 14px solid black;
+  /*   width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 14px solid black; */
+  border: none;
+  background-color: white;
 }
 
 .product-cart-container .name-and-counter .counter-and-price .counter .number-of-items {
