@@ -97,9 +97,15 @@
   margin: 20px;
 }
 
+.category-div-container p {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
 .rea-aside {
   margin-top: 50px;
-  background: #D1EEFF;
+  background: #d1eeff;
   padding: 30px;
 }
 

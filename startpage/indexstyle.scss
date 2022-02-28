@@ -1,7 +1,6 @@
 @import "../styles/partials/variables";
 @import "../styles/partials/mixins";
 
-
 .hero-div {
   background-image: url(../images/hero-löpande-man.jpg);
   height: 230px;
@@ -16,11 +15,11 @@
     color: white;
     padding: 5px;
     text-align: right;
-    @media(min-width:$breakpointMedium){
+    @media (min-width: $breakpointMedium) {
       font-size: 120px;
       padding: 100px 50px;
       text-align: right;
-      .hero-text{
+      .hero-text {
         color: white;
       }
       span {
@@ -49,14 +48,13 @@
   max-width: 250px;
 }
 .category-div-container {
-  
   .category {
     border-radius: 20px;
   }
-.category-title {
-  padding: 30px;
-  font-size: 2rem;
-}
+  .category-title {
+    padding: 30px;
+    font-size: 2rem;
+  }
   a {
     @include list-style;
   }
@@ -78,10 +76,15 @@
     background-image: url(../images/kategori-barnskor.jpg);
     @include category-img;
   }
+  p {
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
 }
 .rea-aside {
   margin-top: 50px;
-  background: #D1EEFF;
+  background: #d1eeff;
   padding: 30px;
   .aside-container {
     max-width: 600px;
@@ -89,7 +92,7 @@
       margin-bottom: 20px;
       font-size: 1.7rem;
     }
-    .aside-text{
+    .aside-text {
       font-size: 1.3rem;
       line-height: 1.5;
     }
@@ -100,7 +103,6 @@
     height: 150px;
   }
 }
-
 
 @media (min-width: $breakpointMedium) {
   .category-div-container {

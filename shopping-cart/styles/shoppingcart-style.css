@@ -3,11 +3,22 @@ main {
   color: #5a5454; }
 
 .shopping-cart-main {
+<<<<<<< HEAD
   text-align: center;
   min-height: 70vh; }
   .shopping-cart-main h1 {
     margin-bottom: 20px;
     margin-top: 160px; }
+=======
+  min-height: 70vh;
+  text-align: center;
+}
+
+.shopping-cart-main h1 {
+  margin-bottom: 20px;
+  margin-top: 160px;
+}
+>>>>>>> 3b18af1e6e01e0c5e09a34df3ac356ee5de1d8b8
 
 .sad-emoji {
   font-size: 10rem;
