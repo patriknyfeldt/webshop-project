@@ -5,7 +5,6 @@ main {
   font-family: $main-font-family;
   color: $text-color;
 }
-// Font-style options
 .shopping-cart-main {
   // height: 300px;
   min-height: 70vh;
@@ -15,17 +14,6 @@ main {
     margin-top: 160px;
   }
 }
-
-.empty-cart-message-wrapper {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  h1 {
-    margin-bottom: 100px;
-  }
-}
-
 .sad-emoji {
   font-size: 10rem;
   margin-bottom: 60px;
@@ -33,64 +21,46 @@ main {
 .chat-bubble {
   margin-bottom: 30px;
 }
-
 .product-cart-container {
   display: flex;
   min-height: 250px;
   width: 100%;
-  margin-top: 10px;
+  margin: 10px 0 40px 0;
   flex-wrap: wrap;
-
+  align-items: center;
+  justify-content: center;
   .name-and-counter {
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    margin-left: 20px;
-
+    gap: 70px;
     .shopping-cart-text {
       text-align: left;
       width: 200px;
+      margin-left: 20px;
     }
-
     .counter-and-price {
-      display: flex;
-      flex-direction: row;
+      @include flex(center, center, column);
       gap: 20px;
-      align-items: center;
       flex-wrap: wrap;
-
       .remove-btn {
         font-size: 1.5rem;
         background-color: white;
         border: none;
       }
-
       .counter {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        align-items: center;
-
-        .arrows {
+        @include flex(center, center, row);
+        gap: 20px;
+        .price-remove {
           display: flex;
-          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+        }
+        .arrows {
+          @include flex(center, center, row);
           gap: 15px;
-          justify-content: center;
-
           .arrow-up {
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 14px solid black;
-            background: white;
-          }
-          .arrow-down {
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 14px solid black;
+            border: none;
+            background-color: white;
           }
         }
         .number-of-items {
@@ -103,32 +73,27 @@ main {
     }
   }
   .shopping-cart-img {
+    height: 160px;
     img {
-      height: 160px;
+      height: auto;
       width: 160px;
     }
   }
 }
-
 .checkout-wrapper {
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
-
   .checkout {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include flex(center, center, column);
     height: 150px;
     width: 80%;
     border-top: 1px solid black;
     gap: 30px;
-
     .total-sum {
       margin-top: 40px;
       font-size: 2rem;
     }
-
     .checkout-btn {
       font-family: Arial, Helvetica, sans-serif;
       border: 1px solid $input-border-colour;
@@ -141,16 +106,13 @@ main {
     }
   }
 }
-
 .lightgreen {
   @include input-color-theme(#ecffde, black, #daf3c8, #f4ffec);
 }
-
 .dimblue {
   @include input-color-theme(#89a3b3, white, #708592, #a3becf);
 }
-
-@media (min-width: $breakpointMedium) {
+@media (min-width: 700px) {
   .product-cart-container {
     justify-content: center;
     align-items: center;
@@ -159,7 +121,10 @@ main {
       flex-direction: row;
       .counter-and-price {
         .counter {
-          margin-right: 100px;
+          gap: 80px;
+          .price-remove {
+            gap: 20px;
+          }
         }
       }
     }
