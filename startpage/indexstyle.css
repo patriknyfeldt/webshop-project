@@ -68,6 +68,17 @@
   cursor: pointer;
 }
 
+.category-div-container a p {
+  display: none;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.category-div-container a:hover p {
+  display: block;
+}
+
 .category-div-container a:visited {
   text-decoration: none;
   color: black;
@@ -95,12 +106,6 @@
   background-size: cover;
   background-position: center center;
   margin: 20px;
-}
-
-.category-div-container p {
-  text-align: center;
-  font-size: 1.3rem;
-  line-height: 1.5;
 }
 
 .rea-aside {
