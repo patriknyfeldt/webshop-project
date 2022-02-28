@@ -4,8 +4,8 @@ main {
 }
 
 .shopping-cart-main {
-  text-align: center;
   min-height: 70vh;
+  text-align: center;
 }
 
 .shopping-cart-main h1 {
