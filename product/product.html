@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/style.css" />
-    <link
-    rel="stylesheet"
-    href="../product/styles/product.css"
-  />
+    <link rel="stylesheet" href="../product/styles/product.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
@@ -19,8 +16,7 @@
     <header class="header">
       <div>
         <a href="../index.html"
-          ><img class="
-          logo" src="../images/Logo- PSAR.svg" width="150" alt=""
+          ><img class="logo" src="../images/Logo- PSAR.svg" width="150" alt=""
         /></a>
       </div>
       <nav class="hidden nav-links">
@@ -53,7 +49,12 @@
             <a href="../login/logincreate.html">Registrera</a>
           </li>
           <li class="hidden">
-            <input type="button" value="Logga ut" id="logout-btn">
+            <input
+              type="button"
+              class="logout-button-desktop"
+              value="Logga ut"
+              id="logout-btn"
+            />
           </li>
         </ul>
         <!--Dropdown menu börjar här-->
@@ -82,10 +83,27 @@
             </li>
           </ul>
           <div id="mobile-user-row">
-            <a href="../login/login.html" class="nav-btn login-button" id="mobile-login-link">Logga in</a>
-            <a href="../login/logincreate.html" class="nav-btn register-button" id="mobile-register-link">Registrera dig</a>
-            <a href="../profile/profile.html" id="mobile-profile-link">Profile</a>
-            <input type="button" class="nav-btn logout-button" value="Logga ut" id="mobile-logout-btn">
+            <a
+              href="../login/login.html"
+              class="nav-btn login-button"
+              id="mobile-login-link"
+              >Logga in</a
+            >
+            <a
+              href="../login/logincreate.html"
+              class="nav-btn register-button"
+              id="mobile-register-link"
+              >Registrera dig</a
+            >
+            <a href="../profile/profile.html" id="mobile-profile-link"
+              >Profile</a
+            >
+            <input
+              type="button"
+              class="nav-btn logout-button"
+              value="Logga ut"
+              id="mobile-logout-btn"
+            />
           </div>
         </div>
         <div class="navigation-icons">
@@ -100,10 +118,10 @@
         <!--Dropdown slutar här-->
       </div>
     </header>
-    
+
     <main class="product-main">
       <section class="product-info" id="product-info"></section>
-        <!-- Template literal inserted in product.js -->
+      <!-- Template literal inserted in product.js -->
     </main>
 
     <footer class="footer">

@@ -126,6 +126,11 @@ main {
     border: 1px solid $register-border-color;
     color: white;
   }
+  //styling för länk till profil i hamburgermenyn
+  a {
+    @include list-style;
+    color: black;
+  }
 }
 
 /* .index-main {
@@ -189,6 +194,14 @@ ul {
     li a {
       @include list-style;
       color: black;
+    }
+    //styling för logga ut knappen desktop
+    li .logout-button-desktop {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: $main-font-family;
+      font-size: 16px;
     }
   }
   .navigation-icons {
