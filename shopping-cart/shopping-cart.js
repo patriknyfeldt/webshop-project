@@ -69,9 +69,11 @@ document.querySelectorAll('button[id*="increment"]').forEach(input => {
     
     input.addEventListener('click', (e) => {
         // Increments quantity in cart Icon
-        let cartIcon = document.querySelector('.cart');
-        let cartCircle = Number(cartIcon.getAttribute('data-count'));
-        cartIcon.setAttribute('data-count', cartCircle +1);
+        let cartIcon = document.querySelectorAll('.cart');
+                    cartIcon.forEach(cartIcon => {
+                        let cartCircle = Number(cartIcon.getAttribute('data-count'));
+                    cartIcon.setAttribute('data-count', cartCircle +1);
+                    })
         chosenProduct.quantity++;
         document.getElementById(`count-input-${inputID}`).innerText = chosenProduct.quantity;
         localStorage.setItem("basket", JSON.stringify(savedProducts));
@@ -88,9 +90,11 @@ document.querySelectorAll('button[id*="decrement"]').forEach(input => {
             return;
         }
          // Decrements quantity from cart Icon
-        let cartIcon = document.querySelector('.cart');
-        let cartCircle = Number(cartIcon.getAttribute('data-count'));
+        let cartIcon = document.querySelectorAll('.cart');
+        cartIcon.forEach(cartIcon => {
+            let cartCircle = Number(cartIcon.getAttribute('data-count'));
         cartIcon.setAttribute('data-count', cartCircle -1);
+        })
         chosenProduct.quantity--;
         document.getElementById(`count-input-${inputID}`).innerText = chosenProduct.quantity;
         localStorage.setItem("basket", JSON.stringify(savedProducts));
@@ -103,9 +107,12 @@ document.querySelectorAll('button[id*="remove"]').forEach(input =>{
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
     document.getElementById(`remove-${inputID}`).addEventListener("click", ()=>{
         // Removes quantity from cart Icon
-        let cartIcon = document.querySelector('.cart');
-        let cartCircle = Number(cartIcon.getAttribute('data-count'));
-        cartIcon.setAttribute('data-count', cartCircle - chosenProduct.quantity);
+        let cartIcon = document.querySelectorAll('.cart');
+                    cartIcon.forEach(cartIcon => {
+                        let cartCircle = Number(cartIcon.getAttribute('data-count'));
+                        cartIcon.setAttribute('data-count', cartCircle - chosenProduct.quantity);
+                    })
+
         savedProductList.splice(savedProductList.indexOf(chosenProduct), 1);
         document.getElementById(`chosen-product-cart-${inputID}`).remove();
         localStorage.setItem("basket", JSON.stringify(savedProducts));

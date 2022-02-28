@@ -99,7 +99,13 @@ document.getElementById("send-order-btn").addEventListener("click", (e)=>{
     renderListToElement(document.getElementById("receipt-user-summary"), inputFieldsNameValues, drawReceiptUser);
     renderListToElement(document.getElementById("receipt-product-summary"), productList, drawProduct);
     localStorage.setItem("basket", JSON.stringify([]))
-    
+
+    // Removes / empties the attribute that displays item amount in cartIcon
+    let cartIcon = document.querySelectorAll('.cart');
+                    cartIcon.forEach(cartIcon => {
+                        let cartCircle = Number(cartIcon.getAttribute('data-count'));
+                        cartIcon.removeAttribute('data-count', cartCircle);
+                    })
 })
 
 fillUserFormData(activeUser);

@@ -56,15 +56,17 @@ export {activeUser};
 
 
 
-// Add / remove number of Products to Cart Icon ( KEEPS SCORE ON ALL PAGES. Code is added for functionality to each eventlistener on all seperate pages )
+// Add / remove number of Products to Cart Icon ( KEEPS SCORE ON ALL PAGES. Code is added for functionality to each relevant eventlistener on all seperate pages )
 
 function cartIconCount() {
     let savedProductList = JSON.parse(localStorage.getItem("basket"));
     savedProductList.forEach(quantity => {
-        let cartIcon = document.querySelector('.cart');
+        let cartIcon = document.querySelectorAll('.cart');
+        cartIcon.forEach(cartIcon => {
         let cartCircle = Number(cartIcon.getAttribute('data-count'));
         cartCircle = savedProductList.reduce((count, item) => count += item.quantity, 0);
         cartIcon.setAttribute('data-count', cartCircle);
+        })
     });
 }
 cartIconCount();
