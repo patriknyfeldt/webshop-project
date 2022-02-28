@@ -54,3 +54,17 @@ function logOutUser(){
 userInit();
 export {activeUser};
 
+
+
+// Add / remove number of Products to Cart Icon ( KEEPS SCORE ON ALL PAGES. Code added for functionality to each eventlistener on the seperate pages )
+
+function cartIconCount() {
+    let savedProductList = JSON.parse(localStorage.getItem("basket"));
+    savedProductList.forEach(quantity => {
+        let cartIcon = document.querySelector('.cart');
+        let cartCircle = Number(cartIcon.getAttribute('data-count'));
+        cartCircle = savedProductList.reduce((count, item) => count += item.quantity, 0);
+        cartIcon.setAttribute('data-count', cartCircle);
+    });
+}
+cartIconCount();

@@ -45,7 +45,10 @@ const getArticles = async () => {
       }
 
       document.getElementById(`addbtn-${item.id}`).addEventListener('click', () => {
-
+            // Adds quantity to cart Icon
+            let cartIcon = document.querySelector('.cart');
+            let cartCircle = Number(cartIcon.getAttribute('data-count'));
+            cartIcon.setAttribute('data-count', cartCircle +1);
       let basketListObject = JSON.parse(localStorage.getItem("basket"));
       let basketList = [];
       if(basketListObject){
