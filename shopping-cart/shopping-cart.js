@@ -57,6 +57,9 @@ if(savedProductList){
     calculateSum();
 
 }
+else{
+    document.getElementById("empty-cart-message").classList.remove("hidden");
+}
 
 
 document.querySelectorAll('input[id*="increment"]').forEach(input => {
@@ -98,7 +101,6 @@ document.querySelectorAll('button[id*="remove"]').forEach(input =>{
 })
 
 function calculateSum(){
-    console.log(savedProductList)
     if(savedProductList.length === 0){
         if(document.getElementById("order-row")){
             document.getElementById("order-row").innerHTML = "  ";
