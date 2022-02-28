@@ -17,7 +17,7 @@
       <div>
         <a href="index.html"
           ><img class="
-          logo" src="./images/sneakers_svg.svg" width="100" alt=""
+          logo" src="./images/Logo- PSAR.svg" width="150" alt=""
         /></a>
       </div>
       <nav class="hidden nav-links">
@@ -36,13 +36,24 @@
       <div>
         <ul class="hidden log-in">
           <li>
-            <a href="../shopping-cart/shopping-cart.html"
+            <div id="cart-container">
+            <a href="./shopping-cart/shopping-cart.html"
               ><i class="cart fa-solid fa-cart-shopping"></i
             ></a>
+          </div>
           </li>
-          <li id="user-name" class="hidden"><a href="./profile/profile.html"></a></li>
-          <li id="log-in-link" class="hidden"><a href="./login/login.html">Logga in</a></li>
-          <li><a href="./login/logincreate.html">Registrera</a></li>
+          <li id="user-name" class="hidden">
+            <a href="./profile/profile.html"></a>
+          </li>
+          <li id="log-in-link" class="hidden">
+            <a href="./login/login.html">Logga in</a>
+          </li>
+          <li id="register-link">
+            <a href="./login/logincreate.html">Registrera</a>
+          </li>
+          <li class="hidden">
+            <input type="button" class="" value="Logga ut" id="logout-btn">
+          </li>
         </ul>
 
         <!--Dropdown menu börjar här-->
@@ -52,9 +63,11 @@
             <li><a class="menu-item" href="../product-list/product-list.html?category=herr">HERR</a></li>
             <li><a class="menu-item" href="../product-list/product-list.html?category=barn">BARN</a></li>
           </ul>
-          <div>
-            <a href="./login/login.html" class="nav-btn login-button">Logga in</a>
-            <a href="./login/logincreate.html" class="nav-btn register-button">Registrera dig</a>
+          <div id="mobile-user-row">
+            <a href="./login/login.html" class="nav-btn login-button" id="mobile-login-link">Logga in</a>
+            <a href="./login/logincreate.html" class="nav-btn register-button" id="mobile-register-link">Registrera dig</a>
+            <a class="profile-link" href="./profile/profile.html" id="mobile-profile-link">Profile</a>
+            <input class="nav-btn logout-button" value="Logga ut" id="mobile-logout-btn">
           </div>
         </div>
         <div class="navigation-icons">
@@ -73,33 +86,41 @@
     <main class="index-main">
       <div class="index-main-container">
         <div class="hero-div">
-          <p class="hero-text"><span>PSAR - Perfect, Stronger</span> Airlight Running</p>
-        </div>
 
+          <p class="hero-text"><span>Perfect, Stronger</span> Airlight Running</p>
+
+        </div>
+<h3 class="category-header">Alla våra Sneakers</h3>
         <div class="category-div-container">
           <a href="../product-list/product-list.html?category=dam">
             <div class="category" id="damsko-category">
-              <h2>DAM</h2>
+              <h2 class="category-title">DAM</h2>
               <!-- <img src="../images/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg" alt="damskor"> -->
             </div>
           </a>
 
           <a href="../product-list/product-list.html?category=barn">
             <div class="category" id="herrsko-category">
-              <h2>HERR</h2>
+              <h2 class="category-title">HERR</h2>
               <!-- <img src="../images/irene-kredenets-dwKiHoqqxk8-unsplash.jpg" alt="herrskor"> -->
             </div>
           </a>
 
           <a href="../product-list/product-list.html?category=barn">
             <div class="category" id="barnsko-category">
-              <h2>BARN</h2>
+              <h2 class="category-title">BARN</h2>
               <!-- <img src="../images/kris-gerhard-0BKZfcamvGg-unsplash.jpg" alt="barnskor"> -->
             </div>
           </a>
         </div>
 
         <aside class="rea-aside">
+          <div class="aside-container">
+            <h2 class="aside-title">PSAR</h2>
+            <p class="aside-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus fuga earum quia rerum magni, nulla vero quo corrupti, saepe voluptatum qui.
+            </p>
+          </div>
           <div class="aside-img">
             <!-- <img src="../images/reklam knyta sko.jpg" alt=""> -->
           </div>

@@ -1,5 +1,7 @@
 @import "../styles/partials/variables";
 @import "../styles/partials/mixins";
+
+
 .hero-div {
   background-image: url(../images/hero-löpande-man.jpg);
   height: 230px;
@@ -7,22 +9,54 @@
   background-position: center center;
   position: relative;
   z-index: -100;
-  filter: grayscale(20%);
+  filter: grayscale(30%);
   .hero-text {
     font-family: $big2-font-family;
     font-size: 45px;
     color: white;
-    padding-top: 1px;
-    text-align: center;
+    padding: 5px;
+    text-align: right;
+    @media(min-width:$breakpointMedium){
+      font-size: 120px;
+      padding: 100px 50px;
+      text-align: right;
+      .hero-text{
+        color: white;
+      }
+      span {
+        text-align: left;
+        margin-bottom: -120px;
+      }
+      .hide {
+        display: none;
+      }
+    }
     span {
       display: block;
       color: black;
-      margin-top: 30px;
+      text-align: left;
+      padding: 5px;
+      margin-top: 20px;
     }
   }
 }
-
+.category-header {
+  text-align: center;
+  font-size: 1.7rem;
+  margin: 40px auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  max-width: 250px;
+}
 .category-div-container {
+  
+  .category {
+    border-radius: 20px;
+  }
+.category-title {
+  padding: 30px;
+  font-size: 2rem;
+}
   a {
     @include list-style;
   }
@@ -45,11 +79,28 @@
     @include category-img;
   }
 }
-.aside-img {
-  background-image: url(../images/reklam-knyta-sko.jpg);
-  @include category-img;
-  height: 150px;
+.rea-aside {
+  margin-top: 50px;
+  background: #D1EEFF;
+  padding: 30px;
+  .aside-container {
+    max-width: 600px;
+    .aside-title {
+      margin-bottom: 20px;
+      font-size: 1.7rem;
+    }
+    .aside-text{
+      font-size: 1.3rem;
+      line-height: 1.5;
+    }
+  }
+  .aside-img {
+    background-image: url(../images/reklam-knyta-sko.jpg);
+    @include category-img;
+    height: 150px;
+  }
 }
+
 
 @media (min-width: $breakpointMedium) {
   .category-div-container {

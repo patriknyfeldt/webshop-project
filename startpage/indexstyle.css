@@ -6,27 +6,66 @@
   background-position: center center;
   position: relative;
   z-index: -100;
-  -webkit-filter: grayscale(20%);
-          filter: grayscale(20%);
+  -webkit-filter: grayscale(30%);
+          filter: grayscale(30%);
 }
 
 .hero-div .hero-text {
   font-family: "Teko", sans-serif;
   font-size: 45px;
   color: white;
-  padding-top: 1px;
-  text-align: center;
+  padding: 5px;
+  text-align: right;
+}
+
+@media (min-width: 550px) {
+  .hero-div .hero-text {
+    font-size: 120px;
+    padding: 100px 50px;
+    text-align: right;
+  }
+  .hero-div .hero-text .hero-text {
+    color: white;
+  }
+  .hero-div .hero-text span {
+    text-align: left;
+    margin-bottom: -120px;
+  }
+  .hero-div .hero-text .hide {
+    display: none;
+  }
 }
 
 .hero-div .hero-text span {
   display: block;
   color: black;
-  margin-top: 30px;
+  text-align: left;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.category-header {
+  text-align: center;
+  font-size: 1.7rem;
+  margin: 40px auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  max-width: 250px;
+}
+
+.category-div-container .category {
+  border-radius: 20px;
+}
+
+.category-div-container .category-title {
+  padding: 30px;
+  font-size: 2rem;
 }
 
 .category-div-container a {
   list-style: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .category-div-container a:visited {
@@ -58,7 +97,27 @@
   margin: 20px;
 }
 
-.aside-img {
+.rea-aside {
+  margin-top: 50px;
+  background: #D1EEFF;
+  padding: 30px;
+}
+
+.rea-aside .aside-container {
+  max-width: 600px;
+}
+
+.rea-aside .aside-container .aside-title {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+}
+
+.rea-aside .aside-container .aside-text {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.rea-aside .aside-img {
   background-image: url(../images/reklam-knyta-sko.jpg);
   height: 380px;
   background-size: cover;

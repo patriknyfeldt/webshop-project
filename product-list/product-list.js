@@ -15,22 +15,22 @@ const searchProductsInputField = document.getElementById('search-products-inputf
 const drawProduct = (item) =>
 
     `<div class="products-wrapper">
-    <articel class="product-article "id=article-${item.id}>
-    <div class="article-content-wrapper">
-    <div class="article-left-wrapper">
-    <h2>${item.name}</h2>
-    <a class="img-link" href="../product/product.html?article=${item.id}">
-    <img class="product-img" src=${item.image} alt="${item.alt}"></img></a>
-    </div>
-    <div class="article-right-wrapper">
-    <p class="description-paragraph">${item.description}<p/>
-    <br>
-    <p class="price-paragraph" >Pris: ${item.price}<p/>
-    <br>
-    <button class="add-to-cart" id="addbtn-${item.id}">lägg till i varukorgen</button>
-    </div>
-    </div>
-    </article>
+        <articel class="product-article "id=article-${item.id}>
+            <div class="article-content-wrapper">
+                <div class="article-left-wrapper">
+                    <h2>${item.name}</h2>
+                    <a class="img-link" href="../product/product.html?article=${item.id}">
+                    <img class="product-img" src=${item.image} alt="${item.alt}"></img></a>
+                </div>
+                <div class="article-right-wrapper">
+                    <p class="description-paragraph">${item.description}<p/>
+                    <br>
+                    <p class="price-paragraph" >Pris: ${item.price}<p/>
+                    <br>
+                    <button class="add-to-cart" id="addbtn-${item.id}">lägg till i varukorgen</button>
+                </div>
+            </div>
+        </article>
     </div>`;
 
     // HÄMTAR DATA FRÅN JSON OCH KÖR DRAWPRODUCT FÖR VARJE ITEM PÅ AKTUELL SIDA
@@ -54,21 +54,15 @@ const drawProduct = (item) =>
 
         // TILLHÖR VARUKORGS FUNKTIONEN
 
-        
         buttons = productList.querySelectorAll(".add-to-cart");
         articles = productList.querySelectorAll(".product-article");
-        // Behövs här eller i shopping-cart.js?
-        shoppingCart = document.getElementById("shopping-cart-list");
         
         buttons.forEach(button => {
             
             button.addEventListener('click', (e) => {
                 let productID = e.target.id.slice(7);
                 
-
                 const chosenProduct = listedProducts.find(product => product.id === productID);
-
-                /* console.log(chosenProduct); */
 
                 let basketList = JSON.parse(localStorage.getItem("basket"));
                 let articlesForChart = [];
@@ -95,7 +89,6 @@ const drawProduct = (item) =>
 
         }) 
     
-
 }
 
 // TILLHÖR SÖKFUNTIONEN
@@ -106,17 +99,14 @@ const getSearchedProducts = ((item, inputValue) => {
 
     if(itemDescription.includes(inputValue)){
         searchedItems.push(item);
-        console.log(searchedItems);
         productList.innerHTML = searchedItems.map(drawProduct).join('');
 
     }
     if(inputValue === itemName){
         searchedItems.push(item);
-        console.log(searchedItems);
         productList.innerHTML = searchedItems.map(drawProduct).join('');
     }
     
-
 })
 
 searchProductsForm.addEventListener('submit', (e) => {

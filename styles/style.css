@@ -46,6 +46,8 @@ main {
 
 .header .logo {
   position: relative;
+  top: 10px;
+  left: 12px;
   z-index: 100;
 }
 
@@ -58,7 +60,7 @@ main {
 
 .navigation-icons .cart {
   margin-right: 1rem;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: black;
 }
 
@@ -102,7 +104,7 @@ main {
 }
 
 .menu-hamburger .menu-item:hover {
-  border-bottom: 2px solid #222121;
+  border-bottom: 3px solid #89a3b3;
 }
 
 .menu-hamburger .nav-btn {
@@ -118,23 +120,40 @@ main {
   padding-top: 10px;
   list-style: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.menu-hamburger .login-button {
+.menu-hamburger .login-button,
+.menu-hamburger .logout-button {
   color: black;
   background-color: #ecffde;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   background: #ecffde;
   border: 1px solid #a7be97;
+  text-align: center;
+  padding-bottom: 10px;
+  width: 300px;
+  font-family: inherit;
 }
 
-.menu-hamburger .login-button:hover {
+.menu-hamburger .login-button:hover,
+.menu-hamburger .logout-button:hover {
   background-color: #daf3c8;
 }
 
-.menu-hamburger .login-button:active {
+.menu-hamburger .login-button:active,
+.menu-hamburger .logout-button:active {
   background-color: #f4ffec;
+}
+
+.menu-hamburger .logout-button {
+  background: #ffd6aa;
+  border: 1px solid #f1a14c;
+}
+
+.menu-hamburger .logout-button:hover {
+  background: #e9af71;
 }
 
 .menu-hamburger .register-button {
@@ -194,6 +213,7 @@ main {
   font-size: 30px;
   gap: 15px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .footer-links {
@@ -233,6 +253,7 @@ main {
 ul {
   list-style: none;
   text-decoration: none;
+  cursor: pointer;
 }
 
 @media (min-width: 550px) {
@@ -240,7 +261,22 @@ ul {
     height: 120px;
   }
   .header .cart {
+    position: relative;
     font-size: 25px;
+  }
+  .header .cart:after {
+    position: absolute;
+    content: attr(data-count);
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    font-size: 12px;
+    line-height: 25px;
+    top: -20px;
+    right: -14px;
+    text-align: center;
+    background-color: #f5b8b8;
+    z-index: 20;
   }
   .hero-div {
     min-height: 450px;
@@ -254,6 +290,7 @@ ul {
   .log-in li a {
     list-style: none;
     text-decoration: none;
+    cursor: pointer;
     color: black;
   }
   .navigation-icons {
@@ -284,11 +321,12 @@ ul {
   .nav-links ul li a {
     list-style: none;
     text-decoration: none;
+    cursor: pointer;
     color: black;
     padding: 0px 10px 10px 10px;
   }
   .nav-links ul li a:hover {
-    border-bottom: 2px solid #222121;
+    border-bottom: 4px solid #89a3b3;
   }
 }
 /*# sourceMappingURL=style.css.map */
