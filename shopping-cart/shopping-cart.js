@@ -2,8 +2,9 @@ const chosenProductCart = document.getElementById("chosen-product-cart");
 
 let savedProducts = JSON.parse(localStorage.getItem("basket"));
 let savedProductList = savedProducts;
+let totalPriceDisplay;
 
-
+if(savedProductList){
 savedProductList.forEach(product => {
     const article = product.article;
     chosenProductCart.innerHTML += 
@@ -26,35 +27,39 @@ savedProductList.forEach(product => {
                                 
                                 <button class="number-inputs arrow-down" type="button" id="decrement-${article.id}"><i class="fa-solid fa-minus"></i></button>
                             </div>
+                                <b>price: ${article.price}</b>
+                                <button class="remove-btn" id="remove-${article.id}"><i class="fa-solid fa-trash-can"></i></button>
                         </div>
-                            <b>price: ${article.price}</b>
-                            <button class="remove-btn" id="remove-${article.id}"><i class="fa-solid fa-trash-can"></i></button>
                     </div>
+                </article>
+            </section>
+        `;
+    });
+    if(savedProductList.length){
+        chosenProductCart.innerHTML += `
+            <div id="order-row" class="checkout-wrapper">
+                <div class="checkout">
+                    <span id="total-price" class="total-sum">Total: 0
+                    </span>
+                    
+                    <span>
+                    <a href="../order/order.html"><button class="checkout-btn lightgreen">Kassa</button></a>
+                    </span>
                 </div>
-            </article>
-        </section>
-    `;
-});
-if(savedProductList.length){
-    chosenProductCart.innerHTML += `
-        <div id="order-row" class="checkout-wrapper">
-            <div class="checkout">
-                <span id="total-price" class="total-sum">Total: 0
-                </span>
-                
-                <span>
-                <a href="../order/order.html"><button class="checkout-btn lightgreen">Kassa</button></a>
-                </span>
             </div>
-        </div>
-    `;
+        `;
+    }
+    else{
+        document.getElementById("empty-cart-message").classList.remove("hidden");
+    }
+    totalPriceDisplay = document.getElementById("total-price");
+    calculateSum();
+
 }
 else{
     document.getElementById("empty-cart-message").classList.remove("hidden");
 }
 
-let totalPriceDisplay = document.getElementById("total-price");
-calculateSum();
 
 document.querySelectorAll('button[id*="increment"]').forEach(input => {
     const inputID = input.id.slice(10);
@@ -95,7 +100,6 @@ document.querySelectorAll('button[id*="remove"]').forEach(input =>{
 })
 
 function calculateSum(){
-    console.log(savedProductList)
     if(savedProductList.length === 0){
         if(document.getElementById("order-row")){
             document.getElementById("order-row").innerHTML = "  ";
