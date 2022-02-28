@@ -5,28 +5,27 @@ let savedProductList = savedProducts;
 let totalPriceDisplay;
 
 if(savedProductList){
-    savedProductList.forEach(product => {
-        const article = product.article;
-        chosenProductCart.innerHTML += 
-            `<section id="chosen-product-cart-${article.id}">
-                <article class="product-cart-container "id=article-${article.id}>
-                    <div class="shopping-cart-img"><img src=${article.image}></img></div>
-                    
-                    <div class="name-and-counter">
-                    
-                            <div class="shopping-cart-text">
-                                <h2>${article.name}</h2>
-                                <p>Description: ${article.description}</p>
-                            </div>
-    
-                        <div class="counter-and-price">
-                            <div class="counter">
-                                <div class="number-of-items"><span id="count-input-${article.id}">${product.quantity}</span></div>
-                                <div class="arrows">
-                                    <input class="number-inputs arrow-up" type="button" id="increment-${article.id}" value=">">
-                                    
-                                    <input class="number-inputs arrow-down" type="button" id="decrement-${article.id}" value="<" >
-                                </div>
+savedProductList.forEach(product => {
+    const article = product.article;
+    chosenProductCart.innerHTML += 
+        `<section id="chosen-product-cart-${article.id}">
+            <article class="product-cart-container "id=article-${article.id}>
+                <div class="shopping-cart-img"><img src=${article.image}></img></div>
+                
+                <div class="name-and-counter">
+                
+                        <div class="shopping-cart-text">
+                            <h2>${article.name}</h2>
+                            <p>Description: ${article.description}</p>
+                        </div>
+
+                    <div class="counter-and-price">
+                        <div class="counter">
+                            <div class="number-of-items"><span id="count-input-${article.id}">${product.quantity}</span></div>
+                            <div class="arrows">
+                                <button class="number-inputs arrow-up" type="button" id="increment-${article.id}"><i class="fa-solid fa-plus"></i></button>
+                                
+                                <button class="number-inputs arrow-down" type="button" id="decrement-${article.id}"><i class="fa-solid fa-minus"></i></button>
                             </div>
                                 <b>price: ${article.price}</b>
                                 <button class="remove-btn" id="remove-${article.id}"><i class="fa-solid fa-trash-can"></i></button>
@@ -62,7 +61,7 @@ else{
 }
 
 
-document.querySelectorAll('input[id*="increment"]').forEach(input => {
+document.querySelectorAll('button[id*="increment"]').forEach(input => {
     const inputID = input.id.slice(10);
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
     
@@ -74,7 +73,7 @@ document.querySelectorAll('input[id*="increment"]').forEach(input => {
     })
 })
 
-document.querySelectorAll('input[id*="decrement"]').forEach(input => {
+document.querySelectorAll('button[id*="decrement"]').forEach(input => {
     const inputID = input.id.slice(10);
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
     

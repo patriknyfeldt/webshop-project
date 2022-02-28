@@ -3,10 +3,21 @@ main {
   color: #5a5454; }
 
 .shopping-cart-main {
+<<<<<<< HEAD
   text-align: center; }
   .shopping-cart-main h1 {
     margin-bottom: 20px;
     margin-top: 160px; }
+=======
+  text-align: center;
+  min-height: 70vh;
+}
+
+.shopping-cart-main h1 {
+  margin-bottom: 20px;
+  margin-top: 160px;
+}
+>>>>>>> 0415ba8a8e503fe7f98b42250d37d0a80fe3e104
 
 .empty-cart-message-wrapper {
   display: flex;
@@ -55,14 +66,26 @@ main {
         .product-cart-container .name-and-counter .counter-and-price .counter .arrows {
           display: flex;
           flex-direction: column;
+<<<<<<< HEAD
           gap: 15px;
           justify-content: center; }
           .product-cart-container .name-and-counter .counter-and-price .counter .arrows .arrow-up {
             width: 0;
+=======
+  gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-cart-container .name-and-counter .counter-and-price .counter .arrows .arrow-up {
+  /*  width: 0;
+>>>>>>> 0415ba8a8e503fe7f98b42250d37d0a80fe3e104
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-bottom: 14px solid black;
+<<<<<<< HEAD
             background: white; }
           .product-cart-container .name-and-counter .counter-and-price .counter .arrows .arrow-down {
             width: 0;
@@ -72,6 +95,29 @@ main {
             border-top: 14px solid black; }
         .product-cart-container .name-and-counter .counter-and-price .counter .number-of-items {
           display: flex;
+=======
+            background: white; */
+  border: none;
+  background-color: white;
+}
+
+.product-cart-container .name-and-counter .counter-and-price .counter .arrows .arrow-down {
+  /*   width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 14px solid black; */
+  border: none;
+  background-color: white;
+}
+
+.product-cart-container .name-and-counter .counter-and-price .counter .number-of-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+>>>>>>> 0415ba8a8e503fe7f98b42250d37d0a80fe3e104
           justify-content: center;
           align-items: center;
           flex-direction: row;
