@@ -57,6 +57,15 @@
   }
   a {
     @include list-style;
+    p {
+      display: none;
+      text-align: center;
+      font-size: 1.3rem;
+      line-height: 1.5;
+    }
+  }
+  a:hover p {
+    display: block;
   }
   a:visited {
     text-decoration: none;
@@ -75,11 +84,6 @@
   #barnsko-category {
     background-image: url(../images/kategori-barnskor.jpg);
     @include category-img;
-  }
-  p {
-    text-align: center;
-    font-size: 1.3rem;
-    line-height: 1.5;
   }
 }
 .rea-aside {
