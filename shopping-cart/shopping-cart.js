@@ -2,59 +2,62 @@ const chosenProductCart = document.getElementById("chosen-product-cart");
 
 let savedProducts = JSON.parse(localStorage.getItem("basket"));
 let savedProductList = savedProducts;
+let totalPriceDisplay;
 
-
-savedProductList.forEach(product => {
-    const article = product.article;
-    chosenProductCart.innerHTML += 
-        `<section id="chosen-product-cart-${article.id}">
-            <article class="product-cart-container "id=article-${article.id}>
-                <div class="shopping-cart-img"><img src=${article.image}></img></div>
-                
-                <div class="name-and-counter">
-                
-                        <div class="shopping-cart-text">
-                            <h2>${article.name}</h2>
-                            <p>Description: ${article.description}</p>
-                        </div>
-
-                    <div class="counter-and-price">
-                        <div class="counter">
-                            <div class="number-of-items"><span id="count-input-${article.id}">${product.quantity}</span></div>
-                            <div class="arrows">
-                                <input class="number-inputs arrow-up" type="button" id="increment-${article.id}" value=">">
-                                
-                                <input class="number-inputs arrow-down" type="button" id="decrement-${article.id}" value="<" >
+if(savedProductList){
+    savedProductList.forEach(product => {
+        const article = product.article;
+        chosenProductCart.innerHTML += 
+            `<section id="chosen-product-cart-${article.id}">
+                <article class="product-cart-container "id=article-${article.id}>
+                    <div class="shopping-cart-img"><img src=${article.image}></img></div>
+                    
+                    <div class="name-and-counter">
+                    
+                            <div class="shopping-cart-text">
+                                <h2>${article.name}</h2>
+                                <p>Description: ${article.description}</p>
                             </div>
+    
+                        <div class="counter-and-price">
+                            <div class="counter">
+                                <div class="number-of-items"><span id="count-input-${article.id}">${product.quantity}</span></div>
+                                <div class="arrows">
+                                    <input class="number-inputs arrow-up" type="button" id="increment-${article.id}" value=">">
+                                    
+                                    <input class="number-inputs arrow-down" type="button" id="decrement-${article.id}" value="<" >
+                                </div>
+                            </div>
+                                <b>price: ${article.price}</b>
+                                <button class="remove-btn" id="remove-${article.id}"><i class="fa-solid fa-trash-can"></i></button>
                         </div>
-                            <b>price: ${article.price}</b>
-                            <button class="remove-btn" id="remove-${article.id}"><i class="fa-solid fa-trash-can"></i></button>
                     </div>
+                </article>
+            </section>
+        `;
+    });
+    if(savedProductList.length){
+        chosenProductCart.innerHTML += `
+            <div id="order-row" class="checkout-wrapper">
+                <div class="checkout">
+                    <span id="total-price" class="total-sum">Total: 0
+                    </span>
+                    
+                    <span>
+                    <a href="../order/order.html"><button class="checkout-btn lightgreen">Kassa</button></a>
+                    </span>
                 </div>
-            </article>
-        </section>
-    `;
-});
-if(savedProductList.length){
-    chosenProductCart.innerHTML += `
-        <div id="order-row" class="checkout-wrapper">
-            <div class="checkout">
-                <span id="total-price" class="total-sum">Total: 0
-                </span>
-                
-                <span>
-                <a href="../order/order.html"><button class="checkout-btn lightgreen">Kassa</button></a>
-                </span>
             </div>
-        </div>
-    `;
-}
-else{
-    document.getElementById("empty-cart-message").classList.remove("hidden");
+        `;
+    }
+    else{
+        document.getElementById("empty-cart-message").classList.remove("hidden");
+    }
+    totalPriceDisplay = document.getElementById("total-price");
+    calculateSum();
+
 }
 
-let totalPriceDisplay = document.getElementById("total-price");
-calculateSum();
 
 document.querySelectorAll('input[id*="increment"]').forEach(input => {
     const inputID = input.id.slice(10);
