@@ -22,9 +22,9 @@ savedProductList.forEach(product => {
                         <div class="counter">
                             <div class="number-of-items"><span id="count-input-${article.id}">${product.quantity}</span></div>
                             <div class="arrows">
-                                <input class="number-inputs arrow-up" type="button" id="increment-${article.id}" value=">">
+                                <button class="number-inputs arrow-up" type="button" id="increment-${article.id}"><i class="fa-solid fa-plus"></i></button>
                                 
-                                <input class="number-inputs arrow-down" type="button" id="decrement-${article.id}" value="<" >
+                                <button class="number-inputs arrow-down" type="button" id="decrement-${article.id}"><i class="fa-solid fa-minus"></i></button>
                             </div>
                         </div>
                             <b>price: ${article.price}</b>
@@ -56,7 +56,7 @@ else{
 let totalPriceDisplay = document.getElementById("total-price");
 calculateSum();
 
-document.querySelectorAll('input[id*="increment"]').forEach(input => {
+document.querySelectorAll('button[id*="increment"]').forEach(input => {
     const inputID = input.id.slice(10);
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
     
@@ -68,7 +68,7 @@ document.querySelectorAll('input[id*="increment"]').forEach(input => {
     })
 })
 
-document.querySelectorAll('input[id*="decrement"]').forEach(input => {
+document.querySelectorAll('button[id*="decrement"]').forEach(input => {
     const inputID = input.id.slice(10);
     const chosenProduct = savedProductList.find(a => a.article.id === inputID);
     
