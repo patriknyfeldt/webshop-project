@@ -57,6 +57,9 @@ if(savedProductList){
     calculateSum();
 
 }
+else{
+    document.getElementById("empty-cart-message").classList.remove("hidden");
+}
 
 
 document.querySelectorAll('input[id*="increment"]').forEach(input => {
