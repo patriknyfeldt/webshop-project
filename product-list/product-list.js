@@ -1,7 +1,8 @@
 const queryString = new URLSearchParams(location.search);
-const qsCategory = queryString.get('category');
-document.querySelector('h1').innerText = qsCategory;
+const qsCategory = queryString.get('category'); 
+document.querySelector('h1').innerText = qsCategory; 
 const productList = document.getElementById('product-list');
+console.log(qsCategory);
 let buttons;
 let articles;
 let products = [];
@@ -37,15 +38,16 @@ const drawProduct = (item) =>
     const getProducts = async (inputValue) => {
         const response = await fetch('../products.json');
         const data = await response.json();
-        products = [...data.products];
+        products = [...data.products]; 
         listedProducts = products.find(e => e.category === qsCategory).items;
-        
-        products.forEach(product => {
+        console.log(listedProducts);
+        /* console.log(products); */
+        products.forEach(product => { 
             if(product.category === qsCategory){
-                let items = product.items;        
+                let items = product.items;      
                 productList.innerHTML = items.map(drawProduct).join(''); 
                 searchedItems = [];
-        
+                console.log(items);
                 items.forEach(item => {
                     getSearchedProducts(item, inputValue);
                 })
@@ -54,8 +56,8 @@ const drawProduct = (item) =>
 
         // TILLHÖR VARUKORGS FUNKTIONEN
 
-        buttons = productList.querySelectorAll(".add-to-cart");
-        articles = productList.querySelectorAll(".product-article");
+        buttons = productList.querySelectorAll(".add-to-cart"); 
+        articles = productList.querySelectorAll(".product-article"); 
         
         buttons.forEach(button => {
             
