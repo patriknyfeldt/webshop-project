@@ -68,6 +68,12 @@ const drawProduct = (item) =>
                 let articlesForChart = [];
                 if(basketList){
                     articlesForChart = basketList;
+                    // Adds quantity to cart
+                    let cartIcon = document.querySelectorAll('.cart');
+                    cartIcon.forEach(cartIcon => {
+                        let cartCircle = Number(cartIcon.getAttribute('data-count'));
+                    cartIcon.setAttribute('data-count', cartCircle +1);
+                    })
                 }
 
                 const existingProduct = articlesForChart.find(a => a.article.id === chosenProduct.id)
