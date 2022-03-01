@@ -16,7 +16,7 @@ savedProductList.forEach(product => {
         
                 <div class="shopping-cart-text">
                     <h2>${article.name}</h2>
-                    <p>Description: ${article.description}</p>
+                    <p>${article.description}</p>
                 </div>
             <div class="counter-and-price">
                 <div class="counter">
