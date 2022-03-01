@@ -43,13 +43,12 @@ function userInit(){
 }
 
 
-document.getElementById("logout-btn").addEventListener("click", logOutUser);
-document.getElementById("mobile-logout-btn").addEventListener("click", logOutUser);
-
-function logOutUser(){
-    localStorage.removeItem("user");
-    window.location.pathname = ('../index.html');
-}
+document.querySelectorAll("input[id*='logout-btn']").forEach(input => {
+    input.addEventListener("click", ()=>{
+        localStorage.removeItem("user");
+        window.location.pathname = ('../index.html');
+    })
+});
 
 userInit();
 export {activeUser};

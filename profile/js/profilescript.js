@@ -54,7 +54,9 @@ document.getElementById("update-btn").addEventListener("click", (e)=>{
     location.reload();
 })
 
-document.getElementById("logout-btn").addEventListener("click", ()=>{
-    localStorage.removeItem("user");
-    window.location.pathname = ('../index.html');
-})
+document.querySelectorAll("input[id*='logout-btn']").forEach(input => {
+    input.addEventListener("click", ()=>{
+        localStorage.removeItem("user");
+        window.location.pathname = ('../index.html');
+    })
+});
