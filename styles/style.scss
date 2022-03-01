@@ -46,9 +46,24 @@ main {
   top: 2rem;
   right: 1rem;
   .cart {
+    position: relative;
     margin-right: 1rem;
     font-size: 1.7rem;
     color: black;
+  }
+  .cart:after {
+    position: absolute;
+    content: attr(data-count);
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    font-size: 12px;
+    line-height: 25px;
+    top: -20px;
+    right: -14px;
+    text-align: center;
+    background-color: rgb(245, 184, 184);
+    z-index: 20;
   }
 }
 .hamburger {
@@ -126,6 +141,11 @@ main {
     border: 1px solid $register-border-color;
     color: white;
   }
+  //styling för länk till profil i hamburgermenyn
+  a {
+    @include list-style;
+    color: black;
+  }
 }
 
 /* .index-main {
@@ -189,6 +209,14 @@ ul {
     li a {
       @include list-style;
       color: black;
+    }
+    //styling för logga ut knappen desktop
+    li .logout-button-desktop {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: $main-font-family;
+      font-size: 16px;
     }
   }
   .navigation-icons {

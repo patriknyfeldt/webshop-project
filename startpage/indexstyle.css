@@ -49,8 +49,8 @@
   font-size: 1.7rem;
   margin: 40px auto;
   padding-bottom: 20px;
-  border-bottom: 1px solid black;
-  max-width: 250px;
+  border-bottom: 5px solid #89a3b3;
+  max-width: 270px;
 }
 
 .category-div-container .category {
@@ -66,6 +66,17 @@
   list-style: none;
   text-decoration: none;
   cursor: pointer;
+}
+
+.category-div-container a p {
+  display: none;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.category-div-container a:hover p {
+  display: block;
 }
 
 .category-div-container a:visited {
@@ -99,7 +110,7 @@
 
 .rea-aside {
   margin-top: 50px;
-  background: #D1EEFF;
+  background: #d1eeff;
   padding: 30px;
 }
 
