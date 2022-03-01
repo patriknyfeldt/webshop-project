@@ -59,6 +59,11 @@ export {activeUser};
 
 function cartIconCount() {
     let savedProductList = JSON.parse(localStorage.getItem("basket"));
+    if(!savedProductList){
+        savedProductList = [];
+        localStorage.setItem("basket", JSON.stringify(savedProductList))
+
+    }
     savedProductList.forEach(quantity => {
         let cartIcon = document.querySelectorAll('.cart');
         cartIcon.forEach(cartIcon => {
