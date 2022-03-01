@@ -1,10 +1,10 @@
-const chosenProductCart = document.getElementById("chosen-product-cart");
+const chosenProductCart = document.getElementById("chosen-product-cart"); 
 
-let savedProducts = JSON.parse(localStorage.getItem("basket"));
+let savedProducts = JSON.parse(localStorage.getItem("basket")); 
 let savedProductList = savedProducts;
 let totalPriceDisplay;
 
-if(savedProductList){
+if(savedProductList){ 
 savedProductList.forEach(product => {
     const article = product.article;
     chosenProductCart.innerHTML += 
@@ -37,7 +37,7 @@ savedProductList.forEach(product => {
     </section>
 `;
     });
-    if(savedProductList.length){
+    if(savedProductList.length){ 
         chosenProductCart.innerHTML += `
             <div id="order-row" class="checkout-wrapper">
                 <div class="checkout">
